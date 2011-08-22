@@ -1,0 +1,46 @@
+%% LyX 1.6.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[letterpaper,english]{UCFthesis}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{0}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+
+\begin{document}
+\pagenumbering{roman}
+\title{Modeling Protein Adsorption in Microfluidic Systems} \author{Craig Finch} \date{August 2011} \maketitle \thispagestyle{empty}
+\begin{UCFcopyright} 2011 Craig Finch \end{UCFcopyright}
+\newpage \begin{abstract} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \end{abstract}
+\begin{acknowledgements} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \end{acknowledgements}
+\clearpage
+\phantomsection \label{tableofcontents} \pdfbookmark[1]{TABLE OF CONTENTS}{tableofcontents} 
+\tableofcontents
+
+\newpage \phantomsection \label{listoffigx} \addcontentsline{toc}{chapter}{LIST OF FIGURES} \listoffigures
+\newpage \phantomsection \label{listoftabx} \addcontentsline{toc}{chapter}{LIST OF TABLES} \listoftables
+\newpage \pagenumbering{arabic}\include{Introduction/Introduction}
+
+\include{Fibronectin/Fibronectin}
+
+\include{GlucoseOxidase/GlucoseOxidase}
+
+\include{HardSpheres/HardSpheres}
+
+\include{Discussion/Discussion}
+
+\bibliographystyle{ieeetr}
+\bibliography{\string"/home/cfinch/cfinch/Microfluidics/Reference Papers/Master_database\string"}
+
+\end{document}

@@ -1,0 +1,260 @@
+
+\chapter{Fibronectin Adsorption}
+
+Fibronectin (FN) is a physiologically important protein in vertebrates.
+It is abundant in plasma and other bodily fluids, and plays an important
+role in the extracellular matrix. The structure of fibronectin is
+complex. The primary structure of FN is a chain composed of three
+types of repeated modules. Although only one gene codes for FN, alternative
+splicing of the pre-mRNA results in numerous variants in which modules
+are added or deleted \cite{Pankov2002}. X-ray crystallography has
+been used to determine the secondary and tertiary structure of the
+three types of modules. The complete FN molecule has not been crystallized,
+so its secondary and tertiary structure are unknown. It is likely
+that the secondary and tertiary structure are highly dependent on
+the local environment. In solution, fibronectin exists as a dimer
+with two identical subunits linked by disulfide bonds. In the extracellular
+matrix, fibronectin is assembled into a fibrillar network\cite{Mao2005}.
+
+
+\section{Methods and Materials}
+
+
+\subsection{Experimental Methods}
+
+
+\subsubsection*{Whispering Gallery Mode Sensor}
+
+A whispering gallery mode sensor system was constructed as described
+in {[}{]}. A schematic overview of the system is shown in Figure \ref{fig:WGM System Diagram}.%
+\begin{figure}
+\includegraphics{Fibronectin/Figures/WGM_System_Overview}
+
+\caption{\label{fig:WGM System Diagram}Schematic diagram of the whispering
+gallery mode biosensor}
+
+
+
+\end{figure}
+
+
+
+\subsubsection{Protein Adsorption Experiments}
+
+Bovine plasma fibronectin in solution was obtained from Sigma-Aldrich
+(F1141) and diluted to the desired concentrations with 50mM phosphate
+buffered saline (PBS) at pH 7.4.
+
+
+\subsection{Modeling the Kinetics of Fibronectin Adsorption}
+
+It is well established that single-layer adsorption models can be
+stated in the general form\begin{equation}
+\frac{d\theta}{dt}=k_{a}c\Phi\left(\theta\right)-k_{d}\theta\label{eq:Single Layer Kinetics}\end{equation}
+where $\theta$ is the fraction of the surface covered by adsorbed
+particles, $c$ is the concentration of protein in solution near the
+surface, $k_{a}$ is the adsorption rate constant, and $k_{d}$ is
+the desorption rate constant. The function $\Phi$ represents the
+blocking effect of adsorbed particles. For the Langmuir model, the
+blocking function is simply $\Phi\left(\theta\right)=1-\theta/\theta_{\infty}$.
+The blocking function for the random sequential adsorption (RSA) model
+is not available in analytic form. A widely used approximation for
+the random sequential adsorption of spherical particles is\begin{equation}
+\Phi\left(\theta\right)=\frac{\left(1-\bar{\theta}\right)^{3}}{1.0-0.812\bar{\theta}+0.2335\bar{\theta}^{2}+0.0845\bar{\theta}^{3}}\label{eq:RSA Blocking Function}\end{equation}
+where $\bar{\theta}=\theta/\theta_{\infty}$ \cite{Schaaf1989}.
+
+
+\subsubsection{RSA-type model of adsorption with transition}
+
+Single-layer adsorption models cannot adequately predict the kinetics
+of adsorption for many combinations of proteins and surfaces. More
+complex models have been developed to account for these experimental
+results. Because many surfaces cause proteins to denature upon adsorption,
+it is common to model adsorption with a post-adsorption transition.
+This process can be described by the kinetic equations\begin{align}
+\frac{d\rho_{\alpha}}{dt} & =k_{a}c\Phi_{\alpha}-k_{s}\rho_{\alpha}\Psi_{\alpha\beta}-k_{d}\rho_{\alpha}\label{eq:Adsorption Transition Kinetics}\\
+\frac{d\rho_{\beta}}{dt} & =k_{s}\rho_{\alpha}\Psi_{\alpha\beta}\label{eq:Adsorption Transition Kinetics 2}\end{align}
+The form of the blocking functions depends upon the assumptions of
+the model. When the particles are spherical, scaled particle theory
+(SPT) can be used to derive the following blocking functions \cite{Brusatori1999}:
+\begin{align}
+\Phi_{\alpha} & =\left(1-\theta\right)\exp\left[-\frac{2\left(\overline{\rho_{\alpha}}+\Sigma\overline{\rho_{\beta}}\right)}{1-\theta}-\frac{\overline{\rho_{\alpha}}+\overline{\rho_{\beta}}+\left(\Sigma-1\right)^{2}\overline{\rho_{\alpha}}\overline{\rho_{\beta}}}{\left(1-\theta\right)^{2}}\right]\label{eq:Phi_alpha}\\
+\Psi_{\alpha\beta} & =\exp\left[-\frac{2\left(\Sigma-1\right)\left(\overline{\rho_{\alpha}}+\Sigma\overline{\rho_{\beta}}\right)}{1-\theta}-\frac{\left(\Sigma^{2}-1\right)\left[\overline{\rho_{\alpha}}+\overline{\rho_{\beta}}+\left(\Sigma-1\right)^{2}\overline{\rho_{\alpha}}\overline{\rho_{\beta}}\right]}{\left(1-\theta\right)^{2}}\right]\label{eq:Psi_alpha_beta}\end{align}
+The following non-dimensional variables are defined: $\overline{\rho_{\alpha}}=\rho_{\alpha}\pi R_{\alpha}^{2}$,
+$\overline{\rho_{\beta}}=\rho_{\beta}\pi R_{\alpha}^{2}$, $\theta=\overline{\rho_{\alpha}}+\Sigma^{2}\overline{\rho_{\beta}}$,
+and $\Sigma=R_{\beta}/R_{\alpha}$.
+
+Since the blocking functions derived from SPT describe spherical particles,
+they can be directly compared to the RSA blocking function. When $k_{s}=0$,
+equations \ref{eq:Adsorption Transition Kinetics} and \ref{eq:Adsorption Transition Kinetics 2}
+reduce to equation \ref{eq:Single Layer Kinetics}. By setting $\rho_{\beta}=0$
+and $\Sigma=1$, equations \ref{eq:RSA Blocking Function} and \ref{eq:Phi_alpha}
+can be compared as shown in Figure \ref{fig:RSA and SPT Blocking Functions}.%
+\begin{figure}
+\includegraphics{Fibronectin/Plots/ASF_comparison}
+
+\caption{\label{fig:RSA and SPT Blocking Functions}Blocking functions from
+the RSA model and scaled particle theory}
+
+\end{figure}
+ It can be seen that the first-level blocking function derived from
+SPT is similar but not identical to the RSA blocking function, especially
+at higher values of fractional surface coverage.
+
+To quantitatively compare different multi-layer models, it is necessary
+to transform equations from different sources to use a common set
+of variables. The surface number densities $\rho_{i}$ used in equations
+\ref{eq:Adsorption Transition Kinetics} and \ref{eq:Adsorption Transition Kinetics 2}
+can be converted to fractional surface coverage by multiplying by
+the area covered by an adsorbed particle in state $i$, $\sigma_{i}$,
+to obtain:\begin{align}
+\frac{d\theta_{\alpha}}{dt} & =k_{a}\,\sigma_{\alpha}c\Phi_{\alpha}-k_{s}\theta_{\alpha}\Psi_{\alpha\beta}-k_{d}\theta_{\alpha}\label{eq:dtheta_alpha dt}\\
+\frac{d\theta_{\beta}}{dt} & =k_{s}\Sigma^{2}\theta_{\alpha}\Psi_{\alpha\beta}\label{eq:dtheta_beta dt}\end{align}
+
+
+
+\subsubsection{Langmuir-type model of adsorption with transition}
+
+A different model of adsorption with a post-adsorption transition
+has been used to fit the adsorption kinetics of the fibronectin fragment
+$\textrm{FNII\ensuremath{I_{7-10}}}$ \cite{Michael2003}. Written
+using the same variables as equations \ref{eq:Adsorption Transition Kinetics}
+and \ref{eq:Adsorption Transition Kinetics 2}, the equations that
+describe this model are\begin{align}
+\frac{d\rho_{\alpha}}{dt} & =k_{a}\, c\, A_{av}-k_{s}\,\rho_{\alpha}\, A_{av}-k_{d}\,\rho_{\alpha}\label{eq:Michael kinetics 1}\\
+\frac{d\rho_{\beta}}{dt} & =k_{s}\,\rho_{\alpha}\, A{}_{av}\label{eq:Michael kinetics 2}\end{align}
+where $Y_{i}$ is the surface density ($ng/cm^{2}$) of adsorbed protein
+in each state. $A_{av}$ is the surface area ($cm^{2}$) available
+for adsorption, which is given by\[
+A_{av}=A_{total}\left(1-f\,\sigma_{1}\,\rho_{1}-f\, b\,\sigma_{1}\,\rho_{2}\right)\]
+where $b=\sigma_{\beta}/\sigma_{\alpha}$. Since $\theta_{i}=\sigma_{i}\, f\,\rho_{i}$
+and $f=N_{A}/M$ ($molecules/ng$), this expression can be written
+$A_{av}=A_{total}\left(1-\theta\right)$, where $\theta=\theta_{\alpha}+\theta_{\beta}$.
+Equations \ref{eq:Michael kinetics 1} and \ref{eq:Michael kinetics 2}
+can be written in terms of fractional surface coverage by multiplying
+both sides by $\sigma_{i}\, f$ to obtain:\begin{align}
+\frac{d\theta_{1}}{dt} & =k\,\sigma_{1}\,\sigma A_{total}\, f\, c\left(1-\theta\right)-s\, A_{total}\,\theta{}_{1}\left(1-\theta\right)-r\,\theta_{1}\label{eq:Langmuir two stage 1}\\
+\frac{d\theta_{2}}{dt} & =s\, A_{total}\, b\,\theta_{1}\,\left(1-\theta\right)\label{eq:Langmuir two stage 2}\end{align}
+It is clear that the blocking function for this model is actually
+the Langmuir blocking function, with $\theta_{\infty}=1$.
+
+The kinetics of adsorption based on the Langmuir blocking function
+were compared to the kinetics modeled by the SPT blocking functions,
+and the results are shown in Figure \ref{fig:SPT vs Langmuir kinetics}.
+%
+\begin{figure}[h]
+\includegraphics{Fibronectin/Plots/SPT_vs_Langmuir_kinetics}
+
+\caption{\label{fig:SPT vs Langmuir kinetics}Comparison of kinetics predicted
+by SPT blocking function (a) and Langmuir blocking function (b) for
+$k_{a}=1$, $k_{s}=\pi$, $k_{d}=\pi$, $r_{\alpha}=1$, $\Sigma=1.2$,
+and $c=1$.}
+
+\end{figure}
+ The parameters used for the comparison were taken from Figure 2a
+from \cite{Brusatori1999}. Note that Figure 2a from \cite{Brusatori1999}
+cannot be directly compared directly with Figure \ref{fig:SPT vs Langmuir kinetics}
+in this work, because $\theta_{\beta}\neq\overline{\rho_{\beta}}$.
+For the Langmuir model, $\theta_{\infty}=0.547$ was used for consistency
+with the RSA and SPT blocking functions.
+
+
+\subsection{Fitting Kinetic Models to Experimental Data}
+
+
+\section{Results}
+
+
+\subsection{Experimental Data}
+
+%
+\begin{figure}
+\includegraphics[width=1\columnwidth]{Fibronectin/Plots/FN_Experimental_Data}
+
+\caption{\label{fig:FN experiments}Measured adsorption kinetics for fibronectin
+on 13F, DETA, and OEG surfaces}
+
+
+
+\end{figure}
+
+
+
+\subsection{Fitted Models}
+
+%
+\begin{table}
+\caption{\label{tab:FN on DETA}Parameter values fitted to FN on DETA}
+
+
+\begin{tabular}{lcccccc}
+ & $k_{a}\times10^{6}$ & $k_{s}\times10^{7}$ & $k_{d}\times10^{4}$ & $\sigma_{\alpha}\times10^{12}$ & $\sigma_{\beta}\times10^{12}$ & $SSE$\tabularnewline
+\hline
+Langmuir & $2.11$ &  & $7.33$ & $2.20$ &  & $127$\tabularnewline
+Langmuir two-stage & $ $ & $ $ & $ $ & $ $ & $ $ & $ $\tabularnewline
+RSA & $2.05$ &  & $3.16$ & $1.82$ &  & $86.1$\tabularnewline
+RSA two-stage & $2.61$ & $5.67$ & $2.53$ & $2.08$ & $110$ & $80.0$\tabularnewline
+\end{tabular}
+\end{table}
+
+
+%
+\begin{figure}
+\includegraphics{Fibronectin/Plots/FN_DETA_RSA_CFD}
+
+\caption{\label{fig:FN DETA RSA}RSA model fitted to experimental data for
+FN on DETA}
+
+
+
+\end{figure}
+
+
+%
+\begin{table}
+\caption{\label{tab:FN on 13F}Parameter values fitted to FN on 13F}
+
+
+\begin{tabular}{lcccccc}
+ & $k_{a}\times10^{6}$ & $k_{s}\times10^{2}$ & $k_{d}\times10^{4}$ & $\sigma_{\alpha}\times10^{12}$ & $\sigma_{\beta}\times10^{12}$ & $SSE$\tabularnewline
+\hline
+Langmuir & $2.22$ &  & $6.05$ & $2.36$ &  & $212$\tabularnewline
+Langmuir two-stage & $ $ & $ $ & $ $ & $ $ & $ $ & $ $\tabularnewline
+RSA & $2.24$ &  & $2.49$ & $1.95$ &  & $121$\tabularnewline
+RSA two-stage & $1.72$ & $3.88$ & $2.91$ & $1.42$ & $3.38$ & $63.9$\tabularnewline
+\end{tabular}
+\end{table}
+
+
+%
+\begin{figure}
+\includegraphics{Fibronectin/Plots/FN_13F_RSA_CFD}
+
+\caption{\label{fig:FN 13F RSA}RSA model fitted to experimental data for FN
+on 13F}
+
+\end{figure}
+%
+\begin{table}
+\caption{\label{tab:FN on OEG}Parameter values fitted to FN on OEG}
+
+
+\begin{tabular}{lcccc}
+ & $k_{a}$ & $k_{d}$ & $\sigma_{\alpha}$ & $SSE$\tabularnewline
+\hline
+Langmuir & $1.91\times10^{-6}$ & $1.12\times10^{-3}$ & $1.6\times10^{-11}$ & $4.3$\tabularnewline
+RSA & $9.22\times10^{-7}$ & $7.20\times10^{-4}$ & $1.25\times10^{-11}$ & $2.8$\tabularnewline
+\end{tabular}
+\end{table}
+%
+\begin{figure}
+\includegraphics{Fibronectin/Plots/FN_OEG_RSA_CFD}
+
+\caption{\label{fig:FN OEG RSA}RSA model fitted to experimental data for FN
+on OEG}
+
+\end{figure}
+
+
+
+\section{Discussion}
