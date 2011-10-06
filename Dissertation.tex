@@ -1,9 +1,10 @@
-%% LyX 1.6.3 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 1.6.10 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[letterpaper,english]{UCFthesis}
+\documentclass[letterpaper,english,letterpaper, english]{UCFthesis}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \setcounter{secnumdepth}{0}
+\usepackage{float}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{amssymb}
@@ -11,36 +12,107 @@
 \makeatletter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\DeclareRobustCommand{\greektext}{%
+  \fontencoding{LGR}\selectfont\def\encodingdefault{LGR}}
+\DeclareRobustCommand{\textgreek}[1]{\leavevmode{\greektext #1}}
+\DeclareFontEncoding{LGR}{}{}
+\DeclareTextSymbol{\~}{LGR}{126}
 %% Because html converters don't know tabularnewline
 \providecommand{\tabularnewline}{\\}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{babel}
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat's toolbar?
+    pdfmenubar=true,        % show Acrobat's menu?
+    pdffitwindow=true,     % window fit to page when opened
+    pdfstartview={FitV},    % fits the page to the window
+    pdfpagelayout={SinglePage}, % Displays a single page; advancing flips the page
+    pdftitle={MODELING TRANSPORT AND ADSORPTION IN MICROFLUIDIC SYSTEMS},    % title
+    pdfauthor={Craig Finch},     % author
+    pdfcreator={LaTeX},   % creator of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+\title{Modeling Transport and Adsorption in Microfluidic Systems}
+\author{Craig Finch}
+\priordegrees{B. S. University of Illinois, 1997 \\ M. S. University of Central Florida, 2001}
+\degree{Doctor of Philosophy}
+\department{Modeling and Simulation}
+\college{College of Sciences}\providecommand*\standardstate{%
+  {%
+    \ensuremath{\protect\cst@standardstate}%
+  }%
+}
+\newcommand*\cst@standardstate{%
+  \mathpalette\cst@standardstate@aux\circ
+}
+\newcommand*\cst@standardstate@aux[2]{%
+  \ooalign{%
+    \hfil
+    $#1-$%
+    \hfil
+    \cr
+    \hfil
+    $#1#2$%
+    \hfil
+    \cr
+  }%
+}
+\term{Fall Term\\2011}
+\advisor{James J. Hickman}
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
 \makeatother
 
 \usepackage{babel}
 
 \begin{document}
 \pagenumbering{roman}
-\title{Modeling Protein Adsorption in Microfluidic Systems} \author{Craig Finch} \date{August 2011} \maketitle \thispagestyle{empty}
-\begin{UCFcopyright} 2011 Craig Finch \end{UCFcopyright}
-\newpage \begin{abstract} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \end{abstract}
-\begin{acknowledgements} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \end{acknowledgements}
-\clearpage
-\phantomsection \label{tableofcontents} \pdfbookmark[1]{TABLE OF CONTENTS}{tableofcontents} 
-\tableofcontents
+\maketitle
+\begin{UCFcopyright} 2011 Craig Finch \end{UCFcopyright} 
+\newpage \pagenumbering{arabic}
 
-\newpage \phantomsection \label{listoffigx} \addcontentsline{toc}{chapter}{LIST OF FIGURES} \listoffigures
-\newpage \phantomsection \label{listoftabx} \addcontentsline{toc}{chapter}{LIST OF TABLES} \listoftables
-\newpage \pagenumbering{arabic}\include{Introduction/Introduction}
+\begin{abstract} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \end{abstract}
 
-\include{Fibronectin/Fibronectin}
+\begin{acknowledgements}I thank my advisors, Dr. James J. Hickman and Dr. Thomas Clarke, for making this work possible.  My colleagues Kerry Wilson and Christopher Long performed many of the experiments upon which my work is based.  I enjoyed many scientific and technical discussions with Vaibhav Thakore.  I thank the Institute for Simulation and Training (IST), the I2 Lab, and the NanoScience Technology Center at the University of Central Florida for financial support.  IST also donated computing resources on the Stokes cluster. \end{acknowledgements}
 
-\include{GlucoseOxidase/GlucoseOxidase}
+\clearpage \label{toc_label} \pdfbookmark[0]{TABLE OF CONTENTS}{toc_label} \tableofcontents
+\newpage \phantomsection \label{listoffig} \addcontentsline{toc}{chapter}{LIST OF FIGURES} \listoffigures
+\newpage \phantomsection \label{listoftab} \addcontentsline{toc}{chapter}{LIST OF TABLES} \listoftables
+\newpage\include{Introduction/Introduction}
+
+\include{Protein_Adsorption/Protein_Adsorption}
 
 \include{HardSpheres/HardSpheres}
 
+\include{Bioreactor/Bioreactor}
+
 \include{Discussion/Discussion}
 
+\newpage \phantomsection \label{listofref} \addcontentsline{toc}{chapter}{LIST OF REFERENCES}
+
 \bibliographystyle{ieeetr}
-\bibliography{\string"/home/cfinch/cfinch/Microfluidics/Reference Papers/Master_database\string"}
+\bibliography{Dissertation_References}
 
 \end{document}

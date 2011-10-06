@@ -1,0 +1,331 @@
+#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass UCFthesis
+\begin_preamble
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{babel}
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in AcrobatÕs bookmarks
+    pdftoolbar=true,        % show Acrobat's toolbar?
+    pdfmenubar=true,        % show Acrobat's menu?
+    pdffitwindow=true,     % window fit to page when opened
+    pdfstartview={FitV},    % fits the page to the window
+    pdfpagelayout={SinglePage}, % Displays a single page; advancing flips the page
+    pdftitle={MODELING TRANSPORT AND ADSORPTION IN MICROFLUIDIC SYSTEMS},    % title
+    pdfauthor={Craig Finch},     % author
+    pdfcreator={LaTeX},   % creator of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+\title{Modeling Transport and Adsorption in Microfluidic Systems}
+\author{Craig Finch}
+\priordegrees{B. S. University of Illinois, 1997 \\ M. S. University of Central Florida, 2001}
+\degree{Doctor of Philosophy}
+\department{Modeling and Simulation}
+\college{College of Sciences}\providecommand*\standardstate{%
+  {%
+    \ensuremath{\protect\cst@standardstate}%
+  }%
+}
+\newcommand*\cst@standardstate{%
+  \mathpalette\cst@standardstate@aux\circ
+}
+\newcommand*\cst@standardstate@aux[2]{%
+  \ooalign{%
+    \hfil
+    $#1-$%
+    \hfil
+    \cr
+    \hfil
+    $#1#2$%
+    \hfil
+    \cr
+  }%
+}
+\term{Fall Term\\2011}
+\advisor{James J. Hickman}
+\end_preamble
+\options letterpaper, english
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry false
+\use_amsmath 2
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\paperwidth 0cm
+\secnumdepth 0
+\tocdepth 2
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{UCFcopyright} 2011 Craig Finch 
+\backslash
+end{UCFcopyright} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage 
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{abstract} Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+ 
+\backslash
+end{abstract}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{acknowledgements}I thank my advisors, Dr.
+ James J.
+ Hickman and Dr.
+ Thomas Clarke, for making this work possible.
+  My colleagues Kerry Wilson and Christopher Long performed many of the
+ experiments upon which my work is based.
+  I enjoyed many scientific and technical discussions with Vaibhav Thakore.
+  I thank the Institute for Simulation and Training (IST), the I2 Lab, and
+ the NanoScience Technology Center at the University of Central Florida
+ for financial support.
+  IST also donated computing resources on the Stokes cluster.
+ 
+\backslash
+end{acknowledgements}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage 
+\backslash
+label{toc_label} 
+\backslash
+pdfbookmark[0]{TABLE OF CONTENTS}{toc_label} 
+\backslash
+tableofcontents
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage 
+\backslash
+phantomsection 
+\backslash
+label{listoffig} 
+\backslash
+addcontentsline{toc}{chapter}{LIST OF FIGURES} 
+\backslash
+listoffigures
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage 
+\backslash
+phantomsection 
+\backslash
+label{listoftab} 
+\backslash
+addcontentsline{toc}{chapter}{LIST OF TABLES} 
+\backslash
+listoftables
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Introduction/Introduction.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Protein_Adsorption/Protein_Adsorption.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "HardSpheres/HardSpheres.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Bioreactor/Bioreactor.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Discussion/Discussion.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage 
+\backslash
+phantomsection 
+\backslash
+label{listofref} 
+\backslash
+addcontentsline{toc}{chapter}{LIST OF REFERENCES}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "Dissertation_References"
+options "ieeetr"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

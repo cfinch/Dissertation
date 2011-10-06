@@ -1,0 +1,1622 @@
+#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass UCFthesis
+\options PhD
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry false
+\use_amsmath 2
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\paperwidth 0cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+A CONTINUUM MODEL OF THE ADSORPTION OF HARD SPHERES
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Computational methods have been applied to model and predict protein adsorption,
+ but their success has been limited due to the complexity of the problem.
+ While nanoscale simulation methods like molecular dynamics (MD) have the
+ potential to predict protein adsorption from first principles, the small
+ time step required by atomistic techniques presents a significant obstacle.
+ Protein adsorption occurs on a time scale of seconds to hours, while it
+ was recently reported that an advanced MD simulation on a specially designed
+ supercomputer has the ability to simulate several microseconds of protein
+ behavior 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dror2010"
+
+\end_inset
+
+.
+ As a result, simplified models are widely used.
+ In colloidal models, the protein is represented by a simplified geometric
+ shape and interactions are modeled by DLVO forces.
+ Recently, Brownian dynamics simulations been used to implement colloidal-scale
+ simulations of protein transport and adsorption 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Unni2005,Magan2006,Quinn2008"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A fundamental limitation of nanoscale and mesoscale simulation methods is
+ that they are impractical for modeling transport in practical applications
+ such as medical implants, engineered tissue constructs, organ models, and
+ microfluidic devices.
+ CFD simulations are widely used to model transport in macroscale systems.
+ To predict protein adsorption, simplified continuum models of adsorption
+ based upon chemical kinetics have been used as adsorbing boundary conditions
+ in CFD simulations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Glaser1993"
+
+\end_inset
+
+.
+ The Langmuir and RSA adsorption models, as well as numerous others, have
+ successfully been utilized to model protein adsorption 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rabe2010"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Chemical thermodynamics has been used to create a link between continuum
+ models and discrete particles 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Adamczyk1999a"
+
+\end_inset
+
+.
+ Adsorbed particles were assumed to create an energy barrier which becomes
+ higher as the number of adsorbed particles increases.
+ This barrier incorporates steric exclusion due to the blocking effect of
+ hard particles and the longer-ranged repulsive effect of electrostatic
+ interactions.
+ The flux of particles to the surface is influenced by the size of the barrier.
+ Previous authors have used the surface boundary layer approximation (SFBLA)
+ to simplify the model by assuming that the interface is one-dimensional
+ and the flux through the boundary layer is independent of the position
+ above the surface.
+ It cannot be assumed that the flux at the surface is equal to the flux
+ at the interface with the bulk when modeling the adsorption of hard spheres.
+ A particle may diffuse into the boundary region, collide with adsorbed
+ particles, and diffuse back out of the boundary region at a later time.
+ At any instant, the flux at the surface will be less than or equal to the
+ flux at the bulk interface.
+\end_layout
+
+\begin_layout Standard
+Brownian dynamics simulations of hard sphere adsorption were utilized to
+ obtain configurations of adsorbed spheres, which were then analyzed to
+ obtain the chemical potential near the surface.
+ The principles of non-equilibrium thermodynamics were used to derive a
+ continuum model of hard-sphere adsorption in which the flux of particles
+ is allowed to vary with the distance from the surface.
+ The chemical potential from the hard-sphere simulations was used to determine
+ the coefficients of the continuum model, which was solved numerically in
+ the region near the surface.
+ This model was used as a boundary condition for a conventional CFD simulation
+ to predict coupled transport and adsorption.
+ The kinetics of adsorption predicted by the continuum model matched the
+ kinetics from the Brownian dynamics simulation.
+ This approach can be used to incorporate the results from a discrete particle
+ simulation when simulating transport and adsorption in a microscale or
+ macroscale system.
+\end_layout
+
+\begin_layout Section
+Methods and Materials
+\end_layout
+
+\begin_layout Subsection
+Derivation of the Continuum Model 
+\end_layout
+
+\begin_layout Standard
+The first steps of the derivation of the continuum model follow the method
+ described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Adamczyk1999a,Adamczyk2000"
+
+\end_inset
+
+, starting with the continuity equation
+\begin_inset Formula \begin{equation}
+\frac{\partial n}{\partial t}=-\nabla\cdot\mathbf{J}\label{eq:Continuity}\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+ is the number density of particles in solution and 
+\begin_inset Formula $\mathbf{J}$
+\end_inset
+
+ is the flux of particles.
+ Adsorption is a process of equilibration that can be described using non-equili
+brium thermodynamics.
+ It has been postulated that the flux is proportional to the gradient of
+ the total potential 
+\begin_inset Formula \begin{align}
+\mathbf{J} & =-\left(\mathbf{M}\cdot\nabla\mathbf{E}\right)\, n\label{eq:Flux ito Mobility}\end{align}
+
+\end_inset
+
+where
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ is the mobility tensor and 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ is the total potential, which can be written as 
+\begin_inset Formula $\mathbf{E}=\mu+\mathbf{\Phi}$
+\end_inset
+
+.
+ The chemical potential 
+\begin_inset Formula $\mu$
+\end_inset
+
+ represents particle-particle interactions, including interactions between
+ particles in solution and adsorbed particles.
+ The external potential 
+\begin_inset Formula $\mathbf{\Phi}$
+\end_inset
+
+ includes effects such as an electric field due to a charged surface or
+ a gravitational potential.
+ Using the relation 
+\begin_inset Formula $\mathbf{D}=kT\mathbf{M}$
+\end_inset
+
+, the flux can be written in terms of the diffusion tensor
+\begin_inset Formula \begin{align}
+\mathbf{J} & =-\mathbf{D}\cdot\left(\nabla\mu/kT+\nabla\mathbf{\Phi}/kT\right)\, n\label{eq:Flux ito Diffusion}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The chemical potential can be written in terms of the activity coefficient
+ 
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation} 
+\backslash
+label{eq:ChemicalPotential}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+mu = 
+\backslash
+mu^
+\backslash
+standardstate + kT 
+\backslash
+, 
+\backslash
+ln 
+\backslash
+gamma 
+\backslash
+frac{n}{n^ 
+\backslash
+standardstate}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+( 
+\backslash
+mu^
+\backslash
+standardstate 
+\backslash
+)
+\end_layout
+
+\end_inset
+
+ is the potential in the standard state, which is chosen to be the potential
+ of a particle in solution far away from other particles.
+ The activity coefficient is a function of position in space, the number
+ and configuration of particles, and the particle-particle interaction potential.
+ Expanding the potential and substituting into the flux equation results
+ in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation} 
+\backslash
+label{eq:Flux ito Potential}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+mathbf{J} = -
+\backslash
+mathbf{D} 
+\backslash
+cdot 
+\backslash
+left[ 
+\backslash
+frac{
+\backslash
+nabla 
+\backslash
+mu^
+\backslash
+standardstate}{kT}
+\end_layout
+
+\begin_layout Plain Layout
+
+ + 
+\backslash
+nabla 
+\backslash
+ln 
+\backslash
+frac{n}{n^
+\backslash
+standardstate} + 
+\backslash
+nabla 
+\backslash
+ln 
+\backslash
+gamma
+\end_layout
+
+\begin_layout Plain Layout
+
+ + 
+\backslash
+frac{
+\backslash
+nabla 
+\backslash
+Phi}{kT}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+right] 
+\backslash
+, n
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+Since the potential in the standard state is constant, its gradient is zero.
+ This expression for the flux was substituted into the continuity equation
+ to obtain
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation} 
+\backslash
+label{eq:PDE 1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frac{
+\backslash
+partial n}{ 
+\backslash
+partial t} =
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+left[ 
+\backslash
+mathbf{D} 
+\backslash
+cdot 
+\backslash
+left(
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+nabla 
+\backslash
+ln 
+\backslash
+frac{n}{n^
+\backslash
+standardstate}
+\end_layout
+
+\begin_layout Plain Layout
+
+ + 
+\backslash
+nabla 
+\backslash
+ln 
+\backslash
+gamma + 
+\backslash
+frac{
+\backslash
+nabla 
+\backslash
+Phi}{kT}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+right) 
+\backslash
+, n 
+\backslash
+right]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+For modeling adsorption at an interface, the general equation can be simplified
+ considerably by making some assumptions about the interface.
+ It was assumed that the interfacial layer is thin with respect to the overall
+ geometry.
+ Transport parallel to the interface and convection were neglected so the
+ equation reduced to a one-dimensional form:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation} 
+\backslash
+label{eq:PDE 2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frac{
+\backslash
+partial n}{ 
+\backslash
+partial t} =
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+frac{
+\backslash
+partial}{ 
+\backslash
+partial h} 
+\backslash
+, 
+\backslash
+left[ D 
+\backslash
+, 
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+left(
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+frac{
+\backslash
+partial}{ 
+\backslash
+partial h} 
+\backslash
+ln 
+\backslash
+frac{n}{n^
+\backslash
+standardstate} 
+\end_layout
+
+\begin_layout Plain Layout
+
+ + 
+\backslash
+frac{
+\backslash
+partial}{ 
+\backslash
+partial h} 
+\backslash
+ln 
+\backslash
+gamma
+\end_layout
+
+\begin_layout Plain Layout
+
+ + 
+\backslash
+frac{1}{kT} 
+\backslash
+frac{
+\backslash
+partial}{ 
+\backslash
+partial h} 
+\backslash
+Phi
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+right) 
+\backslash
+, n 
+\backslash
+right]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $h$
+\end_inset
+
+ is the distance between the edge of the particle and the surface, as shown
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Geometry"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/AdsorbingBoundary.pdf
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Geometry"
+
+\end_inset
+
+Geometry used to define the hard-sphere adsorbing boundary condition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the case of hard spheres with no surface potential, 
+\begin_inset Formula $\Phi\equiv0$
+\end_inset
+
+ and the diffusion coefficient near the surface was assumed to be constant.
+ The notation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+( 
+\backslash
+frac{n}{n^
+\backslash
+standardstate} 
+\backslash
+)
+\end_layout
+
+\end_inset
+
+ will be dropped, and it will be assumed that 
+\begin_inset Formula $n$
+\end_inset
+
+ has been normalized.
+ The equation can be re-arranged to have the form of a generalized diffusion
+ equation
+\begin_inset Formula \begin{align}
+\frac{\partial n}{\partial t} & =D\,\frac{\partial}{\partial h}\left[\left(\frac{1}{n}\frac{\partial n}{\partial h}+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\, n\right]\nonumber \\
+ & =D\,\left[\frac{\partial^{2}}{\partial h^{2}}n+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\frac{\partial n}{\partial h}+n\,\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\right]\label{eq:Generalized Diffusion Eqn}\end{align}
+
+\end_inset
+
+The result is a parabolic partial differential equation with variable coefficien
+ts.
+ Let
+\begin_inset Formula \begin{align}
+k_{1} & =\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\nonumber \\
+k_{2} & =\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)=\frac{\partial k_{1}}{\partial h}\label{eq:Variable coefficients}\end{align}
+
+\end_inset
+
+Then
+\begin_inset Formula \begin{align}
+\frac{\partial n}{\partial t} & =D\,\left[\frac{\partial^{2}}{\partial h^{2}}n+k_{1\,}\frac{\partial n}{\partial h}+k_{2}\, n\right]\label{eq:Generalized Diffusion Eqn 1D}\end{align}
+
+\end_inset
+
+ This equation predicts the evolution of number density over time at every
+ point in a domain for which the activity coefficient is known.
+ To utilize this equation to predict the surface density of adsorbed particles
+ over time, the boundary condition at the surface (
+\begin_inset Formula $h=0$
+\end_inset
+
+) can be defined
+\begin_inset Formula \[
+\frac{d\Gamma}{dt}=-J_{s}\left(t\right)\]
+
+\end_inset
+
+
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ is the number of adsorbed particles per unit area and 
+\begin_inset Formula $J_{s}$
+\end_inset
+
+ is the flux at the surface.
+ The total surface density at time 
+\begin_inset Formula $t$
+\end_inset
+
+ is given by
+\begin_inset Formula \[
+\Gamma\left(t\right)=\int_{0}^{t}J_{s}\left(\tau\right)\, d\tau\]
+
+\end_inset
+
+The choice of boundary condition for the bulk solution depends upon the
+ nature of the problem to be solved.
+ It is straightforward to couple the generalized diffusion equation to a
+ conventional CFD simulation to predict transport-influenced adsorption
+ in arbitrary geometries.
+ 
+\end_layout
+
+\begin_layout Subsection
+Computation of the Activity Coefficient
+\end_layout
+
+\begin_layout Standard
+The coefficients of the generalized diffusion equation are functions of
+ the activity coefficient 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, which is a function of space and the number and configuration of adsorbed
+ particles.
+ Computation of the activity coefficient is critical to obtain a useful
+ model.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Brownian Dynamics Simulation
+\end_layout
+
+\begin_layout Standard
+A Brownian dynamics simulation of irreversible hard-sphere adsorption was
+ used to obtain configurations of adsorbed particles.
+ The Langevin position equation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Elimelech1998"
+
+\end_inset
+
+ was used to update the position of each particle at each time step: 
+\begin_inset Formula \[
+\mathbf{r}_{i}(t+\Delta t)=\mathbf{r}_{i}(t)+\mathbf{g}_{q}\sqrt{2\, D\,\Delta t}\]
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{r}_{i}$
+\end_inset
+
+ is the position of particle 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ is the simulation time step, 
+\begin_inset Formula $D$
+\end_inset
+
+ is the diffusion coefficient, and 
+\begin_inset Formula $g_{q}\in\mathbb{R}^{3}$
+\end_inset
+
+ is a vector of random numbers drawn from a Gaussian distribution with a
+ mean of zero and a variance of one.
+ At each time step, all particles in the domain were moved simultaneously,
+ and overlaps were detected.
+ Any particle which overlapped another was reset to its original position
+ and moved again using a different random vector, until each particle found
+ a valid position.
+ The simulation domain was a rectangular box with height 
+\begin_inset Formula $L$
+\end_inset
+
+ and width and length 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Periodic boundary conditions were applied on the four sides of the simulation
+ domain so that a particle that exited one side of the box re-entered on
+ the opposite side.
+ An adsorbing boundary condition was used for the bottom of the box.
+ A particle adsorbed when it reached the adsorbing surface without overlapping
+ any previously adsorbed particles.
+ The configuration of adsorbed particles was recorded every time a new particle
+ adsorbed.
+ A perfect adsorbing boundary could also be used to simulate diffusion-limited
+ adsorption.
+ Adsorbed particles were moved out of the simulation domain so that blocking
+ did not interfere with the adsorption of additional particles.
+ 
+\end_layout
+
+\begin_layout Standard
+Two different boundary conditions were used for the top of the box.
+ To simulate constant near-surface concentration a reflecting boundary was
+ used for the top of the box.
+ At each time step, the particles in the box were counted.
+ If there were too few particles in the box, particles were added at positions
+ drawn from a uniform random distribution, ensuring that the newly added
+ particles did not overlap with existing particles.
+ If there were too many particles in the domain, a particle was chosen at
+ random for deletion.
+ To simulate diffusion on a semi-infinite domain, an open box top was used
+ to allow the Brownian dynamics simulation to exchange particles with an
+ infinite bulk solution.
+ This boundary condition was implemented according to the multi-scale linking
+ algorithm described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Magan2004"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Implementation of Brownian Dynamics Simulation
+\end_layout
+
+\begin_layout Standard
+The simulation was implemented using the Python programming language.
+ Numerical data, such as the coordinates of the particles, were stored in
+ NumPy arrays 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Oliphant2006"
+
+\end_inset
+
+.
+ Routines from the SciPy library were used for standard operations like
+ interpolation and numerical integration 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Oliphant2007"
+
+\end_inset
+
+.
+ Collision detection was implemented in C for speed, using the weave function
+ from SciPy.
+ Each time a particle adsorbed on the surface the configuration of adsorbed
+ particles was recorded, along with the profile of concentration vs.
+ distance from the adsorbing surface and the fraction of the surface covered
+ by particles (
+\begin_inset Formula $\theta$
+\end_inset
+
+).
+ The PyTables package was used to save the simulation results to binary
+ files in HDF5 format 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Alted2002-,HDFGroup2000-"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Controls and Validation for the Brownian dynamics simulation
+\end_layout
+
+\begin_layout Standard
+The Brownian dynamics simulation was validated by simulating diffusion-limited
+ adsorption and comparing the results to the analytical solution of a well-known
+ boundary value problem.
+ A perfect adsorbing boundary condition (perfect sink) was used so that
+ particles that adsorbed to the surface did not block the adsorption of
+ additional particles.
+ The classical diffusion equation in one dimension can be solve analytically
+ with the boundary conditions 
+\begin_inset Formula $n(h=0,t)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $n(h\rightarrow\infty,t)=n_{b}$
+\end_inset
+
+.
+ Control simulations were performed with three different box widths (75,
+ 100, 150) to ensure that edge effects were not distorting the pattern of
+ adsorbed particles.
+ The simulation was also tested with three time steps (
+\begin_inset Formula $10^{-5}$
+\end_inset
+
+, 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+ and 
+\begin_inset Formula $10^{-7}sec$
+\end_inset
+
+) to determine the largest time step that would produce accurate results.
+\end_layout
+
+\begin_layout Subsubsection
+Calculation of the Activity Coefficient
+\end_layout
+
+\begin_layout Standard
+The activity coefficient was determined empirically from the results of
+ the Brownian dynamics simulations using the Widom particle insertion method
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Widom1963"
+
+\end_inset
+
+.
+ In this method, a 
+\begin_inset Quotes eld
+\end_inset
+
+test
+\begin_inset Quotes erd
+\end_inset
+
+ particle is introduced into a fixed configuration of particles and the
+ energy of interaction 
+\begin_inset Formula $\psi$
+\end_inset
+
+ between the test particle and the surrounding particles is calculated.
+ The activity 
+\begin_inset Formula $a$
+\end_inset
+
+ can be computed by taking the canonical average of many such insertions,
+ using the formula
+\begin_inset Formula \[
+\frac{n}{a}=\left\langle \exp\left(\frac{-\psi}{k_{B}T}\right)\right\rangle \]
+
+\end_inset
+
+For hard spheres, the energy of interaction is either infinite if the test
+ particle overlaps an existing particle or zero if it does not.
+ Therefore the activity coefficient 
+\begin_inset Formula $\gamma=a/n$
+\end_inset
+
+ is also infinite if the test particle overlaps another, and zero if it
+ does not.
+ To avoid dealing with infinite quantities, the available volume function
+ (AVF) was defined as 
+\begin_inset Formula \[
+AVF\left(h,\theta\right)=\gamma^{-1}\left(h,\theta\right)\]
+
+\end_inset
+
+The value of the AVF is one if the test particle does not overlap with a
+ simulation particle and zero if it does overlap.
+ After the completion of an ensemble of Brownian dynamics simulations, the
+ AVF was calculated for each run at multiple values of 
+\begin_inset Formula $h$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ For each 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ a planar grid of non-overlapping test particles was constructed in the
+ simulation domain at a given height above the adsorbing surface.
+ Particles in solution with cannot interact with adsorbed particles, as
+ shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Geometry"
+
+\end_inset
+
+.
+ The position of each test particle was offset by a small random vector
+ in 
+\begin_inset Formula $x-y$
+\end_inset
+
+ plane and each test particle was checked for overlaps with every simulation
+ particle.
+ The fraction of test particles without overlaps was recorded as the value
+ of 
+\begin_inset Formula $AVF\left(h,\theta\right)$
+\end_inset
+
+.
+ Multiple replicates with different random displacements from the grid were
+ performed for each and .
+ The analysis was performed with 50 and 500 replicates, and 50 replicates
+ were found to be sufficient to determine the AVF.
+ The results from multiple runs of the Brownian dynamics simulation were
+ averaged to obtain an estimate of the available volume function.
+ The coefficients of the generalized diffusion equation were computed directly
+ from the available volume function:
+\begin_inset Formula \[
+k_{1}=\frac{\partial}{\partial h}\log\gamma=\frac{1}{AVF}\,\frac{\partial}{\partial h}AVF\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+k_{2}=\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)=\frac{1}{AVF^{2}}\left(\frac{\partial AVF}{\partial h}\right)^{2}-\frac{1}{AVF}\left(\frac{\partial^{2}AVF}{\partial h^{2}}\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Implementation of the Continuum Model
+\end_layout
+
+\begin_layout Standard
+The control volume formulation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Patankar1980"
+
+\end_inset
+
+ was used to obtain a finite difference form of Equation 15 in the region
+ 
+\begin_inset Formula $0\leq h<2$
+\end_inset
+
+.
+ Central differencing was used to approximate first derivatives in space,
+ and a fully implicit scheme was used to approximate time derivatives.
+ To ensure stability, the source term was linearized so that it was independent
+ of the value of n.
+ Any particle that touches the surfaces adsorbs, so the number density of
+ particles at the surface is zero.
+ The Dirichlet (type 1) boundary condition 
+\begin_inset Formula $n=0$
+\end_inset
+
+ was used at 
+\begin_inset Formula $h=0$
+\end_inset
+
+.
+ For simulations with constant near-surface concentration the type 1 boundary
+ condition 
+\begin_inset Formula $n=n_{b}$
+\end_inset
+
+ was applied at 
+\begin_inset Formula $h=2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Coupling the Continuum Model of Hard-Sphere Adsorption to a Conventional
+ CFD Transport Simulation
+\end_layout
+
+\begin_layout Standard
+For simulations in which the concentration at 
+\begin_inset Formula $h=2$
+\end_inset
+
+ was influenced by diffusion, a second simulation domain was created to
+ model diffusion in the bulk for 
+\begin_inset Formula $h\geq2$
+\end_inset
+
+.
+ The classical diffusion equation was discretized and solved in the bulk
+ domain in the same manner as the generalized diffusion equation.
+ The generalized diffusion equation was solved in the interaction region
+ to obtain the net flux, using the value of number density at 
+\begin_inset Formula $h=2$
+\end_inset
+
+ from the previous time step.
+ For small values of 
+\begin_inset Formula $t$
+\end_inset
+
+ the surface is mostly available for adsorption, so the net flux is limited
+ by diffusive transport.
+ The net flux is determined by 
+\begin_inset Formula $J_{c}$
+\end_inset
+
+ rather than 
+\begin_inset Formula $J_{s}$
+\end_inset
+
+.
+ Once the surface is mostly blocked, the net flux is determined by the rate
+ at which particles can find available space on the surface, so the value
+ of 
+\begin_inset Formula $J_{s}$
+\end_inset
+
+ should be used for the net flux.
+ The correct value for the net flux can be computed by
+\begin_inset Formula \[
+J\left(h=2,t\right)=-min\left(\left|J_{s}\right|,\left|J_{c}\right|\right)\]
+
+\end_inset
+
+ The net flux from the generalized diffusion equation was used as the left-hand
+ boundary condition to solve the classical diffusion equation in the bulk,
+ which resulted in a new value for the number density at the interface.
+ This number density was used to solve the generalized diffusion equation
+ in the near-surface domain again, and the iterative process was repeated
+ until the number density at the interface computed in each domain converged:
+\begin_inset Formula $\left|n\left(h=2^{-}\right)-n\left(h=2^{+}\right)\right|<\delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Validation of the continuum model
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Generalized Diffusion Eqn 1D"
+
+\end_inset
+
+ has the form of a diffusion equation.
+ In the case that the activity coefficient is constant, this equation reduces
+ to the classical one-dimensional diffusion equation.
+ It was verified that the adsorption kinetics predicted by the continuum
+ model matched the kinetics predicted by the classical diffusion equation
+ for a perfect adsorbing boundary when the activity coefficient was held
+ constant (
+\begin_inset Formula $AVF\left(h,\theta\right)\equiv1$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Section*
+Results
+\end_layout
+
+\begin_layout Subsection
+Brownian dynamics simulation results
+\end_layout
+
+\begin_layout Standard
+The Brownian dynamics simulation was run with three different number densities
+ of particles in solution.
+ The number density had a significant impact on the kinetics of adsorption,
+ as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:BrD Adsorption Kinetics"
+
+\end_inset
+
+ .
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/BrD_kinetics.pdf
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:BrD Adsorption Kinetics"
+
+\end_inset
+
+Kinetics of adsorption predicted by the Brownian dynamics simulation for
+ three different volume fractions.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ The configurations of adsorbed particles predicted by the Brownian dynamics
+ simulations were characterized using the pair correlation function 
+\begin_inset Formula $g\left(r\right)$
+\end_inset
+
+, which is also known as the radial distribution function (RDF).
+ The results are shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Brownian Dynamics RDF"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/RDF_BrD_volume_fraction.pdf
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Brownian Dynamics RDF"
+
+\end_inset
+
+Radial distribution function predicted by Brownian dynamics simulation for
+ three volume fractions, and the RDF predicted by the RSA model.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Brownian Dynamics RDF"
+
+\end_inset
+
+ also shows the pair correlation function for configurations generated by
+ RSA simulations, which are essentially identical to those generated by
+ the Brownian dynamics simulations.
+ A representative plot of the AVF for a volume fraction of 0.01 is shown
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Available Volume Function"
+
+\end_inset
+
+.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/AVF_publication_plot.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Available Volume Function"
+
+\end_inset
+
+Plot of the available volume function.
+ Available surface function for RSA shown as red dashed line.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ The available surface function (ASF) for the RSA model is also shown in
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Available Volume Function"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schaaf1989"
+
+\end_inset
+
+.
+ Since Brownian dynamics and RSA simulations produce identical configurations
+ of adsorbed particles, it is not surprising that the AVF for Brownian dynamics
+ at 
+\begin_inset Formula $h=0$
+\end_inset
+
+ is identical to the ASF for RSA.
+ 
+\end_layout
+
+\begin_layout Subsection
+Continuum model results
+\end_layout
+
+\begin_layout Standard
+The coefficients of the generalized diffusion equation were computed from
+ the AVF from Brownian dynamics simulations.
+ Representative plots of the coefficient values are shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Coefficient Plots"
+
+\end_inset
+
+.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/cfinch/Brownian_Dynamics/Documentation/Hard_Sphere_Paper/Plots/coeff_a_publication_plot.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Coefficient a"
+
+\end_inset
+
+Coefficient 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/cfinch/Brownian_Dynamics/Documentation/Hard_Sphere_Paper/Plots/coeff_b_publication_plot.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Coefficient b"
+
+\end_inset
+
+Coefficient 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Coefficient Plots"
+
+\end_inset
+
+Coefficients of the generalized diffusion equation, derived from Brownian
+ dynamics results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ The calculation of coefficient was challenging due to the presence of 
+\begin_inset Formula $AVF^{-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $AVF^{-2}$
+\end_inset
+
+ in Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Variable coefficients"
+
+\end_inset
+
+, which result in large numbers when the value of the AVF approaches zero.
+ The continuum model accurately reproduced the kinetics predicted by the
+ Brownian dynamics simulations, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Kinetics CFD BrD"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/BrD_Continuum_Kinetics_dt.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Kinetics CFD BrD"
+
+\end_inset
+
+Kinetics of adsorption predicted by Brownian dynamics simulations and the
+ continuum model for 
+\begin_inset Formula $\phi=0.01$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Discussion
+\end_layout
+
+\begin_layout Standard
+The RDFs for particle configurations generated by Brownian dynamics simulations
+ are almost identical to the RDF for particles generated by RSA.
+ This agreement indicates that the adsorption of hard spheres is a random
+ sequential process that is essentially independent of transport to the
+ surface.
+ If kinetic predictions are not required, an RSA simulation can be used
+ to generate surface configurations that are equivalent to results from
+ hard-sphere Brownian dynamics simulations, with much less computational
+ effort.
+\end_layout
+
+\begin_layout Standard
+The AVF shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Available Volume Function"
+
+\end_inset
+
+ differs significantly from the blocking function reported in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Magan2004"
+
+\end_inset
+
+, which was estimated by taking the ratio of flux at the surface to the
+ flux expected for a perfect adsorbing boundary.
+ In this work the AVF was computed directly by attempting to adsorb an additiona
+l particle onto a surface with adsorbed particles.
+ The method used here is more likely to obtain an accurate result.
+\end_layout
+
+\end_body
+\end_document
