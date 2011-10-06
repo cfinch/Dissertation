@@ -1,41 +1,60 @@
-1. Introduction
-2. Materials and Methods
-    A. Analysis of Transport in Whispering Gallery Mode Biosensor
-        i. Overview of system
-        ii. Analysis of raw data
-        iii. Flow cell model
-        iv. Simplified adsorption model
-    B. Protein Adsorption Models
-        i. Simple Adsorption
-            a. Langmuir
-            b. RSA
-        ii. Models of Adsorption with Post-Adsorption Transition
-            a. Langmuir-type
-            b. RSA-type
-        iii. Two-Level Adsorption
-        iv. Fitting (?)
-3. Results
-    A. Comparison of adsorption models
-    B. Transport analysis of WGM flow cell
-    C. The Adsorption of FN on Functionalized Surfaces
-    D. The Adsorption of GO on Functionalized Surfaces
-4. Discussion
-    A. Comparison of adsorption models
-    B. Transport analysis of WGM flow cell
-    C. The Adsorption of FN on Functionalized Surfaces
-    D. The Adsorption of GO on Functionalized Surfaces
-    
-6. 3D Continuum Model of the Adsorption of Hard Spheres
-    A. Introduction
-    B. Methods
-        i. Derivation
-        ii. Brownian Dynamics simulation of hard-sphere adsorption
-        iii. Evaluation of available volume function and activity coefficient
-        iv. Implementation of continuum model
-    C. Results
-        i. Blocking function and activity coefficient
-        ii. Continuum model vs. Brownian Dynamics
-    D. Discussion
-7. Validating a CFD Simulation of Transport in a Microfluidic Bioreactor
+Modeling Transport and Adsorption in Microfluidic Systems
 
-8. General Discussion
+1. General Introduction
+
+2. Modeling Protein Adsorption and Interpreting Experimental Results
+    2.1 Materials and Methods
+        2.1.1. Experimental methods
+            2.1.1.1. Overview of system
+            2.1.1.2. Analysis of raw data
+        2.1.2. Analysis of Transport in Whispering Gallery Mode Biosensor
+            2.1.2.1. Flow cell model
+            2.1.2.2. Simplified adsorption model
+        2.1.3. Protein Adsorption Models
+            2.1.3.1. Simple Adsorption
+                a. Langmuir
+                b. RSA
+            2.1.3.2. Models of Adsorption with Post-Adsorption Transition
+                a. Langmuir-type
+                b. RSA-type
+            2.1.3.3. Two-Level Adsorption
+        2.1.4. Fitting
+    2.2. Results
+        2.2.1. Comparison of adsorption models
+        2.2.2. Transport analysis of WGM flow cell
+        2.2.3. The Adsorption of FN on Functionalized Surfaces
+        2.2.4. The Adsorption of GO on Functionalized Surfaces
+    2.3. Discussion
+        2.3.1. Comparison of adsorption models
+        2.3.2. Transport analysis of WGM flow cell
+        2.3.3. The Adsorption of FN on Functionalized Surfaces
+        2.3.4. The Adsorption of GO on Functionalized Surfaces
+        2.3.5. Introduction to Modeling 3D Hard-Sphere Adsorption
+    
+3. 3D Continuum Model of the Adsorption of Hard Spheres
+    3.1. Introduction
+    3.2. Methods
+        3.2.1. Derivation
+        3.2.2. Brownian Dynamics simulation of hard-sphere adsorption
+        3.2.3. Evaluation of available volume function and activity coefficient
+        3.2.4. Implementation of continuum model
+    3.3. Results
+        3.3.1. Blocking function and activity coefficient
+        3.3.2. Continuum model vs. Brownian Dynamics
+    3.4. Discussion
+        3.4.1
+        3.4.2. Introduction to modeling transport in bioreactor
+
+4. CFD Simulation of Transport in Microfluidic Bioreactor
+    4.1 Materials and Methods
+        4.1.1. CFD Design
+        4.1.2. Fabrication
+        4.1.3. Experimental Quantification of Transport
+   4.2 Results
+   4.3 Discussion
+
+5. General Discussion
+
+4. CFD Simulation of Transport in a Microfluidic Bioreactor
+
+5. General Discussion
