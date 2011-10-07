@@ -1,5 +1,113 @@
+%% LyX 1.6.10 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[letterpaper,english,PhD]{UCFthesis}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
 
-\chapter{Fibronectin Adsorption}
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\DeclareRobustCommand{\greektext}{%
+  \fontencoding{LGR}\selectfont\def\encodingdefault{LGR}}
+\DeclareRobustCommand{\textgreek}[1]{\leavevmode{\greektext #1}}
+\DeclareFontEncoding{LGR}{}{}
+\DeclareTextSymbol{\~}{LGR}{126}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\makeatother
+
+\usepackage{babel}
+
+\begin{document}
+
+\chapter{MODELING THE KINETICS OF PROTEIN ADSORPTION}
+
+
+\section{Introduction}
+
+Many studies to date have focused on the adsorption behavior of proteins
+using alkanethiol SAMs as model surfaces, and multiple theoretical
+models with varying degrees of complexity have been proposed to describe
+the kinetics observed. These surfaces are convenient in that they
+are relatively easy to prepare, present highly ordered monolayers
+with well-defined composition, and are compatible with integrated
+electrodes and other sensor systems utilizing metal coated surfaces,
+such as surface plasmon resonance (SPR). In-depth discussions of protein
+adsorption on alkanethiol SAMS are easily found in the literature.
+Less attention, however, has been given to alkylsilane monolayers,
+perhaps because they lack the highly ordered packing formed by alkanethiol
+SAMs (resulting in less well defined surfaces), or perceived difficulty
+in the preparation of well-characterized alkylsilane surfaces. This
+is somewhat unfortunate as alkylsilanes represent a broad and useful
+class of compounds that are used in an increasing variety of biomedical
+and biotechnological applications. For this reason a biosensor system
+utilizing whispering gallery mode (WGM) technology, where the active
+sensor is typically a silica disk, ring, toroid, or sphere/spheroid,
+can provide new insights into the adsorption behavior of biomolecules
+onto alkylsilane-modified surfaces. 
+
+
+\subsection{Whispering Gallery Mode Biosensing}
+
+WGM biosensing is based on monitoring the frequency shift of an optical
+resonance excited inside a glass microsphere \cite{Vollmer2005,Vollmer2002}.
+Near-infrared light is evanescently coupled to a glass microsphere
+with a radius of 50-200 \textgreek{m}m from a tapered optical fiber,
+which is connected to a tunable distributed feedback (DFB) laser at
+one end and a photodetector at the other. The laser and detector are
+used to precisely monitor changes in the resonant wavelength of the
+microsphere. As proteins or other material accrete at the surface
+of the microsphere, the effective radius of the sphere increases,
+resulting in a red shift of the resonant wavelength that can be quantified
+and used to calculate the average surface density of adsorbed material.
+Even with a simple experimental configuration \cite{Vollmer2002}
+it has been shown that a detection limit of $\sim1pg/mm^{2}$ can
+be readily achieved. This is ten times more sensitive than an SPR
+biosensor and theoretical calculations predict the ultimate detection
+limit of the method to be close to the single molecule level \cite{Armani2003,Vollmer2008,Vollmer2008a,Arnold2003}.
+These qualities make WGM biosensing an ideal method for studying protein
+adsorption, as the dynamic range of the method allows measurements
+to be performed in concentration regimes that previously were unattainable.
+To date, optical resonators of this kind have been applied to a variety
+of biosensing applications with great effect. In addition to the inherent
+sensitivity of the method, standard CMOS technology can be applied
+to fabricate arrays of resonators on silicon wafers that provide a
+scalable multiplex sensing capability for detecting multiple biological
+or chemical markers from a single sample in parallel \cite{Luchansky2010,Washburn2009}.
+Furthermore it has been shown that these measurements can be performed
+in complex samples such a blood plasma and serum \cite{Luchansky2011}.
+This provides an added level of complexity as {}``real-world'' samples
+such a plasma and serum contain a mixture of hundreds of proteins,
+which may non-specifically bind to a sensor giving inaccurate readings
+or false positive measurements. For this reason it is critical to
+understand the underlying processes that govern the adsorption of
+biomolecules to silica substrates and the coatings used to functionalize
+them and their subsequent interactions with cells and tissue constructs.
+
+
+\subsection{Fibronectin}
+
+The unique capabilities of the WGM sensor were utilized to quantify
+the kinetics of the adsorption of fibronectin (FN) onto engineered
+surfaces. Cell studies were then done to evaluate the biological activity
+of the adsorbed FN \cite{Keselowsky2004}. Fibronectin is an important
+protein in the extracellular matrix (ECM) that mediates the interaction
+of cells with surfaces, but its activity has been shown to be influenced
+by its surface structure \cite{Lan2005,Michael2003}. Since the adsorption
+of FN has been widely studied, the results from the WGM instrument
+could be compared to an extensive amount of data. 
 
 Fibronectin (FN) is a physiologically important protein in vertebrates.
 It is abundant in plasma and other bodily fluids, and plays an important
@@ -14,7 +122,76 @@ so its secondary and tertiary structure are unknown. It is likely
 that the secondary and tertiary structure are highly dependent on
 the local environment. In solution, fibronectin exists as a dimer
 with two identical subunits linked by disulfide bonds. In the extracellular
-matrix, fibronectin is assembled into a fibrillar network\cite{Mao2005}.
+matrix, fibronectin is assembled into a fibrillar network \cite{Mao2005}.
+
+
+\subsection{Glucose Oxidase}
+
+The WGM biosensor was also used to quantify the kinetics of adsorption
+of glucose oxidase (GO) onto alkylsilane surfaces. The activity of
+the adsorbed enzyme was measured to provide more information about
+its conformation on the surface. Glucose oxidase is an important and
+useful enzyme from a technological standpoint. GO which has been adsorbed
+or covalently attached to electrodes forms the basis for amperometric
+glucose sensors\cite{Wang2007}. Advances in portable blood glucose
+sensors have enabled diabetics to monitor and control their blood
+glucose levels, minimizing the risk of complications from the disease
+\cite{Oliver2009}. Perhaps because of its important role in biosensors,
+glucose oxidase has been thoroughly characterized. This makes it an
+ideal candidate for testing and validating the accuracy of the WGM
+biosensor system. 
+
+GO is a dimeric glycoprotein that is composed of two identical subunits
+\cite{Wohlfahrt1999}. The crystal structure of GO from Aspergillus
+niger is available at the Protein Data Bank (1CF3), and its bounding
+box is 6.0 nm x 5.2nm x 7.7 nm. Reported values for the molecular
+mass of GO range from 152kDa \cite{Keilin1948} to 186kDa \cite{Swoboda1965},
+depending upon the method of purification that was used. The isoelectric
+point of GO is 4.2 \cite{Pazur1964}. Many previous studies have focused
+on the effect of different surface chemistries on the structure and
+activity of adsorbed glucose oxidase \cite{Fears2009,Dong1997}. Atomic
+force microscopy (AFM) studies have been performed to determine the
+size and shape of GO adsorbed on various surfaces \cite{Muguruma2006,Otsuka2004}.
+Although the immobilization of glucose oxidase has been widely studied,
+only qualitative results have recently been reported for the kinetics
+of adsorption \cite{Muguruma2006}.
+
+
+\subsection{Kinetic Models of Protein Adsorption}
+
+Kinetic models have been widely used to model protein adsorption.
+
+
+\subsection{Summary}
+
+The glass WGM resonator was modified with alkylsilane monolayers presenting
+well-defined surface chemistries: 2-{[}Methoxypoly(ethyleneoxy)propyl{]}trimethoxysilane
+(SiPEG), (3-trimethoxysilyl propyl) diethyltriamine (DETA), and 1,1,2,2-perfluorooctyl
+trichlorosilane (13F). The WGM biosensor was then used to quantitatively
+study the adsorption of FN at varying concentrations onto SiPEG, DETA
+and 13F alkylsilane SAMs. The WGM biosensor incorporated a flow cell,
+which minimized the effect of transport limitations on protein adsorption,
+and this, along with the inherent sensitivity of the method, allowed
+the kinetics of adsorption of FN and GO to be measured at concentrations
+lower than those that have previously been reported {[}13{]}. The
+kinetic data provided additional information about the mechanism of
+adsorption that is not available from equilibrium experiments. The
+well-known RSA model {[}15{]} was fitted to the measured kinetic curves,
+and the resulting parameters were used to assist in interpreting the
+results. In addition, a more sophisticated model featuring a post-adsorption
+transition was fitted to the experimental data {[}16, 17{]}. To maximize
+the accuracy of the kinetic parameters, computational fluid dynamics
+(CFD) simulations were used to study limitations in the transport
+of protein to the sensor surface. For determining the biological activity
+of the adsorbed FN, neuronal and skeletal muscle cells were cultured
+on the SiPEG, DETA, and 13F surfaces in a serum-free culture system
+{[}18, 19{]}. Glass and silicon oxide surfaces are much more common
+than metal surfaces in cell culture applications, so silane surface
+modification is of greater practical importance than thiol surface
+modification for tissue engineering. WGM biosensing provides a unique
+capability to quantify protein adsorption on silane-modified surfaces
+for the purpose of understanding the interactions between tissues
+and tailored interfaces. 
 
 
 \section{Methods and Materials}
@@ -22,31 +199,87 @@ matrix, fibronectin is assembled into a fibrillar network\cite{Mao2005}.
 
 \subsection{Experimental Methods}
 
-
-\subsubsection*{Whispering Gallery Mode Sensor}
-
 A whispering gallery mode sensor system was constructed as described
-in {[}{]}. A schematic overview of the system is shown in Figure \ref{fig:WGM System Diagram}.%
+in \cite{Wilson2011,Wilson2009}. A schematic overview of the system
+is shown in Figure \ref{fig:WGM System Diagram}.%
 \begin{figure}
-\includegraphics{Fibronectin/Figures/WGM_System_Overview}
+\includegraphics{Figures/WGM_System_Overview}
 
 \caption{\label{fig:WGM System Diagram}Schematic diagram of the whispering
 gallery mode biosensor}
 
 
-
+%
 \end{figure}
-
-
-
-\subsubsection{Protein Adsorption Experiments}
-
-Bovine plasma fibronectin in solution was obtained from Sigma-Aldrich
+ Bovine plasma fibronectin in solution was obtained from Sigma-Aldrich
 (F1141) and diluted to the desired concentrations with 50mM phosphate
 buffered saline (PBS) at pH 7.4.
 
 
-\subsection{Modeling the Kinetics of Fibronectin Adsorption}
+\subsection{Analysis of Transport in the WGM Biosensor}
+
+The rate of adsorption on a surface may be limited by the rate at
+which the chemistry of adsorption takes place, the rate of transport
+to the surface, or both. Computational fluid dynamics (CFD) was used
+to model the transport of protein in the flow cell of the WGM biosensor.
+CFD simulations were run with a CFD-ACE+ multiphysics solver (ESI
+Software, Huntsville, AL) to determine the influence of transport
+on the adsorption of protein on the resonator surface. Before beginning,
+a Reynolds number calculation was performed to confirm that flow in
+the device would be entirely laminar. For all CFD simulations, the
+size of the mesh and the time step were refined until the simulation
+results did not change significantly. Upwind differencing was used
+to approximate velocity derivatives, a 2nd order limiter was used
+to approximate concentration derivatives, and the Euler method was
+used for time stepping in transient simulations. A multi-scale approach
+was used to obtain high-resolution results while keeping the simulation
+run time reasonable. A large-scale model of the flow system, including
+the 40 cm of tubing between the three-way stopcock and the flow cell,
+was created using CFD-GEOM and discretized using a structured mesh.
+This model did not include the resonator and waveguide, as they have
+a minimal effect on the overall flow in the channel. A steady-state
+simulation was performed first to determine the flow field. Transient
+simulations were then performed in which the concentration at the
+inlet was suddenly increased from zero to the target concentration.
+The concentration of protein was monitored at a point in the flow
+cell at the location of the resonator, and the simulation was run
+until the concentration at this point reached the target value. It
+was assumed that the low concentrations of protein used in these experiments
+did not affect the flow field significantly, so the transient simulations
+utilized the flow field from the steady-state simulation to reduce
+computation time. 
+
+Two additional CFD models were created to simulate the transport of
+protein near the resonator. A detailed three-dimensional model was
+used to model the flow field around the resonator and the waveguide.
+This model ran too slowly to be used for transient simulations of
+adsorption, so a simplified model was created with a two-dimensional
+axisymmetric geometry. Because the axisymmetric geometry models a
+channel with a circular cross section while the actual channel has
+a square cross section, the flow velocity at the inlet was adjusted
+so the velocity near the resonator matched the results from the three-dimensional
+simulation. Data from the simulation of the whole flow cell was used
+to set the concentration over time at the inlet of the axisymmetric
+model. A surface reaction was defined on the surface of the resonator
+using the Langmuir model built in to the Biochemistry module of ACE+.
+The purpose of this reaction was to deplete the protein near the resonator
+at an appropriate rate, rather than to model the actual chemistry
+of adsorption. An association rate constant of $1.44\times10^{6}L\, mol{}^{-1}s^{-1}$,
+a dissociation rate constant of $8.9\times10^{-4}s^{-1}$, and a maximum
+density of adsorption sites of $4.4\times10^{-9}mol\, m^{-2}$ were
+used to match the maximum adsorption rate that was observed in the
+experimental data for DETA and 13F. A steady-state simulation was
+used to establish the flow field and a transient simulation was used
+to determine the concentration of protein near the surface of the
+resonator. The adsorption simulation mandated a fairly small time
+step (on the order of $10^{-4}s$), so it was impractical to run the
+simulation to equilibrium due to the large number of time steps required.
+The system was simulated for 150-300 seconds (of simulated time).
+It was assumed that the near-surface concentration increased linearly
+from the end of the CFD simulation to the target concentration.
+
+
+\subsection{Modeling the Kinetics of Protein Adsorption}
 
 It is well established that single-layer adsorption models can be
 stated in the general form\begin{equation}
@@ -54,9 +287,9 @@ stated in the general form\begin{equation}
 where $\theta$ is the fraction of the surface covered by adsorbed
 particles, $c$ is the concentration of protein in solution near the
 surface, $k_{a}$ is the adsorption rate constant, and $k_{d}$ is
-the desorption rate constant. The function $\Phi$ represents the
-blocking effect of adsorbed particles. For the Langmuir model, the
-blocking function is simply $\Phi\left(\theta\right)=1-\theta/\theta_{\infty}$.
+the desorption rate constant \cite{Andrade1986}. The function $\Phi$
+represents the blocking effect of adsorbed particles. For the Langmuir
+model, the blocking function is simply $\Phi\left(\theta\right)=1-\theta/\theta_{\infty}$.
 The blocking function for the random sequential adsorption (RSA) model
 is not available in analytic form. A widely used approximation for
 the random sequential adsorption of spherical particles is\begin{equation}
@@ -89,17 +322,7 @@ they can be directly compared to the RSA blocking function. When $k_{s}=0$,
 equations \ref{eq:Adsorption Transition Kinetics} and \ref{eq:Adsorption Transition Kinetics 2}
 reduce to equation \ref{eq:Single Layer Kinetics}. By setting $\rho_{\beta}=0$
 and $\Sigma=1$, equations \ref{eq:RSA Blocking Function} and \ref{eq:Phi_alpha}
-can be compared as shown in Figure \ref{fig:RSA and SPT Blocking Functions}.%
-\begin{figure}
-\includegraphics{Fibronectin/Plots/ASF_comparison}
-
-\caption{\label{fig:RSA and SPT Blocking Functions}Blocking functions from
-the RSA model and scaled particle theory}
-
-\end{figure}
- It can be seen that the first-level blocking function derived from
-SPT is similar but not identical to the RSA blocking function, especially
-at higher values of fractional surface coverage.
+can be compared.
 
 To quantitatively compare different multi-layer models, it is necessary
 to transform equations from different sources to use a common set
@@ -138,18 +361,49 @@ both sides by $\sigma_{i}\, f$ to obtain:\begin{align}
 It is clear that the blocking function for this model is actually
 the Langmuir blocking function, with $\theta_{\infty}=1$.
 
+
+\subsection{Fitting Kinetic Models to Experimental Data}
+
+The modeled adsorption curves were fitted to the experimentally measured
+curve using the least squares fitting routine from Scipy, which uses
+a modified version of the Levenberg-Marquardt algorithm \cite{Jones2001-}.
+For each surface, the parameters $k_{a}$, $k_{d}$, $k_{s}$, $r_{\alpha}$
+and $r_{\beta}$ were fitted simultaneously for all of the available
+concentrations. The sum of squared errors (SSE) was computed for each
+type of surface and normalized by dividing by the total number of
+data points in each data set so that the SSE values from different
+data sets could be compared.
+
+
+\section{Results}
+
+A comparison of the blocking functions of the Langmuir and RSA models
+is shown in Figure \ref{fig:Blocking function comparison}.%
+\begin{figure}
+\includegraphics{Plots/ASF_comparison}
+
+\caption{\label{fig:Blocking function comparison}Blocking functions from the
+RSA model and scaled particle theory}
+%
+\end{figure}
+ The blocking function for protein in the initial state for the model
+derived from scaled particle theory is also shown. It can be seen
+that the first-level blocking function derived from SPT is similar
+but not identical to the RSA blocking function, especially at higher
+values of fractional surface coverage.
+
 The kinetics of adsorption based on the Langmuir blocking function
 were compared to the kinetics modeled by the SPT blocking functions,
 and the results are shown in Figure \ref{fig:SPT vs Langmuir kinetics}.
 %
 \begin{figure}[h]
-\includegraphics{Fibronectin/Plots/SPT_vs_Langmuir_kinetics}
+\subfloat[\label{fig:SPT kinetics}Blocking function from scaled particle theory]{\includegraphics[scale=0.75]{Plots/SPT_kinetics}}\subfloat[\label{fig:Langmuir two-stage kinetics}Langmuir two-stage model]{\includegraphics[scale=0.75]{Plots/Langmuir_twostage_kinetics}}
 
 \caption{\label{fig:SPT vs Langmuir kinetics}Comparison of kinetics predicted
 by SPT blocking function (a) and Langmuir blocking function (b) for
 $k_{a}=1$, $k_{s}=\pi$, $k_{d}=\pi$, $r_{\alpha}=1$, $\Sigma=1.2$,
 and $c=1$.}
-
+%
 \end{figure}
  The parameters used for the comparison were taken from Figure 2a
 from \cite{Brusatori1999}. Note that Figure 2a from \cite{Brusatori1999}
@@ -159,102 +413,386 @@ For the Langmuir model, $\theta_{\infty}=0.547$ was used for consistency
 with the RSA and SPT blocking functions.
 
 
-\subsection{Fitting Kinetic Models to Experimental Data}
+\subsection{Transport Analysis of the WGM Biosensor}
 
+The steady-state velocity magnitude predicted by the model of the
+whole flow cell is shown in Figure , along with a close-up view of
+the simulated flow field near the junction of the resonator and waveguide.
+It can be seen that the flow field around the resonator was symmetric
+about the long axis of the resonator, as intended. This configuration
+also ensured that the shear rate was constant in the region where
+the evanescent wave was excited, minimizing any shear rate effects
+on the adsorption of protein from solution. Also, it should be noted
+that the waveguide coupled to the resonator created a negligible disturbance
+of the flow field. The evolution of bulk concentration in the flow
+cell over time is shown in Figure \ref{fig:CFD Bulk Conc}.%
+\begin{figure}
+\includegraphics[width=0.75\columnwidth]{Plots/CFD_flow_cell_inlet_concentration}
 
-\section{Results}
+\caption{\label{fig:CFD Bulk Conc}CFD prediction of concentration in the flow
+cell}
 
-
-\subsection{Experimental Data}
 
 %
+\end{figure}
+ The solution concentration in the flow cell in the vicinity of the
+resonator required less than 60 seconds to reach the bulk solution
+concentration. The near-surface concentration predicted by the high-resolution
+CFD model is shown in Figure \ref{fig:CFD near surface conc}.%
 \begin{figure}
-\includegraphics[width=1\columnwidth]{Fibronectin/Plots/FN_Experimental_Data}
+\includegraphics[width=0.75\columnwidth]{Plots/CFD_near_surface_concentration}
+
+\caption{\label{fig:CFD near surface conc}CFD prediction of concentration
+very close to the surface of the resonator}
+
+
+%
+\end{figure}
+ The evolution of the protein concentration near the surface of the
+resonator required considerably more time to reach its final value.
+The effects of this difference in near surface concentration with
+respect to the bulk were taken into account when fitting the model
+to the experimental data.
+
+
+\subsection{Modeling the Adsorption of Fibronectin on Silane Surfaces}
+
+The kinetics of adsorption of fibronection on 13F, DETA, and SiPEG
+are shown in Figure \ref{fig:FN experiments}.%
+\begin{figure}
+\includegraphics[width=1\columnwidth]{Plots/FN_Experimental_Data}
 
 \caption{\label{fig:FN experiments}Measured adsorption kinetics for fibronectin
 on 13F, DETA, and OEG surfaces}
 
 
-
-\end{figure}
-
-
-
-\subsection{Fitted Models}
-
 %
+\end{figure}
+ The kinetics predicted by the models fitted to adsorption on DETA
+are shown in Figure \ref{fig:FN DETA fitted}, and the fitted parameter
+values are shown in Table \ref{tab:FN on DETA params}.%
 \begin{table}
-\caption{\label{tab:FN on DETA}Parameter values fitted to FN on DETA}
-
-
-\begin{tabular}{lcccccc}
- & $k_{a}\times10^{6}$ & $k_{s}\times10^{7}$ & $k_{d}\times10^{4}$ & $\sigma_{\alpha}\times10^{12}$ & $\sigma_{\beta}\times10^{12}$ & $SSE$\tabularnewline
+\caption{\label{tab:FN on DETA params}Parameter values fitted to FN on DETA}
+\begin{tabular}{lccccc}
+ & Langmuir & Langmuir & RSA & RSA & units\tabularnewline
+ &  & two-stage &  & two-stage & \tabularnewline[\doublerulesep]
 \hline
-Langmuir & $2.11$ &  & $7.33$ & $2.20$ &  & $127$\tabularnewline
-Langmuir two-stage & $ $ & $ $ & $ $ & $ $ & $ $ & $ $\tabularnewline
-RSA & $2.05$ &  & $3.16$ & $1.82$ &  & $86.1$\tabularnewline
-RSA two-stage & $2.61$ & $5.67$ & $2.53$ & $2.08$ & $110$ & $80.0$\tabularnewline
-\end{tabular}
+\noalign{\vskip\doublerulesep}
+$k_{a}$ & $ $ & $\times10^{-6}$ & $2.05\times10^{-6}$ & $2.37\times10^{-6}$ & $cm^{3}ng^{-1}s^{-1}$\tabularnewline
+$k_{s}$ & $ $ & $\times10^{-6}$ & $ $ & $1.14\times10^{-4}$ & $s^{-1}$\tabularnewline
+$k_{d}$ & $ $ & $\times10^{-6}$ & $3.16\times10^{-4}$ & $2.12\times10^{-4}$ & $s^{-1}$\tabularnewline
+$\sigma_{\alpha}$ & $ $ & $\times10^{-6}$ & $1.82\times10^{-12}$ & $2.03\times10^{-12}$ & $cm^{2}$\tabularnewline
+$\sigma_{\beta}$ & $ $ & $\times10^{-6}$ & $ $ & $3.80\times10^{-12}$ & $cm^{2}$\tabularnewline
+$SSE$ & $ $ & $ $ & $86.1$ & $86.0$ & \tabularnewline
+\end{tabular}%
 \end{table}
-
-
 %
 \begin{figure}
-\includegraphics{Fibronectin/Plots/FN_DETA_RSA_CFD}
+\includegraphics{Plots/FN_DETA_RSA_CFD}
 
-\caption{\label{fig:FN DETA RSA}RSA model fitted to experimental data for
+\caption{\label{fig:FN DETA fitted}RSA model fitted to experimental data for
 FN on DETA}
 
 
-
+%
 \end{figure}
 
 
-%
+The kinetics predicted by models fitted to FN adsorption on 13F are
+shown in Figure \ref{fig:FN 13F fitted}, and the parameter values
+for the fitted models are shown in Table \ref{tab:FN OEG fitted params}.%
 \begin{table}
 \caption{\label{tab:FN on 13F}Parameter values fitted to FN on 13F}
-
-
-\begin{tabular}{lcccccc}
- & $k_{a}\times10^{6}$ & $k_{s}\times10^{2}$ & $k_{d}\times10^{4}$ & $\sigma_{\alpha}\times10^{12}$ & $\sigma_{\beta}\times10^{12}$ & $SSE$\tabularnewline
+\begin{tabular}{lccccc}
+ & Langmuir & Langmuir two-stage & RSA & RSA two-stage & Units\tabularnewline
 \hline
-Langmuir & $2.22$ &  & $6.05$ & $2.36$ &  & $212$\tabularnewline
-Langmuir two-stage & $ $ & $ $ & $ $ & $ $ & $ $ & $ $\tabularnewline
-RSA & $2.24$ &  & $2.49$ & $1.95$ &  & $121$\tabularnewline
-RSA two-stage & $1.72$ & $3.88$ & $2.91$ & $1.42$ & $3.38$ & $63.9$\tabularnewline
-\end{tabular}
+$k_{a}$ & $ $ & $\times10^{-6}$ & $2.24\times10^{-6}$ & $1.99\times10^{-6}$ & $cm^{3}ng^{-1}s^{-1}$\tabularnewline
+$k_{s}$ & $ $ & $\times10^{-6}$ & $ $ & $8.00\times10^{-3}$ & $s^{-1}$\tabularnewline
+$k_{d}$ & $ $ & $\times10^{-6}$ & $2.49\times10^{-4}$ & $9.95\times10^{-5}$ & $s^{-1}$\tabularnewline
+$\sigma_{\alpha}$ & $ $ & $\times10^{-6}$ & $1.96\times10^{-12}$ & $1.76\times10^{-12}$ & $cm^{2}$\tabularnewline
+$\sigma_{\beta}$ & $ $ & $\times10^{-6}$ & $ $ & $3.03\times10^{-12}$ & $cm^{2}$\tabularnewline
+$SSE$ & $ $ & $ $ & $121$ & $85.5$ & \tabularnewline
+\end{tabular}%
 \end{table}
-
-
 %
 \begin{figure}
-\includegraphics{Fibronectin/Plots/FN_13F_RSA_CFD}
+\includegraphics{Plots/FN_13F_RSA_CFD}
 
-\caption{\label{fig:FN 13F RSA}RSA model fitted to experimental data for FN
-on 13F}
-
-\end{figure}
+\caption{\label{fig:FN 13F fitted}RSA model fitted to experimental data for
+FN on 13F}
 %
+\end{figure}
+
+
+The kinetics predicted by models fitted to FN adsorption on 13F are
+shown in Figure \ref{fig:FN OEG fitted}, and the parameter values
+for the fitted models are shown in Table \ref{tab:FN OEG fitted params}.%
 \begin{table}
-\caption{\label{tab:FN on OEG}Parameter values fitted to FN on OEG}
-
-
-\begin{tabular}{lcccc}
- & $k_{a}$ & $k_{d}$ & $\sigma_{\alpha}$ & $SSE$\tabularnewline
+\caption{\label{tab:FN OEG fitted params}Parameter values fitted to FN on
+SiOEG}
+\begin{tabular}{lccccc}
+ & Langmuir & Langmuir two-stage & RSA & RSA two-stage & Units\tabularnewline
 \hline
-Langmuir & $1.91\times10^{-6}$ & $1.12\times10^{-3}$ & $1.6\times10^{-11}$ & $4.3$\tabularnewline
-RSA & $9.22\times10^{-7}$ & $7.20\times10^{-4}$ & $1.25\times10^{-11}$ & $2.8$\tabularnewline
-\end{tabular}
+$k_{a}$ & $ $ & $\times10^{-6}$ & $9.25\times10^{-7}$ & $1.12\times10^{-6}$ & $cm^{3}ng^{-1}s^{-1}$\tabularnewline
+$k_{s}$ & $ $ & $\times10^{-6}$ & $ $ & $1.16\times10^{-2}$ & $s^{-1}$\tabularnewline
+$k_{d}$ & $ $ & $\times10^{-6}$ & $7.14\times10^{-4}$ & $1.04\times10^{-4}$ & $s^{-1}$\tabularnewline
+$\sigma_{\alpha}$ & $ $ & $\times10^{-6}$ & $1.24\times10^{-11}$ & $1.24\times10^{-11}$ & $cm^{2}$\tabularnewline
+$\sigma_{\beta}$ & $ $ & $\times10^{-6}$ & $ $ & $3.42\times10^{-11}$ & $cm^{2}$\tabularnewline
+$SSE$ & $ $ & $ $ & $2.7$ & $1.86$ & \tabularnewline
+\end{tabular}%
 \end{table}
 %
 \begin{figure}
-\includegraphics{Fibronectin/Plots/FN_OEG_RSA_CFD}
+\includegraphics{Plots/FN_OEG_RSA_CFD}
 
-\caption{\label{fig:FN OEG RSA}RSA model fitted to experimental data for FN
-on OEG}
-
+\caption{\label{fig:FN OEG fitted}RSA model fitted to experimental data for
+FN on OEG}
+%
 \end{figure}
 
+
+
+\subsection{Modeling the Adsorption of Glucose Oxidase on Silane Surfaces}
 
 
 \section{Discussion}
+
+It has been shown that the relationship between the kinetic models
+stated by Brusatori and Van Tassel \cite{Brusatori1999} and Michael
+et. al. \cite{Michael2003} is analogous to the relationship between
+the RSA model and the Langmuir model. Although the kinetics of the
+total fractional surface coverage $\theta$ are similar for both models,
+the kinetics of $\theta_{\alpha}$ and $\theta_{\beta}$ are very
+different. This difference could have significant implications for
+modeling experimental data, if protein in state $\alpha$ functions
+differently than protein in state $\beta$.
+
+The equilibrium surface concentration of FN, as measured by the WGM
+system, compares favorably with previously published results for a
+solution concentration of $10\mu g/ml$. Although different measurement
+techniques and surface preparations were used, the surface concentrations
+on hydrophobic and hydrophilic surfaces were fairly similar among
+the various references (reference \cite{Lee2006} being the only exception).
+The saturation surface concentration of FN on hydrophilic neutral
+surfaces measured by the WGM sensor also indicated excellent agreement
+with previously published results. However, the amount of adsorbed
+protein measured by the WGM system at lower concentrations was significantly
+greater than the amount reported in previously published results for
+hydrophobic and hydrophilic charged surfaces. In contrast, the surface
+concentration value for a neutral hydrophobic surface was in good
+agreement with previous results. Table 1 also shows the saturation
+surface concentration of FN at a solution concentration of $1\mu g/ml$.
+The discrepancy between the WGM sensor results and the other methods
+at low concentrations may be explained by differences in the measurement
+system, the surface chemistry, or the adsorption process. Since the
+limiting surface coverages measured by the WGM sensor agree well with
+other techniques for $10\mu g/ml$ and for neutral hydrophilic surfaces
+at $1\mu g/ml$, the results from the WGM sensor can be considered
+reliable. It is likely that if systematic errors were inherent to
+the WGM method, those errors would be reflected throughout all solution
+concentrations measured. 
+
+One possible interpretation of the higher saturation values measured
+at $1\mu g/ml$ and lower on 13F and DETA could be the relative packing
+order of silane monolayers compared to alkanethiol monolayers. Alkanethiol
+SAMs are known to create highly ordered monolayers due to their tight
+packing on highly ordered gold films \cite{Prime1991}. Because of
+this tight packing only the terminal functional groups of the alkanethiol
+are presented at the surface, resulting in highly defined surface
+chemistries. Alkylsilane monolayers, which are formed on silica surfaces,
+are less tightly packed and therefore form less ordered monolayers,
+which can potentially present more than just the terminal functional
+group. It has been hypothesized that this may result from interaction
+of electron donating groups of the silane side chain with silanol
+groups at the surface resulting in reaction site-limited substrates
+\cite{Stenger1992}. This can lead to incomplete monolayers that allow
+interaction of protein with the unreacted substrate or allow sufficient
+degrees of freedom for the silane side-chains to adopt multiple conformations,
+creating less ordered monolayers that can rearrange to accommodate
+the native protein structure. At the high concentrations the amount
+of protein available to bind would swamp out these effects but they
+would be present at the lower concentrations. This could explain why
+the differences between the silane chemistry used in this work and
+the alkanethiol chemistry used in previous work \cite{Keselowsky2003}
+did not show up at $10\mu g/ml$. Thus, this additional degree of
+freedom would allow the long side chains to rearrange to accommodate
+greater protein interaction for structural stabilization and higher
+coverage or to expose new surface sites for increased protein adsorption.
+This would not be possible with the tightly packed alkane thiol monolayers.
+However, if the observation of high saturation values from low solution
+concentrations were due strictly to monolayer packing, this would
+be reflected in the literature. Thus, SAM surface structure differences
+are not seen as the only possible explanation, but it should be noted
+that this effect could also have major consequences for protein function,
+as described later. 
+
+Another significant difference between the WGM measurement system
+and previous work was that the protein was deposited on the WGM resonator
+under flow conditions and the measurement was continued until saturation
+was reached, while previous measurements were made after exposure
+to a static FN solution for a fixed amount of time (30-60 minutes.)
+The combination of high-affinity surfaces and low solution concentration
+is conducive to transport-limited adsorption, which could explain
+the discrepancy between WGM and static experiments for hydrophobic
+and charged hydrophilic surfaces, but also give new insight into the
+reasons behind why silane monolayers seem to be better cell culture
+substrates than thiol monolayers. In contrast, neutral hydrophilic
+surfaces have a much lower affinity for protein, so depletion of protein
+near the surface would be much less of a factor, resulting in a good
+match between the WGM and static measurements. 
+
+Although the flow cell was designed to minimize transport limitations,
+CFD analysis indicated that transport had some influence on the rate
+of adsorption on DETA and 13F. Initially, transport was limited by
+the large amount of buffer that had to be displaced from the flow
+system before the protein solution could reach the resonator at full
+concentration. This limitation was due to the prototype nature of
+the system, and can be easily eliminated in future systems. After
+the protein solution in the channel reached its target concentration,
+transport was limited by the rate of diffusion across a depletion
+layer that formed at the surface of the resonator. This type of limitation
+is virtually unavoidable in microfluidic systems when the rate of
+adsorption is high and the solution concentration is low. The flow
+of water is laminar at small length scales, and the no-slip boundary
+condition at the resonator surface means that transport to the surface
+is almost entirely diffusive. Our modeling method was approximate
+in that the evolution of the near-surface concentration over time
+was computed once, based on the estimated adsorption rate, and was
+not modified during the curve-fitting procedure. A more accurate method
+would be to incorporate the CFD model into the fitting routine, so
+that the near-surface concentration would be updated as the adsorption
+rate changed \cite{Jenkins2004}. However, this method is only practical
+when the CFD simulation is simple enough to run very quickly. It was
+also assumed that the near-surface concentration increased linearly
+from sixty seconds until the target concentration was reached. Although
+this probably had some impact on the modeled kinetics, it was better
+than assuming that the concentration near the resonator remained constant.
+The near-surface concentration can have a large effect on the kinetics
+of protein adsorption, and must be taken into account when fitting
+kinetic parameters.
+
+Both the embryonic hippocampal neurons and myocytes showed significantly
+better survival on DETA surfaces than 13F surfaces. However, the amount
+of adsorbed protein measured on the 13F surfaces was comparable to
+that of DETA, indicating that the conformation of adsorbed FN, and
+its function, was just as important as the quantity of FN for cell
+survival. This is consistent with the postulate made above that the
+silane monolayers are able to rearrange to accommodate more protein
+and that the DETA surface, being charged and hydrophilic, could accommodate
+the functional conformation of the FN so little or no denaturation
+would occur. Conversely, the hydrophobic side chains of the 13F could
+rearrange to allow for the adsorption of more protein but would also
+promote the exposure of the protein's hydrophobic core, thus denaturing
+the protein and deactivating its biological activity as postulated
+previously for hydrophobic surfaces \cite{Keselowsky2003}. Results
+from the skeletal myocyte culture provided further information about
+the bioactivity of absorbed FN. Skeletal myocytes are precursor cells
+that fuse and differentiate into contractile myotubes. This differentiation
+is mediated by, among other factors, the interaction of the $\alpha5\beta1$
+integrin receptors on the surface of the myocytes with the cell binding
+domain of the FN molecule \cite{Michael2003}. Without this interaction,
+myotubes do not form. The muscle cell culture on 13F indicated that
+while a significant number of cells survived, no myotubes formed.
+The number of dead cells was actually less than that of SiPEG or DETA,
+and the fact that so many cells survived on the 13F substrate indicates
+that there was enough protein adsorbed to the surface to promote adhesion.
+However, the lack of myotube formation indicates that FN adsorbed
+on 13F had reduced biological activity due to its denaturation and
+did not activate the $\alpha5\beta1$ integrin signaling pathways
+necessary for myotube differentiation. These proliferation and differentiation
+results are consistent with previously reported results \cite{Michael2003}.
+The lack of survival of cells on SiPEG surfaces can be attributed
+to the small amount of adsorbed FN and the possibility that the protein
+was also denatured. Utilization of the WGM sensor enables, for the
+first time, quantitative analysis of protein adsorption on silane
+monolayers, which are more commonly used as substrates for cell culture
+than thiol monolayers. The sensitivity of this bench-top setup also
+can be readily enhanced by a number of methods, such as fabricating
+smaller microspheres and using a laser with a shorter wavelength \cite{Vollmer2008a}
+or coating the glass microsphere with a high-index wave-guiding layer
+\cite{Teraoka2006}. 
+
+Fitting models to the experimental data provided additional insight
+about the process of adsorption. It was assumed that the kinetic constants
+did not vary across the limited concentration range in this study.
+Therefore, a single set of parameters was fitted to multiple concentrations
+for a single surface. Fitting more concentrations, while holding the
+number of parameters constant, increased the possibility of finding
+a unique combination of parameters that minimized the SSE. A model
+with too many parameters can have multiple parameter sets with equivalent
+optimal fits, much like an under-determined system of linear equations.
+Although a lower SSE could have been achieved by fitting each concentration
+individually, the likelihood of finding non-unique parameters would
+have increased. 
+
+The fitted parameters of the RSA model were very similar for FN adsorption
+on DETA and 13F surfaces, reflecting the similar shapes of the experimental
+curves. The RSA model fitted the DETA data well, indicating that the
+assumptions of the RSA model were valid for the process of adsorption
+on DETA. This result was confirmed by the fitting results for the
+two-stage adsorption model. The sum of squared errors was only slightly
+lower than the SSE value for the fitted RSA model. We concluded that
+fibronectin adsorbed on DETA with a well-defined footprint, which
+does not change significantly after adsorption. This result is consistent
+with the well-established theory that proteins generally experience
+less denaturation on a hydrophilic surface than on a hydrophobic surface
+{[}31{]}. The experimental results for FN on 13F showed significant
+deviations from the RSA model in the saturation region, especially
+at higher solution concentrations. The two-stage model allows particles
+to change size after adsorption, which significantly improved the
+fit of the model to the data for FN on 13F. The fitted values for
+the association constant were quite similar for DETA and 13F, but
+the transition rate constant ks for the 13F surface was an order of
+magnitude larger than ks for the DETA surface. The results from the
+fitting process indicated that FN denatured after adsorption on 13F,
+which had been previously postulated for certain hydrophobic surfaces
+{[}13, 32{]} and this was also consistent with our cell culture results. 
+
+The RSA model fitted the SiPEG data well. The value for FN adsorption
+on SiPEG was lower than the values for DETA and 13F while the dissociation
+rate constant was higher, which is expected for a protein-resistant
+surface. This result is consistent with findings that SiPEG is an
+electrostatically neutral surface that does not exhibit coulombic
+attraction for proteins in solution. Surprisingly, the fitted radius
+of FN adsorbed on SiPEG was more than twice the fitted radius of FN
+adsorbed on DETA or 13F. For the two-stage model, the transition rate
+constant for adsorption on SiPEG was significantly higher than for
+the other surfaces. The fitted pre-transition radius and post-transition
+radius of adsorbed FN were also larger for SiPEG than DETA or 13F.
+The large radius predicted by the RSA model and the significant transition
+predicted by the two-stage model seemed to indicate that FN denatures
+after it adsorbs to PEG. This prediction was not consistent with the
+well-known observation that proteins in contact with hydrophobic surfaces
+tend to denature, while proteins in contact with hydrophilic, charged
+surfaces tend to retain their native conformations. However, it also
+may indicate that the SiPEG surface could be promoting the denaturation
+of adsorbed proteins, which could explain why it is a cell-resistant
+surface despite being hydrophilic. 
+
+Although the SSE of the fitted two-stage model was about 30\% lower
+than the SSE for the RSA model, the absolute change in SSE was relatively
+small, and may not be significant. It is possible that the two extra
+variable parameters (transition rate constant and post-transition
+radius) are redundant for the SiPEG surface, in which case their fitted
+values should not be considered significant. It is also possible that
+the radius predicted by the fitting process for SiPEG is an artifact
+caused by fitting the data with a model that is not well suited to
+the surface chemistry. Given the assumptions of the RSA model, surface
+coverage can reach saturation in only two ways: either the rate of
+desorption equals the rate of adsorption, or there is no space left
+on the surface for another protein to adsorb. The second case may
+not apply to an adsorption-resistant surface like SiPEG. However,
+combinations of parameters and that fitted the initial adsorption
+kinetics did not predict the low saturation level of protein observed
+in our experiments. One possible explanation is that FN adsorbed to
+a small number of defects in the SiPEG monolayer, which could explain
+both the rapid initial adsorption and the small amount of adsorbed
+protein when the surface is saturated. If this were the case, a site-limited
+adsorption model like the Langmuir model may be better for modeling
+adsorption on SiPEG. Our prototype instrument did not have the sensitivity
+to perform a more thorough study of adsorption on SiPEG at low solution
+concentrations. Future systems based on whispering gallery mode technology
+have the potential to study the adsorption of proteins on SiPEG surfaces
+in greater detail, which could lead to greater understanding as to
+why SiPEG resists protein adsorption. 
+\end{document}

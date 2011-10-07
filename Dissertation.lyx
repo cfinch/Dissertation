@@ -34,7 +34,11 @@
 \priordegrees{B. S. University of Illinois, 1997 \\ M. S. University of Central Florida, 2001}
 \degree{Doctor of Philosophy}
 \department{Modeling and Simulation}
-\college{College of Sciences}\providecommand*\standardstate{%
+\college{College of Sciences}
+\term{Fall Term\\2011}
+\advisor{James J. Hickman}
+
+\providecommand*\standardstate{%
   {%
     \ensuremath{\protect\cst@standardstate}%
   }%
@@ -54,8 +58,16 @@
     \cr
   }%
 }
-\term{Fall Term\\2011}
-\advisor{James J. Hickman}
+
+\let\oldthebibliography=\thebibliography
+\let\endoldthebibliography=\endthebibliography
+\renewenvironment{thebibliography}[1]{%
+\begin{oldthebibliography}{#1}%
+\setlength{\itemsep}{-2mm}%
+}%
+{%
+\end{oldthebibliography}%
+}
 \end_preamble
 \options letterpaper, english
 \use_default_options true
@@ -136,30 +148,101 @@ end{UCFcopyright}
 
 \begin_layout Plain Layout
 
-
-\backslash
-newpage 
-\backslash
-pagenumbering{arabic}
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{abstract} Lorem ipsum dolor sit amet, consectetur adipisicing elit,
- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+begin{abstract}
+\end_layout
+
+\begin_layout Plain Layout
+
+A Whispering Gallery Mode (WGM) biosensor was constructed to measure the
+ adsorption of protein onto alkysilane self-assembled monolayers (SAMs)
+ at solution concentrations unattainable with other techniques.
+ The high sensitivity was provided by a WGM resonance excited in a silica
+ microsphere that was functionalized with alkylsilane SAMs and integrated
+ in a microfluidic flow cell under laminar flow conditions.
+ It was found that FN adsorbed at biologically relevant surface densities,
+ however, the adsorption kinetics and concentration dependent saturation
+ values varied significantly from work published utilizing alkanethiol SAMs.
+  Mathematical models were applied to the experimental results to interpret
+ the observed kinetics of FN adsorption.
+ Embryonic hippocampal neurons and skeletal myoblasts were cultured on the
+ modified surfaces, and a live-dead assay was used to determine the viability
+ of the FN surfaces for cell culture, and major differences were noted in
+ the biological response to the different SAMs.
+  The high sensitivity and simplicity of the WGM biosensor, combined with
+ its ability to quantify the adsorption of any dilute protein in a label-free
+ assay, establishes the importance of this technology for the study of surface
+ accretion and its effect on cellular function, which can affect biomaterials
+ for both in vivo and in vitro applications.
  
+\end_layout
+
+\begin_layout Plain Layout
+
+Two-dimensional random sequential adsorption (RSA) models are widely used
+ to model the adsorption of proteins on solid surfaces.
+  Continuum equations have been developed so that the results of RSA simulations
+ can be used to predict the kinetics of adsorption.
+  Recently, Brownian dynamics simulations have become popular for modeling
+ protein adsorption.
+ A continuum model was developed to allow the results from a Brownian dynamics
+ simulation to be used as a boundary condition in a computational fluid
+ dynamics (CFD) simulation.
+  A Brownian dynamics simulation was used to model the diffusive transport
+ of hard-sphere particles in a liquid, and the adsorption of the particles
+ onto a solid surface.
+  The configuration of the adsorbed particles was analyzed, using a Monte
+ Carlo method and computational geometry, to quantify the chemical potential
+ of a test particle in solution near the surface.
+  The chemical potential was found to be a function of the distance between
+ the test particle and the surface, and the surface coverage.
+  The near-surface chemical potential was used to derive a continuum model
+ of adsorption that incorporates the results from the Brownian dynamics
+ simulation.
+  The equations of the continuum model were discretized and coupled to a
+ CFD simulation of diffusive transport to the surface.
+  The kinetics of adsorption predicted by the continuum model was very close
+ to the results from the Brownian dynamics simulation.
+  This model allows the results from mesoscale simulations to be incorporated
+ into micro- or macro-scale CFD transport simulations of protein adsorption
+ in practical devices.
+\end_layout
+
+\begin_layout Plain Layout
+
+Microreactors experience significant deviations from plug flow due to the
+ no-slip boundary condition at the walls of the chamber.
+  The development of stagnation zones leads to widening of the residence
+ time distribution at the outlet of the reactor.
+  A hybrid design optimization process that combines modeling and experiments
+ has been developed utilized to minimize the width of the residence time
+ distribution in a microreactor.
+  The process was used to optimize the design of a microfluidic system for
+ an in vitro model of the lung alveolus.
+  Iterative computational fluid dynamics (CFD) simulations were performed
+ to optimize the microfluidic structures for two different types of chambers.
+   The residence time distributions of the optimized chambers were significantly
+ narrower than those of non-optimized chambers, indicating that the optimized
+ final chambers better approximate plug flow.
+  Qualitative and quantitative visualization experiments with food dye indicator
+s indicated demonstrated that the CFD results accurately predicted the residence
+ time distributions within the bioreactors.
+  The results demonstrate that the such a hybrid optimization process can
+ be used to design microreactors that approximate plug flow for in vitro
+ tissue engineered systems.
+   This technique can be applied to optimize optimization of  the performance
+ of the compartments in microfluidic body-on-a-chip systems for drug and
+ toxin studies.
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{abstract}
 \end_layout
@@ -239,7 +322,9 @@ listoftables
 
 
 \backslash
-newpage
+newpage 
+\backslash
+pagenumbering{arabic}
 \end_layout
 
 \end_inset

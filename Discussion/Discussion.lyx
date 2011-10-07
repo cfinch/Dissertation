@@ -1,0 +1,114 @@
+#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass UCFthesis
+\options PhD
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry false
+\use_amsmath 2
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\paperwidth 0cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+DISCUSSION
+\end_layout
+
+\begin_layout Standard
+We have constructed a bench-top WGM biosensor system integrated with a flow
+ cell to study the kinetics of protein adsorption on functionalized glass
+ surfaces relevant for tissue culture.
+ Assembly of the table-top biosensing setup does not require any specialized
+ equipment, and the device components (DFB laser, photodetector, optical
+ fiber, simple microfluidics) are inexpensive as compared to commercial
+ systems and can be readily assembled in any laboratory environment.
+ Despite its simplicity, the sensitivity of the setup rivals that of a state-of-
+the art surface plasmon resonance sensor (~ 1 pg/mm2 mass loading), with
+ the additional advantage that silica microspheres can be easily fabricated
+ and conveniently modified with various silane surface coatings by exploiting
+ established silanol surface chemistries.
+ This is an alternative to other methods, such as SPR, that require coating
+ the sensor with gold and are mostly limited to surface modification with
+ thiols.
+ It also allowed for the first time the detailed kinetic analysis of protein
+ adsorption on silane monolayers and enabled some explanation of the differences
+ between silane and thiol surface modifications.
+ The WGM sensor was used to obtain the most comprehensive set of kinetic
+ data that has been reported for the adsorption of fibronectin at low solution
+ concentrations.
+ Measuring adsorption kinetics at multiple concentrations allowed a single
+ set of kinetic constants to be fitted for multiple concentrations, which
+ increased the likelihood of obtaining a unique set of fitted parameters.
+ The results of the model fitting and the cell culture experiments indicate
+ that similar amounts of FN adsorb on hydrophobic surfaces and charged hydrophil
+ic surfaces.
+ When combined with antibody data from other studies, our data supports
+ the conclusion that FN denatures after adsorption on hydrophobic surfaces,
+ leading to a loss of biological activity.
+ Thus, it demonstrates that a much more sophisticated analysis of how protein
+ adsorption can affect cellular response to surfaces can be undertaken with
+ this system.
+ Further improvements to the sensitivity will help answer difficult questions
+ in biomaterials research, such as improving our understanding of cell-surface
+ interactions and surfaces that resist protein adsorption.
+\end_layout
+
+\begin_layout Standard
+A design optimization process has been presented that can be used to optimize
+ the design of a continuous-flow or stop-flow microreactor so that it operates
+ more like an ideal plug-flow reactor.
+ Plug-like flow patterns can minimize undesired mixing between compartments
+ and non-homogeneous concentration profiles across a channel.
+ The results from the three chamber device demonstrate that the two types
+ of chambers can be used as building blocks for devices with multiple chambers.
+ While each chamber contributes to the widening of the residence time distributi
+on, the optimized post and baffle designs can effectively be used to improve
+ overall flow patterns in a multitude of devices of similar geometry.
+ The use of computational fluid dynamics simulations enabled the optimization
+ of the device by allowing many design iterations to be performed without
+ the expense and delay of fabricating a prototype at each iteration.
+ The CFD simulations were validated qualitatively and quantitatively with
+ dye visualization experiments in prototype devices.
+ This combination of simulation and experiments was applied to the design
+ of microfluidic chambers for a bioreactor that models the alveolus of the
+ lung, demonstrating how the optimization process can enhance the performance
+ of body-on-a-chip systems for drug and toxicity studies.
+ 
+\end_layout
+
+\end_body
+\end_document
