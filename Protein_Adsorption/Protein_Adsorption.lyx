@@ -356,19 +356,47 @@ rfluorooctyl trichlorosilane (13F).
  of transport limitations on protein adsorption, and this, along with the
  inherent sensitivity of the method, allowed the kinetics of adsorption
  of FN and GO to be measured at concentrations lower than those that have
- previously been reported [13].
+ previously been reported 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Michael2003"
+
+\end_inset
+
+.
  The kinetic data provided additional information about the mechanism of
  adsorption that is not available from equilibrium experiments.
- The well-known RSA model [15] was fitted to the measured kinetic curves,
- and the resulting parameters were used to assist in interpreting the results.
+ The well-known RSA model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schaaf1989"
+
+\end_inset
+
+ was fitted to the measured kinetic curves, and the resulting parameters
+ were used to assist in interpreting the results.
  In addition, a more sophisticated model featuring a post-adsorption transition
- was fitted to the experimental data [16, 17].
+ was fitted to the experimental data 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brusatori1999,Tie2003"
+
+\end_inset
+
+.
  To maximize the accuracy of the kinetic parameters, computational fluid
  dynamics (CFD) simulations were used to study limitations in the transport
  of protein to the sensor surface.
  For determining the biological activity of the adsorbed FN, neuronal and
  skeletal muscle cells were cultured on the SiPEG, DETA, and 13F surfaces
- in a serum-free culture system [18, 19].
+ in a serum-free culture system 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brewer1995,Das2007"
+
+\end_inset
+
+.
  Glass and silicon oxide surfaces are much more common than metal surfaces
  in cell culture applications, so silane surface modification is of greater
  practical importance than thiol surface modification for tissue engineering.
@@ -603,7 +631,7 @@ key "Schaaf1989"
 \end_layout
 
 \begin_layout Subsubsection
-RSA-type model of adsorption with transition
+RSA-type Model of Adsorption with Transition
 \end_layout
 
 \begin_layout Standard
@@ -750,7 +778,7 @@ reference "eq:Adsorption Transition Kinetics 2"
 \end_layout
 
 \begin_layout Subsubsection
-Langmuir-type model of adsorption with transition
+Langmuir-Rype Model of Adsorption with Transition
 \end_layout
 
 \begin_layout Standard
@@ -983,7 +1011,7 @@ reference "fig:SPT vs Langmuir kinetics"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -1232,7 +1260,9 @@ name "fig:CFD near surface conc"
 
 \end_inset
 
-CFD prediction of concentration very close to the surface of the resonator
+CFD prediction of concentration very close to the surface of the resonator.
+ Thick lines indicate CFD predictions, while thin lines indicate average
+ experimental data.
 \end_layout
 
 \end_inset
@@ -3516,7 +3546,14 @@ The fitted parameters of the RSA model were very similar for FN adsorption
  which does not change significantly after adsorption.
  This result is consistent with the well-established theory that proteins
  generally experience less denaturation on a hydrophilic surface than on
- a hydrophobic surface [31].
+ a hydrophobic surface 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Latour2005"
+
+\end_inset
+
+.
  The experimental results for FN on 13F showed significant deviations from
  the RSA model in the saturation region, especially at higher solution concentra
 tions.
@@ -3527,7 +3564,14 @@ tions.
  order of magnitude larger than ks for the DETA surface.
  The results from the fitting process indicated that FN denatured after
  adsorption on 13F, which had been previously postulated for certain hydrophobic
- surfaces [13, 32] and this was also consistent with our cell culture results.
+ surfaces 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lan2005,Sivaraman2009"
+
+\end_inset
+
+ and this was also consistent with our cell culture results.
  
 \end_layout
 

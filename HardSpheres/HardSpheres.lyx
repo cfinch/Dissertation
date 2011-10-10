@@ -1181,7 +1181,7 @@ J\left(h=2,t\right)=-min\left(\left|J_{s}\right|,\left|J_{c}\right|\right)\]
 \end_layout
 
 \begin_layout Subsubsection
-Validation of the continuum model
+Validation of the Continuum Model
 \end_layout
 
 \begin_layout Standard
@@ -1211,7 +1211,7 @@ Results
 \end_layout
 
 \begin_layout Subsection
-Brownian dynamics simulation results
+Brownian Dynamics Simulation Results
 \end_layout
 
 \begin_layout Standard
@@ -1391,7 +1391,7 @@ key "Schaaf1989"
 \end_layout
 
 \begin_layout Subsection
-Continuum model results
+Continuum Model Results
 \end_layout
 
 \begin_layout Standard

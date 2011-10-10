@@ -588,12 +588,74 @@ Results
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Microreactor.tif
+	lyxscale 30
+	width 4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Microreactor"
+
+\end_inset
+
+Microreactor design (a), fabricated silicon chip (b), and chip in acrylic
+ housing (c)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 The design goal was to obtain the best possible approximation to plug flow
  so that a bolus of liquid would flow from one chamber into the next with
  minimal mixing between the chambers.
- The overall layout of the device is shown in Figure 1a.
- The microfluidic device fabricated in silicon is shown in Figure 1b.
- The silicon device in the acrylic housing is shown in Figure 1c.
+ The overall layout of the device is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Microreactor"
+
+\end_inset
+
+a.
+ The microfluidic device fabricated in silicon is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Microreactor"
+
+\end_inset
+
+b.
+ The silicon device in the acrylic housing is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Microreactor"
+
+\end_inset
+
+c.
  The first chamber after the inlet is a bubble trap 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -620,9 +682,118 @@ Iterative CFD-Based Device Optimization
 \end_layout
 
 \begin_layout Standard
-After the general layout was established as indicated in Figure 1, the chamber
- dimensions and internal structures were optimized by successive computational
- fluid dynamics modeling of the system.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Alveolus_without_baffles.tif
+	lyxscale 20
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Alveolus no baffles"
+
+\end_inset
+
+Without baffles
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Alveolus_with_baffles.tif
+	lyxscale 20
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Alveolus with baffles"
+
+\end_inset
+
+With baffles
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Alveolus CFD vs Dye"
+
+\end_inset
+
+Visualization of the flow in the alveolus predicted by CFD (left columns)
+ and imaged with dye (right columns)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+After the general layout was established as indicated in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Microreactor"
+
+\end_inset
+
+, the chamber dimensions and internal structures were optimized by successive
+ computational fluid dynamics modeling of the system.
  The iterative design process revolved around minimizing the width of the
  residence time distribution.
  A CFD simulation was performed for each new design iteration and the residence
@@ -647,11 +818,120 @@ After the general layout was established as indicated in Figure 1, the chamber
  A small gap was added near the end of each baffle to prevent stagnation
  on the channel inside of the baffle.
  The flow pattern inside an isolated alveolar chamber with and without baffles
- is shown in Figure 2, including both CFD results and experimental visualization.
- 
+ is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Alveolus CFD vs Dye"
+
+\end_inset
+
+, including both CFD results and experimental visualization.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Conditioner_without_baffles.tif
+	lyxscale 20
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conditioner without posts"
+
+\end_inset
+
+Without posts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Conditioner_with_baffles.tif
+	lyxscale 20
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conditioner with posts"
+
+\end_inset
+
+With posts
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conditioner CFD Dye"
+
+\end_inset
+
+Visualization of the flow in the conditioning chamber predicted by CFD (left
+ columns) and imaged with dye (right columns) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 The chamber design for the bubble trap and conditioning chamber were chosen
  to be rectangles with tapering inlet and outlet sections.
  The angle of the taper and the chamber width were adjusted to minimize
@@ -666,9 +946,15 @@ The chamber design for the bubble trap and conditioning chamber were chosen
  the top row of posts and the chamber wall, the spacing between the top
  row of posts and the chamber wall had to be larger than the spacing between
  posts to avoid introducing a stagnation zone.
- Figure 3 indicates the amount of dye predicted to be present in different
- locations within the isolated conditioning chamber and bubble trap at various
- times.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conditioner CFD Dye"
+
+\end_inset
+
+ indicates the amount of dye present in different locations within the isolated
+ conditioning chamber and bubble trap at various times.
  The flow patterns for the conditioning chambers with and without the post
  arrangement are shown along with the flow patterns expected from the CFD
  results.
@@ -676,34 +962,444 @@ The chamber design for the bubble trap and conditioning chamber were chosen
  represented as white and the maximum dye concentration was black.
  Images from the visualization experiments of the alveolar chamber in the
  combined three chamber device are compared to the images from the isolated
- alveolar chamber and CFD results in Figure 4.
+ alveolar chamber and CFD results in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3 Chambers CFD Dye"
+
+\end_inset
+
+.
  
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/3_Chambers_baffles.tif
+	lyxscale 20
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:3 Chambers CFD Dye"
+
+\end_inset
+
+Visualization of the flow in the alveolar chamber in the full chip predicted
+ by CFD (left column) and imaged with dye (right column)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/RT_alveolus.tif
+	lyxscale 50
+	width 3in
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:RT alveolus"
+
+\end_inset
+
+Alveolar chamber
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/RT_conditioner.tif
+	lyxscale 50
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:RT Conditioner"
+
+\end_inset
+
+Conditioner
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/RT_3chambers.tif
+	lyxscale 50
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:RT 3 chambers"
+
+\end_inset
+
+Alveolus on full chip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Residence time dist CFD"
+
+\end_inset
+
+Residence time distributions predicted by CFD for carbon dioxide-saturated
+ water
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 The residence time distributions predicted by the CFD simulation for the
  final designs of the round alveolar chamber and the polygonal chamber are
- shown in Figure 5a and Figure 5b, respectively.
- Figure 5c shows the predicted combined residence time distribution for
- first two chambers of the device (bubble trap and conditioning chamber)
- and for the first three chambers of the device (bubble trap, conditioning
- chamber, and alveolus).
- Figure 5 also shows the performance of the chambers without any posts or
- baffles.
- Figure 6 indicates the dye concentration at the outlet of the alveolar
- chamber as a function of time when a concentration step function was applied
- at the chamber inlet.
+ shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RT alveolus"
+
+\end_inset
+
+ and Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RT Conditioner"
+
+\end_inset
+
+, respectively.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RT 3 chambers"
+
+\end_inset
+
+ shows the predicted combined residence time distribution for first two
+ chambers of the device (bubble trap and conditioning chamber) and for the
+ first three chambers of the device (bubble trap, conditioning chamber,
+ and alveolus).
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Residence time dist CFD"
+
+\end_inset
+
+ also shows the performance of the chambers without any posts or baffles.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Alveolus outlet"
+
+\end_inset
+
+ indicates the dye concentration at the outlet of the alveolar chamber as
+ a function of time when a concentration step function was applied at the
+ chamber inlet.
  The outlet concentrations for the conditioning chamber designs, as analyzed
- from the video captures, are shown in Figure 7, along with the concentrations
- expected from the CFD results for these chambers.
- Figure 8 includes the outlet concentration of the alveolar chamber in the
- three chamber design and the CFD modeling of this device.
+ from the video captures, are shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conditioner outlet"
+
+\end_inset
+
+, along with the concentrations expected from the CFD results for these
+ chambers.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3 chambers outlet"
+
+\end_inset
+
+ includes the outlet concentration of the alveolar chamber in the three
+ chamber design and the CFD modeling of this device.
  Dotted lines indicate plus or minus one standard deviation from the experimenta
 l average, while a dashed line indicates the concentration predicted by
  CFD.
- Figure 9 indicates the concentration at the outlet of the first three chambers
- for flow rates equal to one tenth and ten times the nominal flow rate.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Outlet 3 flow rates"
+
+\end_inset
+
+ indicates the concentration at the outlet of the first three chambers for
+ flow rates equal to one tenth and ten times the nominal flow rate.
  
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Outlet_alveolus.tif
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Alveolus outlet"
+
+\end_inset
+
+Saturation at the outlet of the alveolus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Outlet_conditioner.tif
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conditioner outlet"
+
+\end_inset
+
+Saturation at the outlet of the conditioning chamber
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Outlet_3chambers.tif
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:3 chambers outlet"
+
+\end_inset
+
+Saturation at the outlet of the alveolus on the full chip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Outlet_three_flow_rates.tif
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Outlet 3 flow rates"
+
+\end_inset
+
+Relative concentration at the outlet of the alveolus in the full chip for
+ three different flow rates
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -711,10 +1407,23 @@ Discussion
 \end_layout
 
 \begin_layout Standard
-The residence time distributions in Figures 5a and 5b indicate that the
- design optimization process clearly reduced the width of the residence
- time distribution for each chamber, improving the approximation to plug
- flow.
+The residence time distributions in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RT alveolus"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RT Conditioner"
+
+\end_inset
+
+ indicate that the design optimization process clearly reduced the width
+ of the residence time distribution for each chamber, improving the approximatio
+n to plug flow.
  The residence time distribution of the round chamber without baffles exhibited
  a long 
 \begin_inset Quotes eld
@@ -725,7 +1434,14 @@ tail
 \end_inset
 
  which was caused by the stagnation zones that formed near the outlet of
- the chamber (Figure 2).
+ the chamber (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Alveolus no baffles"
+
+\end_inset
+
+).
  The addition of baffles forced liquid from the inlet to flow around the
  outer perimeter of the chamber, greatly reducing these stagnation zones
  and suppressing the 
@@ -744,9 +1460,16 @@ tail
  the shape of the polygonal chamber could be optimized for plug-like flow
  without additional structures.
  However, the addition of posts further narrowed the residence time distribution.
- Figure 5c demonstrates that each successive chamber further widens the
- residence time distribution so that a plug of fluid becomes more disperse
- as it progresses through the device.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RT 3 chambers"
+
+\end_inset
+
+ demonstrates that each successive chamber further widens the residence
+ time distribution so that a plug of fluid becomes more disperse as it progresse
+s through the device.
  
 \end_layout
 
@@ -787,9 +1510,16 @@ The baffle design clearly improved the flow patterns in the round alveolar
 
 \begin_layout Standard
 The dye visualization of the flow patterns in the conditioning chamber (Figure
- 3) confirmed that the post layout improves the uniformity of the flow pattern
- in the conditioning, like the baffles improved the flow pattern in the
- alveolar chamber.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conditioner CFD Dye"
+
+\end_inset
+
+) confirmed that the post layout improves the uniformity of the flow pattern
+ in the conditioner, like the baffles improved the flow pattern in the alveolar
+ chamber.
  Specifically at 6.5s and 9.5s after the introduction of dye into the inlet,
  the condition chamber without posts exhibited large regions of stagnant
  liquid near the chamber walls, represented by lighter color.
@@ -797,11 +1527,25 @@ The dye visualization of the flow patterns in the conditioning chamber (Figure
  The CFD simulation predicted that the chamber without posts should be nearly
  completely filled with dyed liquid by 6.5s, while experiments showed that
  fillitheng the chamber required somewhat more time.
- In Figure 4, the flow pattern for the liquid in the alveolus of the three
- chamber device followed the CFD results as well as matched the trends of
- the isolated alveolar chamber with baffles.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3 Chambers CFD Dye"
+
+\end_inset
+
+, the flow pattern for the liquid in the alveolus of the three chamber device
+ followed the CFD results as well as matched the trends of the isolated
+ alveolar chamber with baffles.
  The dispersion of dye in the inlet of the alveolus due to the previous
- two chambers can be observed in Figure 4.
+ two chambers can be observed in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3 Chambers CFD Dye"
+
+\end_inset
+
+.
  Because of the dispersion at the inlet, the alveolar chamber in the three-chamb
 er device requires more time to reach a uniform concentration compared to
  the single alveolar chamber.
@@ -810,15 +1554,43 @@ er device requires more time to reach a uniform concentration compared to
 \end_layout
 
 \begin_layout Standard
-The images of the flow patterns (Figures 2-4) include information about
- the distribution of the outlet concentrations over the width of the chambers.
+The images of the flow patterns (Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Alveolus CFD vs Dye"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3 Chambers CFD Dye"
+
+\end_inset
+
+) include information about the distribution of the outlet concentrations
+ over the width of the chambers.
  In the chambers without posts or baffles, there was variation in concentration
  across the width of the outlet before full saturation was reached.
  The liquid near the walls had a lower concentration of dye than the liquid
  in the center of the channel, due to the laminar flow within the chamber
  and the channels.
- In both Figures 2 and 3, the posts or baffles greatly reduced this variation
- across the channel width, indicating more plug-like flow.
+ In both Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Alveolus CFD vs Dye"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conditioner CFD Dye"
+
+\end_inset
+
+, the posts or baffles greatly reduced this variation across the channel
+ width, indicating more plug-like flow.
  The baffles and posts effectively reduced the variation in times the liquid
  took to reach the outlet.
  
@@ -826,8 +1598,14 @@ The images of the flow patterns (Figures 2-4) include information about
 
 \begin_layout Standard
 The results from the quantitative evaluation of the outlet profiles in the
- isolated alveolar chamber (Figure 6) further confirmed the results from
- the CFD simulation.
+ isolated alveolar chamber (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Alveolus outlet"
+
+\end_inset
+
+) further confirmed the results from the CFD simulation.
  In both the CFD and in the experimental visualization, the start of the
  rise in concentration of the liquid at the outlet was delayed by the presence
  of the baffles.
@@ -841,8 +1619,15 @@ The results from the quantitative evaluation of the outlet profiles in the
 
 \begin_layout Standard
 The concentration profiles for the conditioning chambers with and without
- posts (Figure 7) reinforced the conclusion that the post layout improved
- the flow patterns to produce more plug-like flow.
+ posts (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conditioner outlet"
+
+\end_inset
+
+) reinforced the conclusion that the post layout improved the flow patterns
+ to produce more plug-like flow.
  The outlet concentrations in both chambers began to rise at approximately
  the same time, but the two profiles began to deviate at approximately the
  half-saturation point.
@@ -855,9 +1640,15 @@ The concentration profiles for the conditioning chambers with and without
 \end_layout
 
 \begin_layout Standard
-The concentration profile for the three chamber device (Figure 8) in this
- case was actually steeper than the CFD results, indicating a narrower residence
- time distribution within the entire chip than was predicted.
+The concentration profile for the three chamber device (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3 chambers outlet"
+
+\end_inset
+
+) in this case was actually steeper than the CFD results, indicating a narrower
+ residence time distribution within the entire chip than was predicted.
  The inlet concentration for the alveolus was probably influenced by the
  previous two chambers, so the inlet concentration for the alveolar chamber
  was not a step function for either the CFD or the experimental results.
@@ -874,7 +1665,14 @@ The concentration profile for the three chamber device (Figure 8) in this
 The three chamber device was imaged and the outlet concentrations analyzed
  using three different orders of magnitude for the flow rate to produce
  flows of varying ratios of convective flow to diffusive transfer (i.e.
- different Péclet numbers) (Figure 9).
+ different Péclet numbers) (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Outlet 3 flow rates"
+
+\end_inset
+
+).
  As expected, faster flow rates produced less steep concentration profiles
  in the normalized time scale, since the higher convective transport rates
  limited the amount of diffusion that occurred during the normalized time
@@ -884,14 +1682,22 @@ The three chamber device was imaged and the outlet concentrations analyzed
 \end_inset
 
 ) simulates the outlet concentration profile that would be produced using
- dissolved CO2 (with approximately one order of magnitude higher diffusion
- coefficient than dye) at a flow rate of 
+ dissolved 
+\begin_inset Formula $\textrm{CO_{2}}$
+\end_inset
+
+ (with approximately one order of magnitude higher diffusion coefficient
+ than dye) at a flow rate of 
 \begin_inset Formula $35\mu l\, min^{-1}$
 \end_inset
 
 , since the ratio of convective transfer to diffusive transfer is about
  the same for both conditions.
- This condition (CO2 dissolved in a liquid flowing at 
+ This condition (
+\begin_inset Formula $\textrm{CO_{2}}$
+\end_inset
+
+ dissolved in a liquid flowing at 
 \begin_inset Formula $35\mu l\, min^{-1}$
 \end_inset
 
