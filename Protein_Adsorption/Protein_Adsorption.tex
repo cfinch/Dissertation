@@ -67,7 +67,7 @@ them and their subsequent interactions with cells and tissue constructs.
 \subsection{Fibronectin}
 
 The unique capabilities of the WGM sensor were utilized to quantify
-the kinetics of the adsorption of fibronectin (FN) onto engineered
+the kinetics of the adsorption of fibronectin (FN) onto alkylsilane
 surfaces. Cell studies were then done to evaluate the biological activity
 of the adsorbed FN \cite{Keselowsky2004}. Fibronectin is an important
 protein in the extracellular matrix (ECM) that mediates the interaction
@@ -100,7 +100,7 @@ the adsorbed enzyme was measured to provide more information about
 its conformation on the surface. Glucose oxidase is an important and
 useful enzyme from a technological standpoint. GO which has been adsorbed
 or covalently attached to electrodes forms the basis for amperometric
-glucose sensors\cite{Wang2007}. Advances in portable blood glucose
+glucose sensors \cite{Wang2007}. Advances in portable blood glucose
 sensors have enabled diabetics to monitor and control their blood
 glucose levels, minimizing the risk of complications from the disease
 \cite{Oliver2009}. Perhaps because of its important role in biosensors,
@@ -178,9 +178,149 @@ gallery mode biosensor}
 
 %
 \end{figure}
- Bovine plasma fibronectin in solution was obtained from Sigma-Aldrich
-(F1141) and diluted to the desired concentrations with 50mM phosphate
-buffered saline (PBS) at pH 7.4.
+ After the assembly of the flow cell, PBS solution was flowed through
+the tubing and flow cell until the system reach thermal equilibrium.
+Protein solution at the appropriate concentration was flowed through
+the system with a peristaltic pump at a volumetric flow rate of $150\mu l/hr$.
+LabVIEW (National Instruments, Austin, TX) was used to control the
+sweep of the laser wavelength and acquire data. The data acquisition
+software tracked the location of each resonant valley in the acquired
+spectrum using a peak fitting algorithm. All valleys with a FWHM (full
+width at half maximum) value below a certain threshold were tracked,
+and the position of each valley minimum was determined by fitting
+a Bessel function. The position of each resonance over time was saved
+to a binary file to be analyzed later.
+
+Data analysis software was written using the Python programming language.
+The binary file created by LabVIEW for each experiment was loaded
+into the software and the spectral location ($nm$) of each resonance
+was reconstructed over time from the raw data. One resonance, with
+a continuous trace and the lowest FWHM value, was chosen for further
+analysis. A linear baseline subtraction was applied to correct for
+baseline drift. A method based on first order perturbation theory
+\cite{Vollmer2002,Arnold2003} was used to calculation of the surface
+concentration of the adsorbed species $\sigma_{s}$ based on the measured
+change in resonant wavelength $\Delta\lambda$:\begin{equation}
+\frac{\Delta\lambda}{\lambda}=\frac{\alpha_{ex}\sigma_{s}}{\epsilon_{0}\left(n_{s}^{2}-n_{m}^{2}\right)R}\label{eq:WGM data analysis}\end{equation}
+$\lambda$ is the nominal wavelength of the resonance, $\Delta\lambda$
+is the wavelength shift of the resonance, $n_{s}$ is the refractive
+index of the sphere (1.46), $n_{m}$ is the refractive index of the
+medium surrounding the sphere (1.3357), $\alpha_{ex}$ is the excess
+polarizability of the protein molecule ($0.184cm^{3}g^{-1}$), $\epsilon_{0}$
+is the permittivity of free space and $R$ is the radius of the spheroid.
+Spheroid radii were measured from images taken using brightfield microscopy.
+Two runs for each concentration were averaged for the DETA and 13F
+surfaces, and a single run was used for each concentration on the
+SiPEG surface.
+
+
+\subsubsection{Surface Preparation}
+
+A single mode optical fiber with an acrylate polymer coating, $9\mu m$
+core and $125\mu m$ cladding (SMF-28e+, Corning Inc., Corning, NY)
+was used to fabricate the resonators \cite{Vollmer2002}. The acrylate
+coating was first removed using a fiber optic stripper and the stripped
+region was cleaned with isopropyl alcohol (iPA) to remove any residual
+acrylate. The end of the stripped fiber was then placed in the flame
+of a nitrous-butane Microflame torch (Azuremoon trading company, Cordova,
+TN). A nitrous-butane flame was used due to the very high temperatures
+needed to melt the glass and form the resonator ($>700^{\circ}C$).
+The tip of the fiber was placed in the flame until the glass glowed
+bright white and began to melt. The surface tension of the molten
+glass caused it to form into a spheroidal droplet. As the tip melted,
+the fiber was rotated to ensure that the resonator remained centered
+on the stalk of the fiber. Resonator radii used for these studies
+ranged from $125\mu m$ to $175\mu m$.
+
+Glass resonators and glass coverslips (for control measurements) were
+modified with silane surface chemistry to achieve the desired surface
+properties. The glass was first treated with an oxygen plasma for
+20 minutes. All silane solutions were prepared at a concentration
+of 0.1\% (vol:vol) in distilled toluene in an MBraun glovebox (Stratham,
+NH) under anhydrous, low oxygen conditions. Storing and preparing
+solutions in this way prevented solution phase polymerization of the
+silane as nascent water vapor and atmospheric oxygen can react with
+the monomer. Preparation of 13F surfaces was performed in the glovebox
+due to the extreme reactivity of the monomer. Microspheres were immersed
+in the 0.1\% 1,1,2,2-perfluorooctyl\,trichlorosilane solution for
+30 minutes. 5 minutes prior to completion of the reaction, the beaker
+was removed from the glovebox and placed in a chemical fume hood.
+Both the SiPEG and DETA surface modifications were performed in a
+chemical fume hood. The SiPEG coating was achieved by starting with
+a 0.1\% solution (vol:vol) of 2-{[}Methoxypoly(ethyleneoxy)propyl{]}trimethoxysilane
+(Gelest, Tullytown, PA) and adding concentrated HCl to create a 0.08\%
+HCl solution (vol:vol). The resonators and coverslips were immersed
+in the resultant solution for 1 hour. DETA coated substrates were
+immersed in a 0.1\% solution (vol:vol) of (3-trimethoxysilyl propyl)diethyltriamine
+(Gelest) in tolune, gently heated to $65^{\circ}C$ over 30 minutes
+and then allowed to cool for 15-20 minutes. Substrates were rinsed
+three times with fresh toluene and heated again to $65^{\circ}C$
+in fresh toluene for 30 minutes. Upon completion of the reactions,
+the microspheres and coverslips were washed three times in dry toluene
+and stored in a desiccator until needed. Control coverslips were analyzed
+by XPS and contact angle goniometry, and the results were consistent
+with previously published results \cite{Wilson2011a}.
+
+
+\subsubsection{Fibronectin}
+
+The kinetics of FN adsorption were measured with the WGM biosensor
+as described in \cite{Wilson2011}. The experiments will be briefly
+summarized here. Bovine plasma fibronectin in solution (F1141, Sigma-Aldrich,
+St. Louis, MO) and diluted with 50mM phosphate buffered saline (PBS)
+at pH 7.4. Concentrations of $10\mu g/ml$, $5\mu g/ml$, $1\mu g/ml$,
+$0.5\mu g/ml$ and $0.25\mu g/ml$ were used for the experiments.
+To determine the biological activity of the protein adsorbed on the
+various silanes, cell culture experiments were performed on silane-coated
+coverslips that had been treated with $1\mu g/ml$ of FN in PBS (pH
+7.4). Embryonic hippocampal neurons and skeletal myoblasts were cultured
+on the SiPEG, DETA, and 13F surfaces in a serum-free culture system
+\cite{Brewer1995,Das2007}. After plating, cultures were maintained
+in a water-jacketed incubator at $37^{\circ}C$ (85\% relative humidity)
+and 5\% \ce{CO2} for seven days. Phase-contrast microscopy images
+were taken during the course of the culture to document the morphology
+of the cells and, in the case of skeletal myoblasts, the differentiation
+of the cells into functional myotubes. A live-dead assay (Invitrogen,
+Carlsbad, CA) was performed at day 7 to determine the amount of living
+versus dead cells on the coverslips.
+
+Skeletal muscle was dissected from the hind limb thighs of a rat fetus
+at embryonic day 18 (Charles River Laboratories, Wilmington, MA) as
+previously described \cite{Wilson2011}. Purified myocytes were plated
+at a density of 500-800 cells per square millimeter onto FN-coated
+coverslips. Myocytes were allowed to attach for 1 hour after which
+time 3 ml of culture medium (neurobasal media containing B-27 (Invitrogen,
+Carlsbad, CA{]}), Glutamax (Invitrogen, Carlsbad, CA), and Pencillin/Streptavidin)
+was added. Culture medium was exchanged every 4 days. 
+
+Embryonic hippocampal neurons were prepared according to a previously
+published protocol \cite{Wilson2011}. Rat pups at embryonic day 18
+were dissected from timed pregnant rats and the hippocampi were isolated
+from the embryonic brains. Isolated hippocampal neurons were resuspended
+in culture medium (Neurobasal / B27 / Glutamax\textbackslash{}u2122
+/ Antibiotic-antimycotic) and plated at a density of 75 cells per
+square millimeter. After plating, 3 ml of culture media was added.
+Half of the culture medium was changed every 3-4 days. 
+
+
+\subsubsection{Glucose Oxidase}
+
+The kinetics of GO adsorption were measured with the WGM biosensor
+using the same general protocol as the FN experiments. Glucose oxidase
+from \emph{aspergillis niger} was obtained from Sigma-Aldrich (G7141,
+St. Louis, MO) and diluted to $100\mu g/ml$ and $10\mu g/ml$ with
+PBS at pH 7.4. Glass resonators were placed in a 96-well plate and
+incubated for two hours in the glucose oxidase solution. The resonators
+were then rinsed three times with PBS, placed in a new 96-well plate
+and allowed to soak for two hours in $100\mu l$ of PBS to remove
+any reversibly-bound enzyme. The Amplex Red glucose oxidase activity
+assay (Invitrogen, Carlsbad, CA) was used to test the activity of
+the enzyme adsorbed to the resonator. $50\mu l$ of the PBS was removed
+from each well and $50\mu l$ of Amplex Red solution was added. A
+Synergy HT plate reader (Bio-Tek, Winooski, VT) was used read the
+adsorbance of each well at a wavelength of $530nm$. A standard curve,
+created using known concentrations of GO, was used to translate the
+absorbance measurments into activity units.
 
 
 \subsection{Analysis of Transport in the WGM Biosensor}
@@ -201,10 +341,10 @@ to approximate concentration derivatives, and the Euler method was
 used for time stepping in transient simulations. A multi-scale approach
 was used to obtain high-resolution results while keeping the simulation
 run time reasonable. A large-scale model of the flow system, including
-the 40 cm of tubing between the three-way stopcock and the flow cell,
-was created using CFD-GEOM and discretized using a structured mesh.
-This model did not include the resonator and waveguide, as they have
-a minimal effect on the overall flow in the channel. A steady-state
+the $40cm$ of tubing between the three-way stopcock and the flow
+cell, was created using CFD-GEOM and discretized using a structured
+mesh. This model did not include the resonator and waveguide, as they
+have a minimal effect on the overall flow in the channel. A steady-state
 simulation was performed first to determine the flow field. Transient
 simulations were then performed in which the concentration at the
 inlet was suddenly increased from zero to the target concentration.
@@ -391,13 +531,16 @@ also ensured that the shear rate was constant in the region where
 the evanescent wave was excited, minimizing any shear rate effects
 on the adsorption of protein from solution. Also, it should be noted
 that the waveguide coupled to the resonator created a negligible disturbance
-of the flow field. The evolution of bulk concentration in the flow
-cell over time is shown in Figure \ref{fig:CFD Bulk Conc}.%
-\begin{figure}
-\includegraphics[width=0.75\columnwidth]{Protein_Adsorption/Plots/CFD_flow_cell_inlet_concentration}
+of the flow field. 
 
-\caption{\label{fig:CFD Bulk Conc}CFD prediction of concentration in the flow
-cell}
+
+\subsubsection{Fibronectin}
+
+The evolution of bulk concentration in the flow cell over time is
+shown in Figure \ref{fig:CFD Bulk Conc}.%
+\begin{figure}
+\caption{\label{fig:CFD Bulk Conc}CFD prediction of concentration very close
+to the surface of the resonator}
 
 
 %
@@ -407,11 +550,13 @@ resonator required less than 60 seconds to reach the bulk solution
 concentration. The near-surface concentration predicted by the high-resolution
 CFD model is shown in Figure \ref{fig:CFD near surface conc}.%
 \begin{figure}
-\includegraphics[width=0.75\columnwidth]{Protein_Adsorption/Plots/CFD_near_surface_concentration}
+\subfloat[\label{fig:CFD FN DETA surf conc}DETA]{\includegraphics{Protein_Adsorption/Plots/CFD_FN_DETA_surf_conc}}\subfloat[\label{fig:CFD FN 13F surf conc}13F]{\includegraphics{Protein_Adsorption/Plots/CFD_FN_13F_surf_conc}}
 
-\caption{\label{fig:CFD near surface conc}CFD prediction of concentration
-very close to the surface of the resonator. Thick lines indicate CFD
-predictions, while thin lines indicate average experimental data.}
+\includegraphics{Protein_Adsorption/Plots/CFD_FN_legend}
+
+\caption{\label{fig:CFD near surface conc}CFD and experimental predictions
+of surface density of adsorbed FN. Thick lines indicate CFD predictions,
+while thin lines indicate average experimental data.}
 
 
 %
@@ -421,6 +566,48 @@ resonator required considerably more time to reach its final value.
 The effects of this difference in near surface concentration with
 respect to the bulk were taken into account when fitting the model
 to the experimental data.
+
+
+\subsubsection{Glucose Oxidase}
+
+A similar analysis was performed for the transport of glucose oxidase
+in the flow cell. The concentration near the surface of the resonator
+is shown in Figure \ref{fig:CFD GO near surf conc}.%
+\begin{figure}
+\subfloat[\label{fig:CFD GO DETA near surf conc}DETA]{\includegraphics{Protein_Adsorption/Plots/CFD_GO_DETA_near_surf_conc}
+
+}\subfloat[\label{fig:CFD GO 13F near surf conc}13F]{\includegraphics{Protein_Adsorption/Plots/CFD_GO_13F_near_surf_conc}
+
+
+
+}
+
+\subfloat[\label{fig:CFD GO glass near surf conc}Glass]{\includegraphics{Protein_Adsorption/Plots/CFD_GO_glass_near_surf_conc}
+
+
+
+}
+
+\caption{\label{fig:CFD GO near surf conc}Concentration near the surface of
+the resonator predicted by CFD for GO adsorption experiments}
+%
+\end{figure}
+ To verify that the correct kinetic constants were used in Langmuir
+adsorption model, the surface density of adsorbed protein over time
+predicted by the CFD simulation was plotted along with the measured
+surface density. These results are shown in Figure .%
+\begin{figure}
+\subfloat[\label{fig:CFD GO DETA surf conc}DETA]{\includegraphics{Protein_Adsorption/Plots/CFD_GO_DETA_surf_conc}}\subfloat[\label{fig:CFD GO 13F surf conc}13F]{\includegraphics{Protein_Adsorption/Plots/CFD_GO_13F_surf_conc}
+
+}
+
+\subfloat[\label{fig:CFD GO glass surf conc}Glass]{\includegraphics{Protein_Adsorption/Plots/CFD_GO_glass_surf_conc}
+
+}\includegraphics{Protein_Adsorption/Plots/CFD_surf_conc_legend}\caption{\label{fig:CFD GO surface density}Surface density of adsorbed protein
+predicted by CFD simulation and measured by WGM biosensor}
+%
+\end{figure}
+
 
 
 \subsection{Modeling the Adsorption of Fibronectin on Silane Surfaces}
@@ -535,6 +722,60 @@ different. This difference could have significant implications for
 modeling experimental data, if protein in state $\alpha$ functions
 differently than protein in state $\beta$.
 
+
+\subsection{Transport Analysis}
+
+CFD simulations showed that near-surface concentration of fibronectin
+was influenced by transport limitations early in the adsorption process
+on DETA and 13F surfaces. Initially, transport was limited by the
+large amount of buffer that had to be displaced from the flow system
+before the protein solution could reach the resonator at full concentration.
+This limitation was due to the prototype nature of the system, and
+can be easily eliminated in future systems. The rate of adsorption
+onto the resonator was high enough to deplete the fibronectin in the
+boundary layer near the resonator. Because of the no-slip boundary
+condition at the surface and the absence of turbulent mixing, diffusion
+is the only way that fibronectin can be transported to the surface
+to adsorb. Fibronectin is a relatively large protein with a correspondingly
+low diffusion coefficient, so its rate of diffusive transport is rather
+low. The near-surface concentation was used instead of assuming a
+constant concentration when fitting adsorption models to the fibronectin
+data.
+
+Transport limitation has much less influence on the adsorption of
+glucose oxidase. GO is a smaller protein than FN and its initial rate
+of adsorption is lower. GO reaches 99\% of full concentration at the
+resonator surface within 20 seconds, so the near-surface depletion
+has minimal impact on the kinetics. Constant concentration was assumed
+when fitting the kinetic adsorption models to the GO data.
+
+Although the flow cell was designed to minimize transport limitations,
+CFD analysis indicated that transport had some influence on the rate
+of adsorption of FN on DETA and 13F surfaces. After the protein solution
+in the channel reached its target concentration, transport was limited
+by the rate of diffusion across a depletion layer that formed at the
+surface of the resonator. This type of limitation is virtually unavoidable
+in microfluidic systems when the rate of adsorption is high and the
+solution concentration is low. Our modeling method was approximate
+in that the evolution of the near-surface concentration over time
+was computed once, based on the estimated adsorption rate, and was
+not modified during the curve-fitting procedure. A more accurate method
+would be to incorporate the CFD model into the fitting routine so
+that the near-surface concentration would be updated as the adsorption
+rate changed \cite{Jenkins2004}. However, this method is only practical
+when the CFD simulation is simple enough to run very quickly. It was
+also assumed that the near-surface concentration increased linearly
+from sixty seconds until the target concentration was reached. Although
+this probably had a slight impact on the modeled kinetics, it was
+better than assuming that the concentration near the resonator remained
+constant.
+
+
+\subsection{Adsorption Models}
+
+
+\subsubsection{Fibronectin}
+
 The equilibrium surface concentration of FN, as measured by the WGM
 system, compares favorably with previously published results for a
 solution concentration of $10\mu g/ml$. Although different measurement
@@ -608,36 +849,6 @@ substrates than thiol monolayers. In contrast, neutral hydrophilic
 surfaces have a much lower affinity for protein, so depletion of protein
 near the surface would be much less of a factor, resulting in a good
 match between the WGM and static measurements. 
-
-Although the flow cell was designed to minimize transport limitations,
-CFD analysis indicated that transport had some influence on the rate
-of adsorption on DETA and 13F. Initially, transport was limited by
-the large amount of buffer that had to be displaced from the flow
-system before the protein solution could reach the resonator at full
-concentration. This limitation was due to the prototype nature of
-the system, and can be easily eliminated in future systems. After
-the protein solution in the channel reached its target concentration,
-transport was limited by the rate of diffusion across a depletion
-layer that formed at the surface of the resonator. This type of limitation
-is virtually unavoidable in microfluidic systems when the rate of
-adsorption is high and the solution concentration is low. The flow
-of water is laminar at small length scales, and the no-slip boundary
-condition at the resonator surface means that transport to the surface
-is almost entirely diffusive. Our modeling method was approximate
-in that the evolution of the near-surface concentration over time
-was computed once, based on the estimated adsorption rate, and was
-not modified during the curve-fitting procedure. A more accurate method
-would be to incorporate the CFD model into the fitting routine, so
-that the near-surface concentration would be updated as the adsorption
-rate changed \cite{Jenkins2004}. However, this method is only practical
-when the CFD simulation is simple enough to run very quickly. It was
-also assumed that the near-surface concentration increased linearly
-from sixty seconds until the target concentration was reached. Although
-this probably had some impact on the modeled kinetics, it was better
-than assuming that the concentration near the resonator remained constant.
-The near-surface concentration can have a large effect on the kinetics
-of protein adsorption, and must be taken into account when fitting
-kinetic parameters.
 
 Both the embryonic hippocampal neurons and myocytes showed significantly
 better survival on DETA surfaces than 13F surfaces. However, the amount
@@ -764,3 +975,6 @@ concentrations. Future systems based on whispering gallery mode technology
 have the potential to study the adsorption of proteins on SiPEG surfaces
 in greater detail, which could lead to greater understanding as to
 why SiPEG resists protein adsorption. 
+
+
+\subsubsection{Glucose Oxidase}

@@ -34,5 +34,14 @@ draw(particle1);
 draw(particle2);
 
 // Interaction zone
-draw((0,1)--(4,1), p=dashed);
-draw((0,3)--(4,3), p=dashed);
+draw((0,1)--(3.75,1), p=dashed);
+draw((0,3)--(3.75,3), p=dashed);
+
+// Flux arrows
+path Jc = (4,3.5)--(4,2.5);
+path Js = (4,1.5)--(4,0.5);
+draw(Jc, Arrow);
+label("$J_c$", (4,3.5), N);
+draw(Js, Arrow);
+label("$J_s$", (4,1.5), N);
+
