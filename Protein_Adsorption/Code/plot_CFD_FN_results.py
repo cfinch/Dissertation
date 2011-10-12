@@ -9,7 +9,6 @@ from Surface_Reaction_Tools.data_utilities import read_ACE_surf_conc, \
         read_ACE_reaction_rate, read_ACE_near_surface_concentration
 
 # Setup
-separate_plots = True
 molar_mass = 450e3
 f = molar_mass * 1e5
 
@@ -32,13 +31,7 @@ colors = {'10.0 micrograms/ml':'k', '5.0 micrograms/ml':'b',
 
 mpl.rc('font', size=8.0, family='serif')    # Set default font to 8pt
 
-if not separate_plots:
-    width = 190.0/25.4
-    plt.figure(figsize=(width,width/1.618), facecolor='w')
-    plt.subplots_adjust(left=0.08, right=0.96, top=0.93, bottom=0.09, 
-            wspace=0.15, hspace=0.4)
-else:
-    width = 3.0
+width = 3.0
 
 baseNames = ['/home/cfinch/cfinch/Microfluidics/Whispering Gallery Mode Sensor/CFD/FN/Results/FN_250ngml',
     '/home/cfinch/cfinch/Microfluidics/Whispering Gallery Mode Sensor/CFD/FN/Results/FN_500ngml',
@@ -52,14 +45,14 @@ experimentalFileName = "/home/cfinch/cfinch/Microfluidics/Whispering Gallery Mod
 (concentrations, times, mean_surf_conc, std_surf_conc, exp_labels) = \
         load_average_data(experimentalFileName)
 
-if separate_plots:
-    plt.figure(figsize=(width,width/1.618), facecolor='w')
-    plt.subplots_adjust(left=0.16, bottom=0.2, top=0.87)
-else:
-    plt.subplot(2,2,1)
-    plt.title("FN on 13F")
+plt.figure(figsize=(width,width/1.618), facecolor='w')
+plt.subplots_adjust(left=0.16, bottom=0.2, top=0.87)
+
+plt.figure(figsize=(width,width/1.618), facecolor='w')
+plt.subplots_adjust(left=0.16, bottom=0.2, top=0.87)
 
 for i in range(len(mean_surf_conc)):
+    plt.figure(1)
     plt.plot(times[i], mean_surf_conc[i], color=colors[exp_labels[i]], 
             dashes=dashes[exp_labels[i]], antialiased=True, label=labels[exp_labels[i]])
     plt.plot(times[i], mean_surf_conc[i]+std_surf_conc[i], 
@@ -71,15 +64,24 @@ for i in range(len(mean_surf_conc)):
     fileName = baseNames[i] + '_Surf_Conc.DAT'
     t, cB, CAB = read_ACE_surf_conc(fileName)
     plt.plot(t, CAB * f, color='k', linewidth=2, dashes=dashes[exp_labels[i]]) 
-#            label=r"$\mathrm{CFD} \," + str(exp_C[i]) + "\, \mu g/ml $")
-#    plt.title('Surface Concentration')
-#    plt.axis([0.0, 200.0, 0.0, 120.0])
-#    plt.xlabel('$t \, (sec)$')
-#    plt.ylabel('$ng/cm^2$')
 
+    # Near-surface concentration
+    fileName = baseNames[i] + '_Near_Surf_Conc.DAT'
+    t, c = read_ACE_near_surface_concentration(fileName)
+
+    plt.figure(2)
+    plt.plot(t, c * 1000 * molar_mass, color=colors[exp_labels[i]], 
+            dashes=dashes[exp_labels[i]], label=labels[exp_labels[i]]) 
+
+plt.figure(1)
 plt.xlabel(x_label)
 plt.ylabel(y_label)
 plt.axis([0.0, 200, 0, 250])
+
+plt.figure(2)
+plt.axis([0.0, 200, 0.0, 10.0])
+plt.xlabel('$t \, (sec)$')
+plt.ylabel('$\mu g/ml$')
 
 # Fn on DETA
 experimentalFileName = "/home/cfinch/cfinch/Microfluidics/Whispering Gallery Mode Sensor/Experimental Data Analysis/Fn/Kerry/Fn_DETA_experiments.h5"
@@ -87,14 +89,14 @@ experimentalFileName = "/home/cfinch/cfinch/Microfluidics/Whispering Gallery Mod
 (concentrations, times, mean_surf_conc, std_surf_conc, exp_labels) = \
         load_average_data(experimentalFileName)
 
-if separate_plots:
-    plt.figure(figsize=(width,width/1.618), facecolor='w')
-    plt.subplots_adjust(left=0.16, bottom=0.2, top=0.87)
-else:
-    plt.subplot(2,2,2)
-    plt.title("FN on DETA")
+plt.figure(figsize=(width,width/1.618), facecolor='w')
+plt.subplots_adjust(left=0.16, bottom=0.2, top=0.87)
+
+plt.figure(figsize=(width,width/1.618), facecolor='w')
+plt.subplots_adjust(left=0.16, bottom=0.2, top=0.87)
 
 for i in range(len(mean_surf_conc)):
+    plt.figure(3)
     plt.plot(times[i], mean_surf_conc[i], color=colors[exp_labels[i]], 
             dashes=dashes[exp_labels[i]], antialiased=True, 
             label=labels[exp_labels[i]])
@@ -108,32 +110,38 @@ for i in range(len(mean_surf_conc)):
     t, cB, CAB = read_ACE_surf_conc(fileName)
     plt.plot(t, CAB * f, color='k', linewidth=2, dashes=dashes[exp_labels[i]]) 
 
+    # Near-surface concentration
+    fileName = baseNames[i] + '_Near_Surf_Conc.DAT'
+    t, c = read_ACE_near_surface_concentration(fileName)
+
+    plt.figure(4)
+    plt.plot(t, c * 1000 * molar_mass, color=colors[exp_labels[i]], dashes=dashes[exp_labels[i]]) 
+
+plt.figure(3)
 plt.xlabel(x_label)
-if separate_plots:
-    plt.ylabel(y_label)
+plt.ylabel(y_label)
 plt.axis([0.0, 200, 0, 250])
 
-if separate_plots:
-    # Make the legend without a figure
-    from matplotlib.lines import Line2D
-    plt.figure(figsize=(width,width/2.5), facecolor='w')
-    ax = plt.gca()
-    ax.set_frame_on(False)
-    ax.axes.get_xaxis().set_visible(False)
-    ax.axes.get_yaxis().set_visible(False)
-    lines = []
-    line_labels = []
-    for i in range(len(mean_surf_conc)):
-        lines.append(Line2D((0.0, 0.0), (0.0, 0.0), color=colors[exp_labels[i]], 
-                dashes=dashes[exp_labels[i]]))
-        line_labels.append(labels[exp_labels[i]])
-    plt.legend(lines, line_labels, loc='center', 
-            handlelength=6, labelspacing=0.1)
-else:
-    plt.legend(borderaxespad=0, bbox_to_anchor=(0,-1.3), loc='lower left', 
-            handlelength=6, labelspacing=0.1)
+plt.figure(4)
+plt.axis([0.0, 200, 0.0, 1.0])
+plt.xlabel('$t \, (sec)$')
+plt.ylabel('$\mu g/ml$')
 
-#plt.savefig('Plots/Fn_experimental_averaged.eps')
+# Make the legend without a figure
+from matplotlib.lines import Line2D
+plt.figure(figsize=(width,width/2.5), facecolor='w')
+ax = plt.gca()
+ax.set_frame_on(False)
+ax.axes.get_xaxis().set_visible(False)
+ax.axes.get_yaxis().set_visible(False)
+lines = []
+line_labels = []
+for i in range(len(mean_surf_conc)):
+    lines.append(Line2D((0.0, 0.0), (0.0, 0.0), color=colors[exp_labels[i]], 
+            dashes=dashes[exp_labels[i]]))
+    line_labels.append(labels[exp_labels[i]])
+plt.legend(lines, line_labels, loc='center', 
+        handlelength=6, labelspacing=0.1)
 
 plt.show()
 

@@ -44,7 +44,7 @@ for i in range(len(exp_C)):
     plt.axis([0.0, 60.0, 0.0, 100.0])
     plt.xlabel('$t \, (sec)$')
     plt.ylabel('$\mu g/ml$')
-#    plt.legend(loc='center right', handlelength=3)
+    plt.legend(loc='center right', handlelength=4)
 
     # Find time at which concentration reaches target %
     index = abs(c - c.max() * target_fraction).argmin()

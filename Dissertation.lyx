@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{babel}
+\usepackage{bpchem}
 
 \hypersetup{
     bookmarks=true,         % show bookmarks bar?
@@ -296,7 +297,11 @@ This would not have been possible without support from my advisors, Dr.
 I thank the Institute for Simulation and Training (IST), the I
 \backslash
 textsuperscript{2} Lab, and the NanoScience Technology Center at the University
- of Central Florida for financial support.
+ of Central Florida, as well the National Institutes for Health (grant 
+\backslash
+#RO1EB005459) and the United States Army (grant 
+\backslash
+#W81XWH-10-1-0542) for financial support.
   IST also donated computing resources on the Stokes cluster.
 \end_layout
 
