@@ -572,7 +572,7 @@ reference "fig:WGM System Diagram"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1070,7 +1070,7 @@ reference "fig:CFD flow cell"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1150,7 +1150,7 @@ reference "fig:CFD 3D resonator"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1203,7 +1203,7 @@ reference "fig:CFD Mesh 2D"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1760,7 +1760,7 @@ Since the Langmuir and RSA models only allow protein to exist in one state,
 \end_layout
 
 \begin_layout Subsection
-Fitting Kinetic Models to Experimental Data
+Implementation of Models and Fitting to Experimental Data
 \end_layout
 
 \begin_layout Standard
@@ -1830,7 +1830,11 @@ key "Jones2001-"
 \end_inset
 
 .
- Each model was fitted to the experimental data from the WGM biosensor for
+ 
+\end_layout
+
+\begin_layout Standard
+Each model was fitted to the experimental data from the WGM biosensor for
  glass, DETA, 13F, and SiPEG by adjusting the parameters until the best
  possible fit was achieved, according to the least-squares criterion.
  The concentration of protein in solution near the surface was assumed to
@@ -1874,7 +1878,7 @@ reference "fig:Blocking function comparison"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1944,7 +1948,7 @@ reference "fig:SPT vs Langmuir kinetics"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -2177,13 +2181,13 @@ reference "fig:CFD Bulk Conc"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2222,7 +2226,7 @@ Near-surface concentration
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2321,13 +2325,13 @@ reference "fig:CFD near surface conc"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2359,7 +2363,7 @@ DETA
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2449,7 +2453,7 @@ reference "fig:CFD GO near surf conc"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2488,13 +2492,13 @@ CFD prediction of the concentration of GO near the surface of the resonator.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2526,7 +2530,7 @@ DETA
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2564,7 +2568,7 @@ name "fig:CFD GO 13F surf conc"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2643,7 +2647,7 @@ reference "fig:FN experiments"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2665,7 +2669,7 @@ name "fig:FN experiments"
 
 \end_inset
 
-Measured adsorption kinetics for fibronectin on 13F, DETA, and OEG surfaces.
+Measured adsorption kinetics for fibronectin on 13F, DETA, and SiPEG surfaces.
 \end_layout
 
 \end_inset
@@ -2710,79 +2714,24 @@ name "tab:FN on DETA params"
 
 \end_inset
 
-Parameter values fitted to FN on DETA.
+Fitted parameter values for FN on DETA.
 \end_layout
 
 \end_inset
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="6">
+<lyxtabular version="3" rows="5" columns="7">
 <features>
-<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0.75in">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Langmuir
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Langmuir
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RSA
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RSA
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-units
-\end_layout
-
-\end_inset
-</cell>
-</row>
+<column alignment="center" valignment="top" width="0">
 <row bottomspace="default">
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2795,6 +2744,9 @@ units
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $k_{a}\left(cm^{3}\, ng^{-1}\, s^{-1}\right)$
+\end_inset
+
 
 \end_layout
 
@@ -2804,7 +2756,10 @@ units
 \begin_inset Text
 
 \begin_layout Plain Layout
-two-stage
+\begin_inset Formula $k_{s}\left(s^{-1}\right)$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2813,6 +2768,9 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $k_{d}\left(s^{-1}\right)$
+\end_inset
+
 
 \end_layout
 
@@ -2822,7 +2780,10 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
-two-stage
+\begin_inset Formula $\sigma_{\alpha}\left(nm^{2}\right)$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2831,6 +2792,21 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\beta}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
 
 \end_layout
 
@@ -2838,20 +2814,41 @@ two-stage
 </cell>
 </row>
 <row topspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\noun off
-\color none
-\begin_inset Formula $k_{a}$
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
 \end_inset
 
 
@@ -2875,10 +2872,113 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
 \end_inset
 
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir with transition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA
 \end_layout
 
 \end_inset
@@ -2899,7 +2999,16 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $2.37\times10^{-6}$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.16\times10^{-4}$
 \end_inset
 
 
@@ -2911,7 +3020,28 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $cm^{3}ng^{-1}s^{-1}$
+\begin_inset Formula $182$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $86.1$
 \end_inset
 
 
@@ -2920,15 +3050,12 @@ two-stage
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="default">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $k_{s}$
-\end_inset
-
-
+RSA with transition
 \end_layout
 
 \end_inset
@@ -2937,31 +3064,7 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
+\begin_inset Formula $2.37\times10^{-6}$
 \end_inset
 
 
@@ -2985,68 +3088,6 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $s^{-1}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $k_{d}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $3.16\times10^{-4}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Formula $2.12\times10^{-4}$
 \end_inset
 
@@ -3059,21 +3100,7 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $s^{-1}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\sigma_{\alpha}$
+\begin_inset Formula $203$
 \end_inset
 
 
@@ -3085,179 +3112,7 @@ two-stage
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1.82\times10^{-12}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $2.03\times10^{-12}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $cm^{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\sigma_{\beta}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $3.80\times10^{-12}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $cm^{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $SSE$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $86.1$
+\begin_inset Formula $380$
 \end_inset
 
 
@@ -3272,15 +3127,6 @@ two-stage
 \begin_inset Formula $86.0$
 \end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -3370,23 +3216,24 @@ name "tab:FN on 13F"
 
 \end_inset
 
-Parameter values fitted to FN on 13F.
+Fitted parameter values for FN on 13F.
 \end_layout
 
 \end_inset
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="6">
+<lyxtabular version="3" rows="5" columns="7">
 <features>
-<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0.75in">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<column alignment="center" valignment="top" width="0">
+<row bottomspace="default">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3396,6 +3243,80 @@ Parameter values fitted to FN on 13F.
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a}\left(cm^{3}\, ng^{-1}\, s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{s}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\alpha}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\beta}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3404,58 +3325,32 @@ Langmuir
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Langmuir two-stage
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RSA
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RSA two-stage
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Units
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\noun off
-\color none
-\begin_inset Formula $k_{a}$
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
 \end_inset
 
 
@@ -3479,10 +3374,113 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
 \end_inset
 
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir with transition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA
 \end_layout
 
 \end_inset
@@ -3503,7 +3501,16 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.99\times10^{-6}$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.49\times10^{-4}$
 \end_inset
 
 
@@ -3515,7 +3522,28 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $cm^{3}ng^{-1}s^{-1}$
+\begin_inset Formula $196$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $121$
 \end_inset
 
 
@@ -3524,15 +3552,12 @@ Units
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="default">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $k_{s}$
-\end_inset
-
-
+RSA with transition
 \end_layout
 
 \end_inset
@@ -3541,31 +3566,7 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
+\begin_inset Formula $1.99\times10^{-6}$
 \end_inset
 
 
@@ -3589,68 +3590,6 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $s^{-1}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $k_{d}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $2.49\times10^{-4}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Formula $9.95\times10^{-5}$
 \end_inset
 
@@ -3663,21 +3602,7 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $s^{-1}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\sigma_{\alpha}$
+\begin_inset Formula $176$
 \end_inset
 
 
@@ -3689,179 +3614,7 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1.96\times10^{-12}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1.76\times10^{-12}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $cm^{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\sigma_{\beta}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $3.03\times10^{-12}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $cm^{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $SSE$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $121$
+\begin_inset Formula $303$
 \end_inset
 
 
@@ -3876,15 +3629,6 @@ Units
 \begin_inset Formula $85.5$
 \end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -3977,16 +3721,17 @@ Parameter values fitted to FN on SiOEG.
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="6">
+<lyxtabular version="3" rows="5" columns="7">
 <features>
-<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0.75in">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<column alignment="center" valignment="top" width="0">
+<row bottomspace="default">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3996,6 +3741,80 @@ Parameter values fitted to FN on SiOEG.
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a}\left(cm^{3}\, ng^{-1}\, s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{s}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\alpha}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\beta}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4004,58 +3823,32 @@ Langmuir
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Langmuir two-stage
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RSA
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RSA two-stage
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Units
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\noun off
-\color none
-\begin_inset Formula $k_{a}$
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
 \end_inset
 
 
@@ -4079,10 +3872,113 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
 \end_inset
 
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir with transition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times10^{-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA
 \end_layout
 
 \end_inset
@@ -4103,7 +3999,16 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.12\times10^{-6}$
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.14\times10^{-4}$
 \end_inset
 
 
@@ -4115,7 +4020,28 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $cm^{3}ng^{-1}s^{-1}$
+\begin_inset Formula $1240$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.7$
 \end_inset
 
 
@@ -4124,15 +4050,12 @@ Units
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="default">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $k_{s}$
-\end_inset
-
-
+RSA with transition
 \end_layout
 
 \end_inset
@@ -4141,31 +4064,7 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
+\begin_inset Formula $1.12\times10^{-6}$
 \end_inset
 
 
@@ -4189,68 +4088,6 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $s^{-1}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $k_{d}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $7.14\times10^{-4}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Formula $1.04\times10^{-4}$
 \end_inset
 
@@ -4263,21 +4100,7 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $s^{-1}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\sigma_{\alpha}$
+\begin_inset Formula $1240$
 \end_inset
 
 
@@ -4289,179 +4112,7 @@ Units
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1.24\times10^{-11}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1.24\times10^{-11}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $cm^{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\sigma_{\beta}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\times10^{-6}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $3.42\times10^{-11}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $cm^{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $SSE$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $2.7$
+\begin_inset Formula $3420$
 \end_inset
 
 
@@ -4476,15 +4127,6 @@ Units
 \begin_inset Formula $1.86$
 \end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -4525,7 +4167,7 @@ name "fig:FN OEG fitted"
 
 \end_inset
 
-RSA model fitted to experimental data for FN on OEG.
+RSA model fitted to experimental data for FN on SiPEG.
 \end_layout
 
 \end_inset
@@ -4544,44 +4186,2430 @@ Modeling the Adsorption of Glucose Oxidase on Silane Surfaces
 
 \begin_layout Standard
 The measured adsorption kinetics of glucose oxidase on glass, DETA, 13F
- and SiPEG are shown in Figure 2.
+ and SiPEG are shown in Figure [].
  The initial rate of adsorption was highest on the DETA and 13F surfaces
  and lowest on the SiPEG surface.
  The surface density of adsorbed protein reached the highest saturation
- value on the DETA surface at 100 
-\backslash
-u00b5g/ml, while the highest saturation at 10 
-\backslash
-u00b5g/ml occurred on 13F.
- On the 13F surface the saturation surface density at 10 
-\backslash
-u00b5g/ml was nearly as high as 100 
-\backslash
-u00b5g/ml.
+ value on the DETA surface at 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+, while the highest saturation at 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+ occurred on 13F.
+ On the 13F surface the saturation surface density at 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+ was nearly as high as 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+.
  Adsorption on the glass surface showed an 
-\backslash
-u201covershoot
-\backslash
-u201d profile in which the surface density reached a maximum and then decreased
+\begin_inset Quotes eld
+\end_inset
+
+overshoot
+\begin_inset Quotes erd
+\end_inset
+
+ profile in which the surface density reached a maximum and then decreased
  gradually with time.
  
 \end_layout
 
 \begin_layout Standard
-For all four surfaces and both concentrations, CFD simulations showed that
- the concentration of protein in solution near the surface of the resonator
- reached 99% of its final value about 20 seconds after switching from buffer
- to protein solution.
- Representative plots of the near-surface concentration and adsorbed surface
- density over time are shown in the Supplemental Material.
- The parameter values for the five models fitted to experimental measurements
- of the adsorption of GO on glass, DETA, and 13F are shown in Tables 1,
- 2, and 3, respectively.
+The experimentally measured kinetic curves, along with the model that achieved
+ the best fit to the kinetic data, are shown in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO glass plot"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO on DETA"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO on 13F"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO on PEG"
+
+\end_inset
+
+.
+ The results of the enzyme activity assay, along with the activity predicted
+ by each model, are shown in figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO glass activity"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO DETA activity"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO 13F activity"
+
+\end_inset
+
+.
+ The parameter values for the five models fitted to the experimental measurement
+s are shown in Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:GO params glass"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:GO params DETA"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:GO params 13F"
+
+\end_inset
+
+, respectively.
  Only the RSA and Langmuir models were fitted to GO on SiPEG, and the fitted
- parameter values are shown in Table 4.
- The experimentally measured kinetic curves, along with the model that achieved
- the best fit to the kinetic data, are shown in Figure 3.
+ parameter values are shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:GO params PEG"
+
+\end_inset
+
+.
  
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/GO_glass.pdf
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GO glass plot"
+
+\end_inset
+
+Langmuir model with post-adsorption transition fitted to data for GO on
+ glass from the WGM biosensor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/GO_DETA.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GO on DETA"
+
+\end_inset
+
+Langmuir two-layer adsorption model fitted to data for GO on DETA from the
+ WGM biosensor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/GO_13F.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GO on 13F"
+
+\end_inset
+
+Langmuir model with post-adsorption transition fitted to data for GO on
+ 13F from the WGM biosensor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/GO_PEG.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GO on PEG"
+
+\end_inset
+
+RSA model fitted to data for GO on SiPEG from the WGM biosensor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/GO_glass_activity.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GO glass activity"
+
+\end_inset
+
+Experimental measurements and model predictions of GO activity on a glass
+ surface.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/GO_DETA_activity.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GO DETA activity"
+
+\end_inset
+
+Experimental measurements and model predictions of GO activity on a DETA
+ surface.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Plots/GO_13F_activity.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GO 13F activity"
+
+\end_inset
+
+Experimental measurements and model predictions of GO activity on a 13F
+ surface.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:GO params glass"
+
+\end_inset
+
+Parameters fitted to data for GO on glass.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="7">
+<features>
+<column alignment="left" valignment="top" width="0.75in">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row bottomspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a}\left(cm^{3}\, ng^{-1}\, s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{s}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\alpha}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\beta}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.33\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.15\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $257$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6.15$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir with transition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.35\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.48\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.75\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $122$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $414$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.73$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.16\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.34\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $80.8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.81$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA with transition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.80\times10^{-9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.20\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.99\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $31.5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $349$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.19$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Two layer model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.85\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5.46\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.18\times10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.60\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $224$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.15$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:GO params DETA"
+
+\end_inset
+
+Parameters fitted to data for GO on DETA.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="7">
+<features>
+<column alignment="left" valignment="top" width="0.75in">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row bottomspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a}\left(cm^{3}\, ng^{-1}\, s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{s}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\alpha}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\beta}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default" interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.10\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.83\times10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $190$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $66.1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir with transition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.15\times10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9.41\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.22\times10^{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $161$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $161$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $38.7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.47\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.15\times10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $72.6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $39.3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA with transition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.19\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.412$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.33\times10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $28.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $457$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6.47$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default" interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Two layer model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.44\times10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.26\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.19\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.42\times10^{-9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $363$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $12.7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:GO params 13F"
+
+\end_inset
+
+Parameters fitted to data for GO on 13F.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="7">
+<features>
+<column alignment="left" valignment="top" width="0.75in">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row bottomspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a}\left(cm^{3}\, ng^{-1}\, s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{s}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\alpha}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{\beta}\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.20\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.17\times10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $247$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.45$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir with transition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5.96\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.14\times10^{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6.74\times10^{-5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $209$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $291$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.23$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.79\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.81\times10^{-5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $103$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $12.8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA with transition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.27\times10^{-9}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.377$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9.73\times10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $175$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Two layer model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.92\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.18\times10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.51\times10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.28\times10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $496$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.82$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:GO params PEG"
+
+\end_inset
+
+Fitted parameters for GO on SiPEG.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="5">
+<features>
+<column alignment="left" valignment="top" width="0.75in">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row bottomspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{a}\left(cm^{3}\, ng^{-1}\, s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{d}\left(s^{-1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma\,\left(nm^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SSE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default" interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Langmuir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.06\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.67\times10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $684$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.81$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RSA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.18\times10^{-8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.55\times10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $482$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.73$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4590,22 +6618,40 @@ For GO on glass, the Langmuir-derived models fitted the data slightly better
  The Langmuir-type model with post-adsorption transition provided the best
  fit to the kinetic data.
  Both models with post-adsorption transition predicted the amount of active
- protein at 10 ug/ml, but not at 100 ug/ml, as shown in Figure 4.
- The activity predicted by both models at 100 ug/ml matched the experimental
- value much more closely if it was assumed that the protein was active in
- both the initial and final states.
+ protein at 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+, but not at 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+, as shown in Figure [].
+ The activity predicted by both models at 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+ matched the experimental value much more closely if it was assumed that
+ the protein was active in both the initial and final states.
  For GO on DETA, the RSA-derived models fitted the data better than the
  Langmuir-type models.
  The best fit to the kinetic curves was achieved by the RSA-type model with
  post-adsorption transition.
- However, this model did not predict the amount of active enzyme at 10 ug/ml
- or 100 ug/ml, as shown in Figure 4.
+ However, this model did not predict the amount of active enzyme at 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+ or 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+, as shown in Figure [].
  The two-layer model does not fit the kinetic data quite as well, but it
  does predict the amount of active enzyme very well.
  For GO on 13F, the two-layer model and the Langmuir-type model with post-adsorp
 tion transition fitted the kinetic data well.
  Although the two-layer model fitted the kinetic data slightly better, Figure
- 4 indicates that it does not accurately predict the amount of active adsorbed
+ [] indicates that it does not accurately predict the amount of active adsorbed
  protein.
  The Langmuir-type model with a post-adsorption transition predicted the
  amount of active protein very well.
@@ -4724,7 +6770,7 @@ reference "fig:Adsorption Model Matrix"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4882,7 +6928,7 @@ Fibronectin Adsorption
 The equilibrium surface concentration of FN, as measured by the WGM system,
  compares favorably with previously published results for a solution concentrati
 on of 
-\begin_inset Formula $10\mu g/ml$
+\begin_inset Formula $10\,\mu g/ml$
 \end_inset
 
 .
@@ -4906,7 +6952,7 @@ key "Lee2006"
  surface was in good agreement with previous results.
  Table 1 also shows the saturation surface concentration of FN at a solution
  concentration of 
-\begin_inset Formula $1\mu g/ml$
+\begin_inset Formula $1\,\mu g/ml$
 \end_inset
 
 .
@@ -4915,11 +6961,11 @@ key "Lee2006"
  the surface chemistry, or the adsorption process.
  Since the limiting surface coverages measured by the WGM sensor agree well
  with other techniques for 
-\begin_inset Formula $10\mu g/ml$
+\begin_inset Formula $10\,\mu g/ml$
 \end_inset
 
  and for neutral hydrophilic surfaces at 
-\begin_inset Formula $1\mu g/ml$
+\begin_inset Formula $1\,\mu g/ml$
 \end_inset
 
 , the results from the WGM sensor can be considered reliable.
@@ -4932,7 +6978,7 @@ key "Lee2006"
 \begin_layout Standard
 One possible interpretation of the higher saturation values measured at
  
-\begin_inset Formula $1\mu g/ml$
+\begin_inset Formula $1\,\mu g/ml$
 \end_inset
 
  and lower on 13F and DETA could be the relative packing order of silane
@@ -4977,7 +7023,7 @@ key "Keselowsky2003"
 \end_inset
 
  did not show up at 
-\begin_inset Formula $10\mu g/ml$
+\begin_inset Formula $10\,\mu g/ml$
 \end_inset
 
 .
@@ -5003,13 +7049,131 @@ Another significant difference between the WGM measurement system and previous
  for a fixed amount of time (30-60 minutes.) The combination of high-affinity
  surfaces and low solution concentration is conducive to transport-limited
  adsorption, which could explain the discrepancy between WGM and static
- experiments for hydrophobic and charged hydrophilic surfaces, but also
- give new insight into the reasons behind why silane monolayers seem to
- be better cell culture substrates than thiol monolayers.
+ experiments for hydrophobic and charged hydrophilic surfaces.
  In contrast, neutral hydrophilic surfaces have a much lower affinity for
  protein, so depletion of protein near the surface would be much less of
- a factor, resulting in a good match between the WGM and static measurements.
+ a factor, resulting in good agreement between the WGM and static measurements.
  
+\end_layout
+
+\begin_layout Subsubsection
+Fibronectin on DETA and 13F
+\end_layout
+
+\begin_layout Standard
+The fitted parameters of the RSA model were very similar for FN adsorption
+ on DETA and 13F surfaces, reflecting the similar shapes of the experimental
+ curves.
+ The RSA model fitted the DETA data well, indicating that the assumptions
+ of the RSA model were valid for the process of adsorption on DETA.
+ This result was confirmed by the fitting results for the two-stage adsorption
+ model.
+ The sum of squared errors was only slightly lower than the SSE value for
+ the fitted RSA model.
+ We concluded that fibronectin adsorbed on DETA with a well-defined footprint,
+ which does not change significantly after adsorption.
+ This result is consistent with the well-established theory that proteins
+ generally experience less denaturation on a hydrophilic surface than on
+ a hydrophobic surface 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Latour2005"
+
+\end_inset
+
+.
+ The experimental results for FN on 13F showed significant deviations from
+ the RSA model in the saturation region, especially at higher solution concentra
+tions.
+ The two-stage model allows particles to change size after adsorption, which
+ significantly improved the fit of the model to the data for FN on 13F.
+ The fitted values for the association constant were quite similar for DETA
+ and 13F, but the transition rate constant 
+\begin_inset Formula $k_{s}$
+\end_inset
+
+ for the 13F surface was an order of magnitude larger than 
+\begin_inset Formula $k_{s}$
+\end_inset
+
+ for the DETA surface.
+ The results from the fitting process indicated that FN denatured after
+ adsorption on 13F, which had been previously postulated for certain hydrophobic
+ surfaces 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lan2005,Sivaraman2009"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Fibronection on SiPEG
+\end_layout
+
+\begin_layout Standard
+The RSA model fitted the SiPEG data well.
+ The value for FN adsorption on SiPEG was lower than the values for DETA
+ and 13F while the dissociation rate constant was higher, which is expected
+ for a protein-resistant surface.
+ This result is consistent with findings that SiPEG is an electrostatically
+ neutral surface that does not exhibit coulombic attraction for proteins
+ in solution.
+ Surprisingly, the fitted radius of FN adsorbed on SiPEG was more than twice
+ the fitted radius of FN adsorbed on DETA or 13F.
+ For the two-stage model, the transition rate constant for adsorption on
+ SiPEG was significantly higher than for the other surfaces.
+ The fitted pre-transition radius and post-transition radius of adsorbed
+ FN were also larger for SiPEG than DETA or 13F.
+ The large radius predicted by the RSA model and the significant transition
+ predicted by the two-stage model seemed to indicate that FN denatures after
+ it adsorbs to PEG.
+ This prediction was not consistent with the well-known observation that
+ proteins in contact with hydrophobic surfaces tend to denature, while proteins
+ in contact with hydrophilic, charged surfaces tend to retain their native
+ conformations.
+ However, it also may indicate that the SiPEG surface could be promoting
+ the denaturation of adsorbed proteins, which could explain why it is a
+ cell-resistant surface despite being hydrophilic.
+ 
+\end_layout
+
+\begin_layout Standard
+Although the SSE of the fitted two-stage model was about 30% lower than
+ the SSE for the RSA model, the absolute change in SSE was relatively small,
+ and may not be significant.
+ It is possible that the two extra variable parameters (transition rate
+ constant and post-transition radius) are redundant for the SiPEG surface,
+ in which case their fitted values should not be considered significant.
+ It is also possible that the radius predicted by the fitting process for
+ SiPEG is an artifact caused by fitting the data with a model that is not
+ well suited to the surface chemistry.
+ Given the assumptions of the RSA model, surface coverage can reach saturation
+ in only two ways: either the rate of desorption equals the rate of adsorption,
+ or there is no space left on the surface for another protein to adsorb.
+ The second case may not apply to an adsorption-resistant surface like SiPEG.
+ However, combinations of parameters and that fitted the initial adsorption
+ kinetics did not predict the low saturation level of protein observed in
+ our experiments.
+ One possible explanation is that FN adsorbed to a small number of defects
+ in the SiPEG monolayer, which could explain both the rapid initial adsorption
+ and the small amount of adsorbed protein when the surface is saturated.
+ If this were the case, a site-limited adsorption model like the Langmuir
+ model may be better for modeling adsorption on SiPEG.
+ Our prototype instrument did not have the sensitivity to perform a more
+ thorough study of adsorption on SiPEG at low solution concentrations.
+ Future systems based on whispering gallery mode technology have the potential
+ to study the adsorption of proteins on SiPEG surfaces in greater detail,
+ which could lead to greater understanding as to why SiPEG resists protein
+ adsorption.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Cell Growth and Survival on FN-Coated Alkylsilane Monolayers
 \end_layout
 
 \begin_layout Standard
@@ -5078,7 +7242,745 @@ key "Michael2003"
  The lack of survival of cells on SiPEG surfaces can be attributed to the
  small amount of adsorbed FN and the possibility that the protein was also
  denatured.
- Utilization of the WGM sensor enables, for the first time, quantitative
+ 
+\end_layout
+
+\begin_layout Subsection
+Glucose Oxidase Adsorption
+\end_layout
+
+\begin_layout Standard
+The highest saturation surface density of adsorbed protein was found on
+ the hydrophobic 13F surface, and the lowest was found on the hydrophilic
+ SiPEG surface.
+ Intermediate amounts of protein adsorbed on the hydrophilic charged surfaces,
+ glass and DETA.
+ These results are consistent with the general consensus of previous protein
+ adsorption studies20.
+ The initial kinetics of adsorption were slowest on the SiPEG surface, followed
+ by glass.
+ The 13F surface had the highest rate of adsorption at 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+, but the initial rate of adsorption on the DETA surface was slightly higher
+ at 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In a previous study, glucose oxidase was adsorbed onto plasma-polymerized
+ thin films of hexamethyldisiloxane (HDMS) on silica substrates
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Muguruma2006"
+
+\end_inset
+
+.
+ HDMS is a hydrophobic polymer, and its surface properties were modified
+ by exposure to nitrogen and oxygen plasma, as shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Surface Properties"
+
+\end_inset
+
+.
+ Adsorption was measured with a quartz crystal microbalance (QCM), although
+ only the saturation values were quantified.
+ The size and shape of adsorbed GO was also measured by AFM.
+ It was assumed that GO in solution could be approximated by an ellipsoid
+ with a major axis of 
+\begin_inset Formula $10-14\, nm$
+\end_inset
+
+ and a minor axis of 
+\begin_inset Formula $6-8\, nm$
+\end_inset
+
+.
+ It was found that GO adsorbed to native HDMS surfaces with the major axis
+ parallel to the surface, while GO adsorbed to HDMS-O and HDMS-N with the
+ major axis normal the surface.
+ The maximum area occupied by an adsorbed molecule (its 
+\begin_inset Quotes erd
+\end_inset
+
+footprint
+\begin_inset Quotes erd
+\end_inset
+
+) would be 
+\begin_inset Formula $88\, nm^{2}$
+\end_inset
+
+ when adsorbed with major axis parallel to surface, while the minimum area
+ would be 
+\begin_inset Formula $28\, nm^{2}$
+\end_inset
+
+ when adsorbed with the major axis normal to surface.
+ Previous AFM studies of GO adsorbed on gold also found that it could be
+ represented by an ellipse with a major axis of 
+\begin_inset Formula $14-18\, nm$
+\end_inset
+
+ and a minor axis of 
+\begin_inset Formula $5-8\, nm$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Quinto1998"
+
+\end_inset
+
+.
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Surface Properties"
+
+\end_inset
+
+Properties of surfaces used in these experiments and similar surfaces used
+ in previous experiments.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row bottomspace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Water contact angle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zeta potential (
+\begin_inset Formula $mV$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reference
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default" interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Glass
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<5^{\circ}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-25$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kirby2004,Wilson2011a"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DETA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $49\pm2^{\circ}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wilson2011a,Metwalli2006"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $94\pm2^{\circ}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-15$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Stenger1992,Tandon2008"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SiPEG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $38\pm2^{\circ}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wilson2011a"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HDMS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $>90^{\circ}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Muguruma2006"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HDMS-N
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $<50^{\circ}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $20$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Muguruma2006"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HDMS-O
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hydrophilic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-40$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Muguruma2006"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Glucose Oxidase on Glass
+\end_layout
+
+\begin_layout Standard
+The Langmuir-type models fitted the kinetics of GO on glass slightly better
+ than the RSA-type models, and the two-stage models fitted the data better
+ than the single-stage models.
+ The enzyme activity data indicated that GO adsorbed on bare glass retained
+ about 25% of its activity at a solution concentration of 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+.
+ When the solution concentration was increased to 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+, almost all of the adsorbed enzyme remained active.
+ Both of the two-stage models predicted the amount of active enzyme at 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+, but under-predicted the amount of active enzyme at 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+ (assuming that enzyme in state 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is active and enzyme in state 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is inactive).
+ If it was assumed that enzyme in both states remains active, both of the
+ two-stage models would accurately predict the amount of active enzyme at
+ 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+.
+ It has been shown that some 
+\begin_inset Quotes eld
+\end_inset
+
+soft
+\begin_inset Quotes erd
+\end_inset
+
+ enzymes lose most of their structure and activity when adsorbed to glass,
+ while 
+\begin_inset Quotes eld
+\end_inset
+
+hard
+\begin_inset Quotes erd
+\end_inset
+
+ enzymes retain their structure and function after adsorption
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zoungrana1997,Welzel2002"
+
+\end_inset
+
+.
+ An alternative hypothesis is that an initial layer of enzyme adsorbed to
+ the surface in a highly spread-out state, resulting in a very low surface
+ density and low activity, followed by a second layer of adsorbed enzyme
+ that retained its activity.
+ This could explain the low fraction of active enzyme at 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+, and the high fraction of active enzyme at 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+.
+ Modeling this process would require a model that incorporated both a post-adsor
+ption transition and multi-layer adsorption.
+\end_layout
+
+\begin_layout Subsubsection
+Glucose Oxidase on DETA
+\end_layout
+
+\begin_layout Standard
+The model fits to the kinetic data for GO on DETA were not as good as the
+ fits to the kinetic data for GO on glass.
+ The RSA-type model with a post-adsorption transition provided the best
+ fit to the kinetic data, as determined by the sum of squared error.
+ It was assumed that the DETA surface did not induce proteins to denature
+ upon adsorption, and this assumption was consistent with the data from
+ the enzyme activity assay at 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+.
+ When the solution concentration was increased to 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+, approximately half of the adsorbed GO apparently lost its activity.
+ It is unlikely that this reduction was caused by denaturation, since adsorbed
+ proteins are more likely to retain their native conformation when the rate
+ of adsorption is higher
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Latour2005"
+
+\end_inset
+
+.
+ Further, the fitted parameter values for the two-stage RSA-type model were
+ fairly implausible.
+ The fitted transition rate constant was two orders of magnitude higher
+ than the transition rate constant for the glass surface, and the surface
+ area occupied by a molecule in state 
+\begin_inset Formula $\beta$
+\end_inset
+
+ was 16 times larger than a molecule in state 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ A more likely hypothesis for the 50% reduction in activity is that a second
+ layer of adsorbed enzyme formed, preventing the substrate solution from
+ reaching the lower layer of enzyme.
+ The two-layer model provided the best prediction of the amount of active
+ adsorbed enzyme at both concentrations, although it did not fit the kinetic
+ data quite as well as the RSA-type two-stage model.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Glucose Oxidase on 13F
+\end_layout
+
+\begin_layout Standard
+The kinetic data for GO on 13F was fitted well by both the Langmuir-type
+ model with a post-adsorption transitions and the two-layer model.
+ Although the SSE was slightly lower for the two-layer model, the Langmuir-type
+ model provided a much better prediction of the amount of active adsorbed
+ enzyme.
+ The experimental data showed that almost none of the adsorbed enzyme was
+ active at a solution concentration of 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+.
+ When the solution concentration was increased to 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+, about 75% of the adsorbed enzyme retained its activity.
+ GO that adsorbs from a higher solution concentration may experience less
+ denaturation because it is sterically hindered from spreading out on the
+ surface by the high density of adsorbed enzyme molecules.
+ Surprisingly, the fitted parameters for the Langmuir-type model with a
+ post-adsorption transition indicated the area occupied by a molecule in
+ the final state was not much larger than that of a molecule in the initial
+ state.
+\end_layout
+
+\begin_layout Subsubsection
+Glucose Oxidase on SiPEG
+\end_layout
+
+\begin_layout Standard
+Despite its sensitivity, the WGM sensor was unable to detect the adsorption
+ of GO on an SiPEG surface reliably at a solution concentration of 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+.
+ At 
+\begin_inset Formula $100\,\mu g/ml$
+\end_inset
+
+, GO adsorbed on the SiPEG surface, but at a relatively low surface density.
+ The enzyme activity assay did not detect any significant amount of active
+ enzyme for either solution concentration.
+ This may be because the amount of activity was below the detection limit
+ of the assay, or because the enzyme did not retain its activity on SiPEG.
+ It is well known that SiPEG surfaces resist protein adsorption, but denaturatio
+n on SiPEG has not been previously reported.
+ Further investigation is necessary to answer this question.
+ Both the RSA and Langmuir single-layer models fitted this data set well.
+\end_layout
+
+\begin_layout Subsubsection
+Summary
+\end_layout
+
+\begin_layout Standard
+Utilization of the WGM sensor enables, for the first time, quantitative
  analysis of protein adsorption on silane monolayers, which are more commonly
  used as substrates for cell culture than thiol monolayers.
  The sensitivity of this bench-top setup also can be readily enhanced by
@@ -5121,295 +8023,42 @@ Fitting models to the experimental data provided additional insight about
 \end_layout
 
 \begin_layout Standard
-The fitted parameters of the RSA model were very similar for FN adsorption
- on DETA and 13F surfaces, reflecting the similar shapes of the experimental
- curves.
- The RSA model fitted the DETA data well, indicating that the assumptions
- of the RSA model were valid for the process of adsorption on DETA.
- This result was confirmed by the fitting results for the two-stage adsorption
- model.
- The sum of squared errors was only slightly lower than the SSE value for
- the fitted RSA model.
- We concluded that fibronectin adsorbed on DETA with a well-defined footprint,
- which does not change significantly after adsorption.
- This result is consistent with the well-established theory that proteins
- generally experience less denaturation on a hydrophilic surface than on
- a hydrophobic surface 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Latour2005"
 
-\end_inset
-
-.
- The experimental results for FN on 13F showed significant deviations from
- the RSA model in the saturation region, especially at higher solution concentra
-tions.
- The two-stage model allows particles to change size after adsorption, which
- significantly improved the fit of the model to the data for FN on 13F.
- The fitted values for the association constant were quite similar for DETA
- and 13F, but the transition rate constant ks for the 13F surface was an
- order of magnitude larger than ks for the DETA surface.
- The results from the fitting process indicated that FN denatured after
- adsorption on 13F, which had been previously postulated for certain hydrophobic
- surfaces 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Lan2005,Sivaraman2009"
-
-\end_inset
-
- and this was also consistent with our cell culture results.
- 
-\end_layout
-
-\begin_layout Standard
-The RSA model fitted the SiPEG data well.
- The value for FN adsorption on SiPEG was lower than the values for DETA
- and 13F while the dissociation rate constant was higher, which is expected
- for a protein-resistant surface.
- This result is consistent with findings that SiPEG is an electrostatically
- neutral surface that does not exhibit coulombic attraction for proteins
- in solution.
- Surprisingly, the fitted radius of FN adsorbed on SiPEG was more than twice
- the fitted radius of FN adsorbed on DETA or 13F.
- For the two-stage model, the transition rate constant for adsorption on
- SiPEG was significantly higher than for the other surfaces.
- The fitted pre-transition radius and post-transition radius of adsorbed
- FN were also larger for SiPEG than DETA or 13F.
- The large radius predicted by the RSA model and the significant transition
- predicted by the two-stage model seemed to indicate that FN denatures after
- it adsorbs to PEG.
- This prediction was not consistent with the well-known observation that
- proteins in contact with hydrophobic surfaces tend to denature, while proteins
- in contact with hydrophilic, charged surfaces tend to retain their native
- conformations.
- However, it also may indicate that the SiPEG surface could be promoting
- the denaturation of adsorbed proteins, which could explain why it is a
- cell-resistant surface despite being hydrophilic.
- 
-\end_layout
-
-\begin_layout Standard
-Although the SSE of the fitted two-stage model was about 30% lower than
- the SSE for the RSA model, the absolute change in SSE was relatively small,
- and may not be significant.
- It is possible that the two extra variable parameters (transition rate
- constant and post-transition radius) are redundant for the SiPEG surface,
- in which case their fitted values should not be considered significant.
- It is also possible that the radius predicted by the fitting process for
- SiPEG is an artifact caused by fitting the data with a model that is not
- well suited to the surface chemistry.
- Given the assumptions of the RSA model, surface coverage can reach saturation
- in only two ways: either the rate of desorption equals the rate of adsorption,
- or there is no space left on the surface for another protein to adsorb.
- The second case may not apply to an adsorption-resistant surface like SiPEG.
- However, combinations of parameters and that fitted the initial adsorption
- kinetics did not predict the low saturation level of protein observed in
- our experiments.
- One possible explanation is that FN adsorbed to a small number of defects
- in the SiPEG monolayer, which could explain both the rapid initial adsorption
- and the small amount of adsorbed protein when the surface is saturated.
- If this were the case, a site-limited adsorption model like the Langmuir
- model may be better for modeling adsorption on SiPEG.
- Our prototype instrument did not have the sensitivity to perform a more
- thorough study of adsorption on SiPEG at low solution concentrations.
- Future systems based on whispering gallery mode technology have the potential
- to study the adsorption of proteins on SiPEG surfaces in greater detail,
- which could lead to greater understanding as to why SiPEG resists protein
- adsorption.
- 
-\end_layout
-
-\begin_layout Subsection
-Glucose Oxidase Adsorption
-\end_layout
-
-\begin_layout Standard
-The highest saturation surface density of adsorbed protein was found on
- the hydrophobic 13F surface, and the lowest was found on the hydrophilic
- SiPEG surface.
- Intermediate amounts of protein adsorbed on the hydrophilic charged surfaces,
- glass and DETA.
- These results are consistent with the general consensus of previous protein
- adsorption studies20.
- The initial kinetics of adsorption were slowest on the SiPEG surface, followed
- by glass.
- The 13F surface had the highest rate of adsorption at 100 
-\backslash
-u00b5g/ml, but the initial rate of adsorption on the DETA surface was slightly
- higher at 10 
-\backslash
-u00b5g/ml.
-\end_layout
-
-\begin_layout Standard
-In a previous study, glucose oxidase was adsorbed onto plasma-polymerized
- thin films of hexamethyldisiloxane (HDMS) on silica substrates.9 HDMS is
- a hydrophobic polymer, and its surface properties were modified by exposure
- to nitrogen and oxygen plasma, as shown in Table 5.
- Adsorption was measured with a quartz crystal microbalance (QCM), although
- only the saturation values were quantified.
- The size and shape of adsorbed GO was also measured by AFM.
- It was assumed that GO in solution could be approximated by an ellipsoid
- with a major axis of 10-14 nm and a minor axis of 6-8 nm.
- It was found that GO adsorbed to native HDMS surfaces with the major axis
- parallel to the surface, while GO adsorbed to HDMS-O and HDMS-N with the
- major axis normal the surface.
- The maximum area occupied by an adsorbed molecule (its 
-\backslash
-u201cfootprint
-\backslash
-u201d) would be 88nm2 when adsorbed with major axis parallel to surface,
- while the minimum area would be 28 nm2 when adsorbed with the major axis
- normal to surface.
- Previous AFM studies of GO adsorbed on gold also found that it could be
- represented by an ellipse with a major axis of 14-18 nm and a minor axis
- of 5-8 nm21.
-\end_layout
-
-\begin_layout Subsubsection
-Using models to interpret experimental data
-\end_layout
-
-\begin_layout Standard
-The Langmuir-type models fitted the kinetics of GO on glass slightly better
- than the RSA-type models, and the two-stage models fitted the data better
- than the single-stage models.
- The enzyme activity data indicated that GO adsorbed on bare glass retained
- about 25% of its activity at a solution concentration of 10
-\backslash
-u00b5g/ml.
- When the solution concentration was increased to 100 
-\backslash
-u00b5g/ml, almost all of the adsorbed enzyme remained active.
- Both of the two-stage models predicted the amount of active enzyme at 10
- 
-\backslash
-u00b5g/ml, but under-predicted the amount of active enzyme at 100 
-\backslash
-u00b5g/ml (assuming that enzyme in state a is active and enzyme in state
- 
-\backslash
-u00df is inactive).
- If it was assumed that enzyme in both states remains active, both of the
- two-stage models would accurately predict the amount of active enzyme at
- 100 
-\backslash
-u00b5g/ml.
- It has been shown that some 
-\backslash
-u201csoft
-\backslash
-u201d enzymes lose most of their structure and activity when adsorbed to
- glass, while 
-\backslash
-u201chard
-\backslash
-u201d enzymes retain their structure and function after adsorption22, 23.
- An alternative hypothesis is that an initial layer of enzyme adsorbed to
- the surface in a highly spread-out state, resulting in a very low surface
- density and low activity, followed by a second layer of adsorbed enzyme
- that retained its activity.
- This could explain the low fraction of active enzyme at 10 
-\backslash
-u00b5g/ml, and the high fraction of active enzyme at 100 
-\backslash
-u00b5g/ml.
- Modeling this process would require a model that incorporated both a post-adsor
-ption transition and multi-layer adsorption.
-\end_layout
-
-\begin_layout Standard
-The model fits to the kinetic data for GO on DETA were not as good as the
- fits to the kinetic data for GO on glass.
- The RSA-type model with a post-adsorption transition provided the best
- fit to the kinetic data, as determined by the sum of squared error.
- It was assumed that the DETA surface did not induce proteins to denature
- upon adsorption, and this assumption was consistent with the data from
- the enzyme activity assay at 10 
-\backslash
-u00b5g/ml.
- When the solution concentration was increased to 100 
-\backslash
-u00b5g/ml, approximately half of the adsorbed GO apparently lost its activity.
- It is unlikely that this reduction was caused by denaturation, since adsorbed
- proteins are more likely to retain their native conformation when the rate
- of adsorption is higher24.
- Further, the fitted parameter values for the two-stage RSA-type model were
- fairly implausible.
- The fitted transition rate constant was two orders of magnitude higher
- than the transition rate constant for the glass surface, and the surface
- area occupied by a molecule in state 
-\backslash
-u00df was 16 times larger than a molecule in state a.
- A more likely hypothesis for the 50% reduction in activity is that a second
- layer of adsorbed enzyme formed, preventing the substrate solution from
- reaching the lower layer of enzyme.
- The two-layer model provided the best prediction of the amount of active
- adsorbed enzyme at both concentrations, although it did not fit the kinetic
- data quite as well as the RSA-type two-stage model.
- 
-\end_layout
-
-\begin_layout Standard
-The kinetic data for GO on 13F was fitted well by both the Langmuir-type
- model with a post-adsorption transitions and the two-layer model.
- Although the SSE was slightly lower for the two-layer model, the Langmuir-type
- model provided a much better prediction of the amount of active adsorbed
- enzyme.
- The experimental data showed that almost none of the adsorbed enzyme was
- active at a solution concentration of 10
-\backslash
-u00b5g/ml.
- When the solution concentration was increased to 100
-\backslash
-u00b5g/ml, about 75% of the adsorbed enzyme retained its activity.
- GO that adsorbs from a higher solution concentration may experience less
- denaturation because it is sterically hindered from spreading out on the
- surface by the high density of adsorbed enzyme molecules.
- Surprisingly, the fitted parameters for the Langmuir-type model with a
- post-adsorption transition indicated the area occupied by a molecule in
- the final state was not much larger than that of a molecule in the initial
- state.
-\end_layout
-
-\begin_layout Standard
-Despite its sensitivity, the WGM sensor was unable to detect the adsorption
- of GO on an SiPEG surface reliably at a solution concentration of 10
-\backslash
-u00b5g/ml.
- At 100
-\backslash
-u00b5g/ml, GO adsorbed on the SiPEG surface, but at a relatively low surface
- density.
- The enzyme activity assay did not detect any significant amount of active
- enzyme for either solution concentration.
- This may be because the amount of activity was below the detection limit
- of the assay, or because the enzyme did not retain its activity on SiPEG.
- It is well known that SiPEG surfaces resist protein adsorption, but denaturatio
-n on SiPEG has not been previously reported.
- Further investigation is necessary to answer this question.
- Both the RSA and Langmuir single-layer models fitted this data set well.
-\end_layout
-
-\begin_layout Standard
-Comparison of adsorption models 
 \backslash
 u2022 Fitting models to data allows us to test hypotheses about mechanisms
  of adsorption 
+\end_layout
+
+\begin_layout Standard
+
 \backslash
 u2022 Sum of squared error is a only a rough guide to gauging the usefulness
  of a model 
+\end_layout
+
+\begin_layout Standard
+
 \backslash
 u2022 Activity assay provides valuable data to support or reject a particular
  model 
+\end_layout
+
+\begin_layout Standard
+
 \backslash
 u2022 Langmuir-type and RSA-type models predict very different mechanisms
  
+\end_layout
+
+\begin_layout Standard
+
 \backslash
 u2022 RSA-type models assume proteins occupy a spherical footprint on surface,
  but the assumption works well 
+\end_layout
+
+\begin_layout Standard
+
 \backslash
 u2022 Opportunity and difficulty of creating two-layer models with post-adsorpti
 on transition
