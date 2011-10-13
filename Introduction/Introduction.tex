@@ -1,20 +1,42 @@
+%% LyX 2.0.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[letterpaper,english,PhD]{UCFthesis}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
 
 \chapter{INTRODUCTION}
 
 Microfluidics is the science and technology of manipulating small
 quantities of fluid. One prominent author considers fluid volumes
 less than $10^{-9}L$ to be microfluidic \cite{Whitesides2006}, while
-many published microfluidic systems contain up to several mililiters
-of fluid. Rather than attempting to agree upon an arbitrary upper
-limit for the volume of the system, a more practical approach is to
-classify a system based upon its characteristics. The two defining
-characteristics of microfluidic systems are the inability to induce
-turbulent flow and the high ratio of surface area to volume. At sufficiently
-small length scales, the flow of a fluid is completely laminar and
-it is virtually impossible to induce turbulence. This means that parallel
+the MEMS Handbook defines a microfluidic channel as having characeristic
+dimensions between $1\,\mu m$ and $1\, mm$~\cite{Sharp2002}. Rather
+than attempting to agree upon an arbitrary upper limit for the volume
+of the system, a more practical approach is to classify a system based
+upon its characteristics. The defining characteristics of microfluidic
+systems are the inability to induce turbulent flow, a high ratio of
+surface area to volume, and high shear rates. At sufficiently small
+length scales, the flow of a fluid is completely laminar and it is
+virtually impossible to induce turbulence. This means that parallel
 streams of fluids in a microfluidic channel will mix only by diffusion,
 which is a considerably slower process than it would be in a macroscale
-system. Therefore, the creation o mixers is one of the defining challenges
+system. Therefore, the creation of mixers is one of the defining challenges
 of microfluidics. Because a microfluidic device has so much surface
 area relative to its volume, a large fraction of the fluid has the
 potential to interact with the surface. Interfacial phenomena such
@@ -24,18 +46,59 @@ with a surface is generally stationary and turbulence does not occur,
 diffusion is the only way that solute can be transported near the
 surface. This phenomenon may impose a significant challenge if the
 purpose of the device is to deliver nutrients to a layer of cells
-or analyte to the surface of sensor.
+or analyte to the surface of sensor. The no-slip boundary condition
+on the walls, combined with small channel dimensions, can lead to
+high shear rates near the walls.
 
 Microfluidic technology has been applied to many fields.
 
 Microfluidic technology has had a significant impact on the field
-of biology.
+of biology. Microfluidics enables systems biologists to study the
+signaling of individual cells without interference from heterogeneous
+populations {[}{]}. Microfluidic chambers can also be used to create
+defined chemical gradients to study chemotaxis, the movement of cells
+in response to chemical cues.
 
 A general overview of the field of microfluidics can be found in a
 recent special issue of \emph{Lab on a Chip} \cite{Santiago2009}.
 
 
 \section{Transport in Microfluidic Systems}
+
+Various dimensionless numbers have been derived to help characterize
+fluid systems through dimensional analysis. One of the best-known
+is the Reynolds number, which describes the ratio of inertial forces
+to viscous (damping) forces~\cite{fox2006}. A large Reynolds number
+indicates that inertial forces dominate and the flow may be turbulent.
+A small Reynolds number indicates that viscous damping is strong enough
+to prevent turbulence from occuring, resulting in laminar flow. The
+Reynolds number is defined as
+\[
+Re=\frac{\bar{v}L}{\nu}
+\]
+$\bar{v}$ is the average velocity, $L$ is the characteristic dimension
+and $\nu$ is the kinematic viscosity of the system. Because both
+the average velocity and dimensions of microfluidic systems tend to
+be small, the Reynolds number is also small, corresponding to the
+observation that flow in microfluidic systems is almost always laminar.
+
+If a volume of fluid is sufficiently small, there may not be enough
+molecules in the system to satisfy the assumptions of continuum models.
+The Knudsen number is a dimensionless group that can be used to assess
+the validity of the the continuum approximation. For a gas, the Knudsen
+number is defined as
+\[
+Kn=\frac{\lambda}{L}
+\]
+$\lambda$ is the mean free path of a molecule in the gas. Molecules
+in a liquid do not have a mean free path becaue their motion is highly
+constrained by their neighbors, so the lattice spacing $\delta$ can
+be used instead of $\lambda$ to compute the Knudsen number~\cite{Sharp2002}.
+The lattice spacing for liquid water is about $0.3\, nm$. Knudsen
+numbers below $10^{-3}$ indicate that the continuum approximation
+is valid, while in the range $10^{-3}<Kn<10^{-1}$ continuum models
+can be used with slip boundary conditions. For $Kn>10^{-1}$ entirely
+different modeling procedures must be used to obtain accurate results.
 
 
 \section{Protein Adsorption}
@@ -64,26 +127,14 @@ problem \cite{Wilson2004}. Thus, it is necessary to devise experimental
 solutions for making quantitative observations that can be used to
 assess the biocompatibility of materials.
 
-
-\subsection{Experimental Measurements of Protein Adsorption}
-
 There is a vast body of experimental research on protein adsorption. 
-
-
-\subsection{Models of Protein Adsorption}
-
-Although experimental measurements are indispensible for studying
-protein adsorption, the development of models is critical to understand
-and interpret experimental results.
-
-
 
 
 \section{Summary}
 
 This work describes theoretical advances in the modeling of microfluidic
 systems and demonstrates the practical application of those techniques.
-A new continuum model of the adsorption of hard spheres was formulated
+A new multi-scale model of the adsorption of hard spheres was formulated
 to bridge the gap between simulations of discrete particles and continuum
 fluid dynamics. A whispering gallery mode (WGM) biosensor was constructed
 and used to measure the kinetics of protein adsorption on four types
@@ -97,3 +148,4 @@ bioreactor. Experiments were used to validate the transport simulations.
 The combination of quantitative modeling and simulation with experimental
 work leads to results that could not be achieved by either method
 by itself.
+\end{document}

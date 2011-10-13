@@ -1,22 +1,30 @@
-#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass UCFthesis
 \options PhD
 \use_default_options false
+\maintain_unincluded_children false
 \language english
+\language_package default
 \inputencoding auto
+\fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -24,22 +32,32 @@
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
 \paperwidth 0cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
-\defskip medskip
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -62,20 +80,40 @@ key "Whitesides2006"
 
 \end_inset
 
-, while many published microfluidic systems contain up to several mililiters
- of fluid.
+, while the MEMS Handbook defines a microfluidic channel as having characeristic
+ dimensions between 
+\begin_inset Formula $1\,\mu m$
+\end_inset
+
+ and 
+\begin_inset Formula $1\, mm$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sharp2002"
+
+\end_inset
+
+.
  Rather than attempting to agree upon an arbitrary upper limit for the volume
  of the system, a more practical approach is to classify a system based
  upon its characteristics.
- The two defining characteristics of microfluidic systems are the inability
- to induce turbulent flow and the high ratio of surface area to volume.
+ The defining characteristics of microfluidic systems are the inability
+ to induce turbulent flow, a high ratio of surface area to volume, and high
+ shear rates.
  At sufficiently small length scales, the flow of a fluid is completely
  laminar and it is virtually impossible to induce turbulence.
  This means that parallel streams of fluids in a microfluidic channel will
  mix only by diffusion, which is a considerably slower process than it would
  be in a macroscale system.
- Therefore, the creation o mixers is one of the defining challenges of microflui
-dics.
+ Therefore, the creation of mixers is one of the defining challenges of
+ microfluidics.
  Because a microfluidic device has so much surface area relative to its
  volume, a large fraction of the fluid has the potential to interact with
  the surface.
@@ -87,6 +125,8 @@ dics.
  This phenomenon may impose a significant challenge if the purpose of the
  device is to deliver nutrients to a layer of cells or analyte to the surface
  of sensor.
+ The no-slip boundary condition on the walls, combined with small channel
+ dimensions, can lead to high shear rates near the walls.
 \end_layout
 
 \begin_layout Standard
@@ -95,6 +135,10 @@ Microfluidic technology has been applied to many fields.
 
 \begin_layout Standard
 Microfluidic technology has had a significant impact on the field of biology.
+ Microfluidics enables systems biologists to study the signaling of individual
+ cells without interference from heterogeneous populations [].
+ Microfluidic chambers can also be used to create defined chemical gradients
+ to study chemotaxis, the movement of cells in response to chemical cues.
 \end_layout
 
 \begin_layout Standard
@@ -115,6 +159,114 @@ key "Santiago2009"
 
 \begin_layout Section
 Transport in Microfluidic Systems
+\end_layout
+
+\begin_layout Standard
+Various dimensionless numbers have been derived to help characterize fluid
+ systems through dimensional analysis.
+ One of the best-known is the Reynolds number, which describes the ratio
+ of inertial forces to viscous (damping) forces
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fox2006"
+
+\end_inset
+
+.
+ A large Reynolds number indicates that inertial forces dominate and the
+ flow may be turbulent.
+ A small Reynolds number indicates that viscous damping is strong enough
+ to prevent turbulence from occuring, resulting in laminar flow.
+ The Reynolds number is defined as
+\begin_inset Formula 
+\[
+Re=\frac{\bar{v}L}{\nu}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\bar{v}$
+\end_inset
+
+ is the average velocity, 
+\begin_inset Formula $L$
+\end_inset
+
+ is the characteristic dimension and 
+\begin_inset Formula $\nu$
+\end_inset
+
+ is the kinematic viscosity of the system.
+ Because both the average velocity and dimensions of microfluidic systems
+ tend to be small, the Reynolds number is also small, corresponding to the
+ observation that flow in microfluidic systems is almost always laminar.
+\end_layout
+
+\begin_layout Standard
+If a volume of fluid is sufficiently small, there may not be enough molecules
+ in the system to satisfy the assumptions of continuum models.
+ The Knudsen number is a dimensionless group that can be used to assess
+ the validity of the the continuum approximation.
+ For a gas, the Knudsen number is defined as
+\begin_inset Formula 
+\[
+Kn=\frac{\lambda}{L}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the mean free path of a molecule in the gas.
+ Molecules in a liquid do not have a mean free path becaue their motion
+ is highly constrained by their neighbors, so the lattice spacing 
+\begin_inset Formula $\delta$
+\end_inset
+
+ can be used instead of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ to compute the Knudsen number
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sharp2002"
+
+\end_inset
+
+.
+ The lattice spacing for liquid water is about 
+\begin_inset Formula $0.3\, nm$
+\end_inset
+
+.
+ Knudsen numbers below 
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+ indicate that the continuum approximation is valid, while in the range
+ 
+\begin_inset Formula $10^{-3}<Kn<10^{-1}$
+\end_inset
+
+ continuum models can be used with slip boundary conditions.
+ For 
+\begin_inset Formula $Kn>10^{-1}$
+\end_inset
+
+ entirely different modeling procedures must be used to obtain accurate
+ results.
 \end_layout
 
 \begin_layout Section
@@ -162,27 +314,9 @@ key "Wilson2004"
  observations that can be used to assess the biocompatibility of materials.
 \end_layout
 
-\begin_layout Subsection
-Experimental Measurements of Protein Adsorption
-\end_layout
-
 \begin_layout Standard
 There is a vast body of experimental research on protein adsorption.
  
-\end_layout
-
-\begin_layout Subsection
-Models of Protein Adsorption
-\end_layout
-
-\begin_layout Standard
-Although experimental measurements are indispensible for studying protein
- adsorption, the development of models is critical to understand and interpret
- experimental results.
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Section
@@ -192,7 +326,7 @@ Summary
 \begin_layout Standard
 This work describes theoretical advances in the modeling of microfluidic
  systems and demonstrates the practical application of those techniques.
- A new continuum model of the adsorption of hard spheres was formulated
+ A new multi-scale model of the adsorption of hard spheres was formulated
  to bridge the gap between simulations of discrete particles and continuum
  fluid dynamics.
  A whispering gallery mode (WGM) biosensor was constructed and used to measure
