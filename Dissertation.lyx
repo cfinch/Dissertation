@@ -9,6 +9,7 @@
 \usepackage{amssymb}
 \usepackage{babel}
 \usepackage{bpchem}
+\usepackage[version=3]{mhchem}
 
 \hypersetup{
     bookmarks=true,         % show bookmarks bar?

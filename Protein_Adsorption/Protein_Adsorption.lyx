@@ -2647,7 +2647,7 @@ reference "fig:FN experiments"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2702,7 +2702,7 @@ reference "tab:FN on DETA params"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -3146,7 +3146,7 @@ RSA with transition
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3181,11 +3181,7 @@ RSA model fitted to experimental data for FN on DETA.
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The kinetics predicted by models fitted to FN adsorption on 13F are shown
+ The kinetics predicted by models fitted to FN adsorption on 13F are shown
  in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3204,7 +3200,7 @@ reference "tab:FN OEG fitted params"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -3648,7 +3644,7 @@ RSA with transition
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3679,11 +3675,7 @@ RSA model fitted to experimental data for FN on 13F.
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The kinetics predicted by models fitted to FN adsorption on 13F are shown
+ The kinetics predicted by models fitted to FN adsorption on SiPEG are shown
  in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3702,7 +3694,7 @@ reference "tab:FN OEG fitted params"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -3714,7 +3706,7 @@ name "tab:FN OEG fitted params"
 
 \end_inset
 
-Parameter values fitted to FN on SiOEG.
+Parameter values fitted to FN on SiPEG.
 \end_layout
 
 \end_inset
@@ -4146,7 +4138,7 @@ RSA with transition
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4177,6 +4169,461 @@ RSA model fitted to experimental data for FN on SiPEG.
 
 \end_inset
 
+ Results of the cell culture experiments are shown in Table
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Cell counts on FN"
+
+\end_inset
+
+.
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Cell counts on FN"
+
+\end_inset
+
+Cell counts (
+\begin_inset Formula $mm^{-2}$
+\end_inset
+
+) for embryonic hippocampal neurons and embryonic skeletal muscle cultured
+ on silane surfaces.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="6">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row bottomspace="default">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cell Type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DETA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SiPEG
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default" interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hippocampal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Live
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $212\pm102$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1\pm3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4\pm5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hippocampal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dead
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $340\pm75$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $218\pm81$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $265\pm86$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muscle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Live
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $35\pm13$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0\pm0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0\pm0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muscle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dead
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $178\pm43$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $50\pm32$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0\pm0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Muscle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Myotubes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $63\pm66$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $18\pm14$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $111\pm59$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -4185,8 +4632,37 @@ Modeling the Adsorption of Glucose Oxidase on Silane Surfaces
 \end_layout
 
 \begin_layout Standard
-The measured adsorption kinetics of glucose oxidase on glass, DETA, 13F
- and SiPEG are shown in Figure [].
+The experimentally measured kinetic curves for glucose oxidase on glass,
+ DETA, 13F, and SiPEG, along with the model that achieved the best fit to
+ each data set, are shown in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO glass plot"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO on DETA"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO on 13F"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO on PEG"
+
+\end_inset
+
+, respectively.
  The initial rate of adsorption was highest on the DETA and 13F surfaces
  and lowest on the SiPEG surface.
  The surface density of adsorbed protein reached the highest saturation
@@ -4218,63 +4694,6 @@ overshoot
 
  profile in which the surface density reached a maximum and then decreased
  gradually with time.
- 
-\end_layout
-
-\begin_layout Standard
-The experimentally measured kinetic curves, along with the model that achieved
- the best fit to the kinetic data, are shown in Figures 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GO glass plot"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GO on DETA"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GO on 13F"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GO on PEG"
-
-\end_inset
-
-.
- The results of the enzyme activity assay, along with the activity predicted
- by each model, are shown in figures 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GO glass activity"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GO DETA activity"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GO 13F activity"
-
-\end_inset
-
-.
  The parameter values for the five models fitted to the experimental measurement
 s are shown in Tables 
 \begin_inset CommandInset ref
@@ -4307,11 +4726,13 @@ reference "tab:GO params PEG"
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4344,7 +4765,7 @@ Langmuir model with post-adsorption transition fitted to data for GO on
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4380,7 +4801,7 @@ Langmuir two-layer adsorption model fitted to data for GO on DETA from the
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4416,7 +4837,7 @@ Langmuir model with post-adsorption transition fitted to data for GO on
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4451,7 +4872,7 @@ RSA model fitted to data for GO on SiPEG from the WGM biosensor.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4491,7 +4912,7 @@ Experimental measurements and model predictions of GO activity on a glass
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -4527,7 +4948,7 @@ Experimental measurements and model predictions of GO activity on a DETA
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -6626,7 +7047,14 @@ For GO on glass, the Langmuir-derived models fitted the data slightly better
 \begin_inset Formula $100\,\mu g/ml$
 \end_inset
 
-, as shown in Figure [].
+, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO glass activity"
+
+\end_inset
+
+.
  The activity predicted by both models at 
 \begin_inset Formula $100\,\mu g/ml$
 \end_inset
@@ -6645,13 +7073,26 @@ For GO on glass, the Langmuir-derived models fitted the data slightly better
 \begin_inset Formula $100\,\mu g/ml$
 \end_inset
 
-, as shown in Figure [].
+, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO DETA activity"
+
+\end_inset
+
  The two-layer model does not fit the kinetic data quite as well, but it
  does predict the amount of active enzyme very well.
  For GO on 13F, the two-layer model and the Langmuir-type model with post-adsorp
 tion transition fitted the kinetic data well.
  Although the two-layer model fitted the kinetic data slightly better, Figure
- [] indicates that it does not accurately predict the amount of active adsorbed
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GO 13F activity"
+
+\end_inset
+
+ indicates that it does not accurately predict the amount of active adsorbed
  protein.
  The Langmuir-type model with a post-adsorption transition predicted the
  amount of active protein very well.
@@ -6731,11 +7172,12 @@ reference "fig:Blocking function comparison"
 \end_inset
 
  demonstrates that there is a small difference between the blocking functions.
- This is probably because the equation for the RSA blocking function is
- fitted to simulation data and the two-stage blocking function is also an
- approximation.
- If an RSA model is fitted to a data set, the fitted parameters can be used
- as an initial guess for fitting a two-stage model, but 
+ This difference is probably because neither blocking function is exact;
+ the equation for the RSA blocking function is fitted to simulation data
+ and the two-stage blocking function is also an approximation.
+ If the RSA model and the transition model are fitted to the same data set,
+ the fitted parameters will not be identical, even if the transition rate
+ constant is very small.
 \end_layout
 
 \begin_layout Standard
@@ -6829,8 +7271,8 @@ reference "fig:SPT vs Langmuir kinetics"
 \end_inset
 
  are very different for the two models.
- This difference could have significant implications for modeling experimental
- data if protein in state
+ This difference has significant implications for modeling experimental
+ data if a protein in state
 \begin_inset space ~
 \end_inset
 
@@ -6838,7 +7280,7 @@ reference "fig:SPT vs Langmuir kinetics"
 \begin_inset Formula $\alpha$
 \end_inset
 
- functions differently than protein in state
+ functions differently than a protein in state
 \begin_inset space ~
 \end_inset
 
@@ -6925,9 +7367,989 @@ Fibronectin Adsorption
 \end_layout
 
 \begin_layout Standard
-The equilibrium surface concentration of FN, as measured by the WGM system,
- compares favorably with previously published results for a solution concentrati
-on of 
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="6">
+<features>
+<column alignment="center" valignment="top" width="1in">
+<column alignment="center" valignment="top" width="1in">
+<column alignment="center" valignment="top" width="0.8in">
+<column alignment="center" valignment="top" width="0.8in">
+<column alignment="center" valignment="top" width="0.65in">
+<column alignment="center" valignment="top" width="1.25in">
+<row bottomspace="default">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solution Concentration (
+\begin_inset Formula $\mu g/ml$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hydrophobic Surface
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hydrophilic Charged Surface
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hydrophilic Neutral Surface
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ref
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Notes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="default" interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $200$
+\end_inset
+
+ (13F)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $190$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $25$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+This work
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $170$
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{CH3}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $170$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $30$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Keselowsky2003"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $160$
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{CH3}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $30$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Capadona2003"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $140$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $140$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $50$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Michael2003"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{FN III_{7-10}}
+\end_layout
+
+\end_inset
+
+ fragment
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $110$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $70$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $25$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lee2006"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim175$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim175$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Baujard-Lamotte2008"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Saturation value inferred
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $135$
+\end_inset
+
+ (13F)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $137$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $14$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+This work
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $20$
+\end_inset
+
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{CH3}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $20$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Keselowsky2003"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $20$
+\end_inset
+
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{CH3}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Capadona2003"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $30$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $25$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Michael2003"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="default">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lee2006"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:FN saturation values"
+
+\end_inset
+
+Saturation surface density of adsorbed fibronectin (
+\begin_inset Formula $ng/cm^{2})$
+\end_inset
+
+ from this work and previous studies reported in the literature.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The saturation surface concentration of FN, as measured by the WGM system,
+ was compared to previously published results for solution concentrations
+ of 
+\begin_inset Formula $1\,\mu g/ml$
+\end_inset
+
+ and 
+\begin_inset Formula $10\,\mu g/ml$
+\end_inset
+
+ as shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:FN saturation values"
+
+\end_inset
+
+.
+ The WGM measurements compare favorably with previously published results
+ for a solution concentration of 
 \begin_inset Formula $10\,\mu g/ml$
 \end_inset
 
@@ -6950,12 +8372,6 @@ key "Lee2006"
  published results for hydrophobic and hydrophilic charged surfaces.
  In contrast, the surface concentration value for a neutral hydrophobic
  surface was in good agreement with previous results.
- Table 1 also shows the saturation surface concentration of FN at a solution
- concentration of 
-\begin_inset Formula $1\,\mu g/ml$
-\end_inset
-
-.
  The discrepancy between the WGM sensor results and the other methods at
  low concentrations may be explained by differences in the measurement system,
  the surface chemistry, or the adsorption process.
@@ -7032,12 +8448,8 @@ key "Keselowsky2003"
  stabilization and higher coverage or to expose new surface sites for increased
  protein adsorption.
  This would not be possible with the tightly packed alkane thiol monolayers.
- However, if the observation of high saturation values from low solution
- concentrations were due strictly to monolayer packing, this would be reflected
- in the literature.
- Thus, SAM surface structure differences are not seen as the only possible
- explanation, but it should be noted that this effect could also have major
- consequences for protein function, as described later.
+ This effect could also have major consequences for protein function, as
+ described later.
  
 \end_layout
 
@@ -7068,9 +8480,9 @@ The fitted parameters of the RSA model were very similar for FN adsorption
  of the RSA model were valid for the process of adsorption on DETA.
  This result was confirmed by the fitting results for the two-stage adsorption
  model.
- The sum of squared errors was only slightly lower than the SSE value for
- the fitted RSA model.
- We concluded that fibronectin adsorbed on DETA with a well-defined footprint,
+ The mean squared error for the model with transition was only slightly
+ lower than the error for the fitted RSA model.
+ We conclude that fibronectin adsorbs on DETA with a well-defined footprint,
  which does not change significantly after adsorption.
  This result is consistent with the well-established theory that proteins
  generally experience less denaturation on a hydrophilic surface than on
@@ -7116,9 +8528,9 @@ Fibronection on SiPEG
 
 \begin_layout Standard
 The RSA model fitted the SiPEG data well.
- The value for FN adsorption on SiPEG was lower than the values for DETA
- and 13F while the dissociation rate constant was higher, which is expected
- for a protein-resistant surface.
+ The association rate constat for FN adsorption on SiPEG was lower than
+ the values for DETA and 13F while the dissociation rate constant was higher,
+ which is expected for a protein-resistant surface.
  This result is consistent with findings that SiPEG is an electrostatically
  neutral surface that does not exhibit coulombic attraction for proteins
  in solution.
@@ -7179,10 +8591,10 @@ Cell Growth and Survival on FN-Coated Alkylsilane Monolayers
 \begin_layout Standard
 Both the embryonic hippocampal neurons and myocytes showed significantly
  better survival on DETA surfaces than 13F surfaces.
- However, the amount of adsorbed protein measured on the 13F surfaces was
- comparable to that of DETA, indicating that the conformation of adsorbed
- FN, and its function, was just as important as the quantity of FN for cell
- survival.
+ However, measurements with the WGM biosensor indicated that the amount
+ of adsorbed protein measured on the 13F surfaces was comparable to that
+ of DETA, indicating that the conformation of adsorbed FN, and its function,
+ was just as important as the quantity of FN for cell survival.
  This is consistent with the postulate made above that the silane monolayers
  are able to rearrange to accommodate more protein and that the DETA surface,
  being charged and hydrophilic, could accommodate the functional conformation
@@ -7199,8 +8611,12 @@ key "Keselowsky2003"
 \end_inset
 
 .
- Results from the skeletal myocyte culture provided further information
- about the bioactivity of absorbed FN.
+ 
+\end_layout
+
+\begin_layout Standard
+Results from the skeletal myocyte culture provided further information about
+ the bioactivity of absorbed FN.
  Skeletal myocytes are precursor cells that fuse and differentiate into
  contractile myotubes.
  This differentiation is mediated by, among other factors, the interaction
@@ -7256,7 +8672,18 @@ The highest saturation surface density of adsorbed protein was found on
  Intermediate amounts of protein adsorbed on the hydrophilic charged surfaces,
  glass and DETA.
  These results are consistent with the general consensus of previous protein
- adsorption studies20.
+ adsorption studies
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rabe2010"
+
+\end_inset
+
+.
  The initial kinetics of adsorption were slowest on the SiPEG surface, followed
  by glass.
  The 13F surface had the highest rate of adsorption at 
@@ -7349,10 +8776,25 @@ key "Quinto1998"
 \end_inset
 
 .
+ Estimates of protein size from crystal structure data or AFM measurements
+ on gold surfaces should be considered 
+\begin_inset Quotes eld
+\end_inset
+
+order of magnitude
+\begin_inset Quotes erd
+\end_inset
+
+ estimates, since the size of proteins is heavily dependent upon their environme
+nt.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -7792,7 +9234,8 @@ The Langmuir-type models fitted the kinetics of GO on glass slightly better
 \end_inset
 
 , almost all of the adsorbed enzyme remained active.
- Both of the two-stage models predicted the amount of active enzyme at 
+ Both of the two-stage models predicted the amount of active enzyme correctly
+ at 
 \begin_inset Formula $10\,\mu g/ml$
 \end_inset
 
@@ -7800,15 +9243,15 @@ The Langmuir-type models fitted the kinetics of GO on glass slightly better
 \begin_inset Formula $100\,\mu g/ml$
 \end_inset
 
- (assuming that enzyme in state 
+ with the assumption that enzyme in state 
 \begin_inset Formula $\alpha$
 \end_inset
 
- is active and enzyme in state 
+ was active and enzyme in state 
 \begin_inset Formula $\beta$
 \end_inset
 
- is inactive).
+ was inactive.
  If it was assumed that enzyme in both states remains active, both of the
  two-stage models would accurately predict the amount of active enzyme at
  
@@ -7925,7 +9368,7 @@ Glucose Oxidase on 13F
 
 \begin_layout Standard
 The kinetic data for GO on 13F was fitted well by both the Langmuir-type
- model with a post-adsorption transitions and the two-layer model.
+ model with a post-adsorption transition and the two-layer model.
  Although the SSE was slightly lower for the two-layer model, the Langmuir-type
  model provided a much better prediction of the amount of active adsorbed
  enzyme.
