@@ -3,6 +3,9 @@
 \begin_document
 \begin_header
 \textclass UCFthesis
+\begin_preamble
+\usepackage[version=3]{mhchem}
+\end_preamble
 \use_default_options true
 \language english
 \inputencoding auto
@@ -51,6 +54,147 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+The principles of transport and adsorption described in the previous chapters
+ were applied to the design of a microreactor that models the function of
+ an alveolus.
+ Alveoli are a micro-scale structures in the lung that facilitate the exchange
+ of oxygen and carbon dioxide between the blood and inhaled air.
+ Each alveolus is typically 
+\begin_inset Formula $200-250\,\mu m$
+\end_inset
+
+ in diameter, and the 300-480 million alveoli in the lungs of an adult human
+ provide a total surface area of 
+\begin_inset Formula $50-100\, m^{2}$
+\end_inset
+
+ for gas exchange
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Levitsky2007"
+
+\end_inset
+
+.
+ The alveolar membrane consists of a single layer of epithelial cells in
+ contact with the air and a single layer of endothelial cells that forms
+ a capillary for blood flow.
+ Development of an 
+\emph on
+in vitro
+\emph default
+ model of the alveolus-capillary interface would be important to biomedical
+ science, as this barrier tissue is an point of entry for toxins and plays
+ a role in compromised gas exchange in disease states.
+ A recent study found that only 11% of the drugs that passed preclinical
+ trials eventually became approved for use by either U.S.
+ or European regulatory agencies, and that the major causes of drugs failing
+ clinical trials were lack of efficacy and toxicity 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kola2004"
+
+\end_inset
+
+.
+ The majority of these failures occurred in the expensive late phases of
+ clinical trials.
+ With the potential to overcome the failures of traditional cell-based drug
+ assays in predicting physiological behavior, body-on-a-chip devices have
+ become an increasing area of interest in pharmaceutical testing 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sung2010"
+
+\end_inset
+
+.
+ Body-on-a-chip devices have been created based on pharmacokinetic models
+ in attempts to supplement traditional cell culture methods that are not
+ always capable of modeling tissue-tissue interactions that can occur when
+ the body is exposed to pharmaceuticals 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Esch2011"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Creating an 
+\emph on
+in vitro
+\emph default
+ model of the alveolus poses unique challenges due to the gas-liquid environment
+, layers of disparate functional cell types, and the transport of nutrients,
+ cells, and dissolved gas species through the tissue.
+ One lung-tissue based device was produced out of poly(dimethyl siloxane)
+ (PDMS) to recreate the structure, mechanics, and certain aspects of transport
+ that occur in lung tissue 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Huh2010"
+
+\end_inset
+
+.
+ The elastomeric PDMS material used in the device was highly permeable to
+ both oxygen and carbon dioxide, which precluded the ability to create physiolog
+ically relevant gas concentrations in the liquid phase of the environment.
+ Additionally, the high gas diffusion through the PDMS prevented measurement
+ of transport of these gas species through the tissue, a fundamental function
+ of the alveolus-capillary interface in the lung.
+ To overcome these limitations silicon based microfluidic technology was
+ utilized to create an 
+\emph on
+in vitro
+\emph default
+ body-on-a-chip model of the lung with a long-term goal of quantifying the
+ rate of gas transport across the model alveolar membrane.
+ To replicate the physiological function of the alveolus, liquid that enters
+ the model alveolus with a gas composition similar to that of venous blood
+ should exit the chamber with a gas composition similar to that of arterial
+ blood.
+ To be able to detect small changes in the rate of gas exchange across the
+ model alveolar membrane, the alveolar chamber should be designed such that
+ the gas composition of the liquid reaches arterial values just before the
+ liquid exits the chamber.
+ 
+\end_layout
+
+\begin_layout Standard
+After leaving the alveolar chamber, the liquid will pass through another
+ chamber containing dissolved-gas sensors.
+ These sensors require several minutes to register small changes in gas
+ levels, so the system was designed to be operated in either continuous
+ or stop-flow mode.
+ The microfluidics must be designed so that a 
+\begin_inset Quotes eld
+\end_inset
+
+plug
+\begin_inset Quotes erd
+\end_inset
+
+ of fluid moves from the alveolar chamber into the sensor chamber with relativel
+y little mixing in the the longitudinal direction.
+ The residence time distribution of an ideal plug-flow system is a Dirac
+ delta function, so the width of the residence time distribution can be
+ used to characterize how similar a system is to plug flow.
+ Each chamber must be designed so that liquid flowing through different
+ parts of the chamber experiences a similar residence time within the chamber.
+ This objective is equivalent to minimizing the width of the residence time
+ distribution, or approximating plug flow.
+\end_layout
+
+\begin_layout Standard
 Microreactors have recently been employed for synthetic organic chemistry,
  nanoparticle synthesis, and ultra-fast DNA amplification 
 \begin_inset CommandInset citation
@@ -71,8 +215,6 @@ key "Hartman2011"
 \end_inset
 
 .
- The residence time distribution of an ideal plug-system is a Dirac delta
- function.
  Several innovative methods have been developed to create plug flow in a
  microreactor, such as creating a multiphase flow with dispersed droplets
  or 
@@ -127,7 +269,7 @@ key "Carlotto2011,Ryu2011,Campbell2004,Hessel2005"
 \end_inset
 
 .
- Visualization experiments have focused mainly on mixing of two components,
+ Visualization experiments have focused mainly on the mixing of two components,
  though this method has been used to a limited extent to measure residence
  times in certain devices 
 \begin_inset CommandInset citation
@@ -195,113 +337,48 @@ key "Cantu-Perez2010"
  Although CFD simulations have been used to analyze the residence time distribut
 ion of microfluidic devices, the use of CFD to optimize these devices has
  not been widely reported.
+\end_layout
+
+\begin_layout Standard
+Protein adsorption also plays an important role in the microfluidic model
+ of the alveolus.
+ A PDMS membrane was chosen as the substrate for culturing monolayers of
+ epithelial and endothelial cells because of its high permeability to oxygen
+ and carbon dioxide.
+ PDMS is regarded as a poor substrate for cell culture, so it is standard
+ practice to treat the polymer with an oxygen plama and adsorb fibronectin
+ onto the membrane prior to tissue culture
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Powers2010"
+
+\end_inset
+
+.
+ PDMS can be easily molded to create intricate shapes.
+ This capability will eventually be utililized to create porous membranes
+ that will allow nutrients, chemical signals and even macrophages to pass
+ between the epithelial and endothelial cell layers.
  
 \end_layout
 
 \begin_layout Standard
-The general field of microreactor design would benefit from new methodology
- combining experimental and simulation based tool development, but this
- would be particularly germane to biomedical engineering of new systems
- for the drug discovery and toxicology fields.
- A recent study found that only 11% of the drugs that passed preclinical
- trials eventually became approved for use by either U.S.
- or European regulatory agencies, and that the major causes of drugs failing
- clinical trials were lack of efficacy and toxicity 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Kola2004"
-
-\end_inset
-
-.
- The majority of these failures occurred in the expensive late phases of
- clinical trials.
- With the potential to overcome the failures of traditional cell-based drug
- assays in predicting physiological behavior, body-on-a-chip devices have
- become an increasing area of interest in pharmaceutical testing 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Sung2010"
-
-\end_inset
-
-.
- Body-on-a-chip devices have been created based on pharmacokinetic models
- in attempts to supplement traditional cell culture methods that are not
- always capable of modeling tissue-tissue interactions that can occur when
- the body is exposed to pharmaceuticals 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Esch2011"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-One system of interest is the tissue of the lung, specifically the small
- functional alveoli and the alveolus-capillary interface, as this is the
- point of entry for toxins through this barrier organ and compromised gas
- exchange in disease states.
- This tissue poses unique difficulties to the creation of in vitro models
- due to the gas-liquid environment, layers of disparate functional cell
- types, and transport of nutrients, cells, and dissolved of gas species
- through the tissue.
- One lung-tissue based device was produced out of poly(dimethyl siloxane)
- (PDMS) to recreate the structure, mechanics, and certain aspects of transport
- that occur in lung tissue 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Huh2010"
-
-\end_inset
-
-.
- The elastomeric PDMS material used in the device was highly permeable to
- both oxygen and carbon dioxide, which precluded the ability to create physiolog
-ically relevant gas concentrations in the liquid phase of the environment.
- Additionally, the high gas diffusion through the PDMS prevented measurement
- of transport of these gas species through the tissue, a fundamental function
- of the alveolus-capillary interface in the lung.
- 
-\end_layout
-
-\begin_layout Standard
-To overcome these limitations silicon based microfluidic technology was
- utilized to create an in vitro body-on-a-chip model of the lung with a
- long-term goal of quantifying the rate of gas transport across the model
- alveolar membrane.
- To replicate the physiological function of the alveolus, liquid that enters
- the model alveolus with a gas composition similar to the gas composition
- of venous blood should exit the chamber with a gas composition similar
- to that of arterial blood.
- To detect small changes in the rate of gas exchange across the model alveolar
- membrane, the alveolar chamber should be designed such that the gas composition
- of the liquid reaches arterial values just before the liquid exits the
- chamber.
- The chamber must be designed so that liquid flowing through different parts
- of the chamber experiences a similar residence time within the chamber
- but with the limitation that gas concentration changes have measurable
- values.
- This objective is equivalent to minimizing the width of the residence time
- distribution, or approximating plug flow.
- This is a necessary first step to enable dissolved-gas sensors to be incorporat
-ed in the device to quantify the amount of dissolved gas present in the
- liquid.
- Since it was determined that for a microfluidic lung surrogate that these
- sensors will require a significant amount of time to reach steady-state,
- the device was designed and modeled to operate in a stop-flow mode.
+The general field of microreactor design would benefit from a new methodology
+ combining experimental and simulation-based development.
+ This capability would be particularly germane to biomedical engineering
+ of new systems for drug discovery and toxicology.
  CFD simulations were used as part of an iterative design process to quantify
  the convective and diffusive transport of dissolved gas in the liquid side
  of the alveolus and achieve the best possible approximation to plug flow.
  The flexibility of the design process was demonstrated by the fabrication
  of an alveolar chamber that could accommodate a standard tissue culture
  support and a polygonal chamber for more general applications.
- The modeled results were verified through quantitative and qualitative
- experimental measurements using dye visualization of different iterations
- of the designed system.
+ The CFD predictions for different design iterations were validated with
+ quantitative and qualitative experimental measurements using dye visualization.
  The design techniques presented here can be utilized to optimize the performanc
 e of microreactors for any application.
 \end_layout
@@ -390,20 +467,27 @@ The CFD-ACE+ suite of simulation tools was used to predict the performance
  To characterize the residence time distribution of each design, the inlet
  boundary condition introduced water saturated with carbon dioxide (mass
  fraction of 0.03366) at a volumetric flow rate of 
-\begin_inset Formula $35\mu l\, min^{-1}$
+\begin_inset Formula $35\,\mu l\, min^{-1}$
 \end_inset
 
 , approximating a step function at the inlet of the device at t=0.
  The results of this simulation protocol should also be valid for dissolved
- oxygen, which has a diffusion coefficient similar to carbon dioxide ( for
- oxygen 
+ oxygen, which has a diffusion coefficient similar to carbon dioxide (
+\begin_inset Formula $2\times10^{-9}m^{2}s^{-1}$
+\end_inset
+
+ for oxygen 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Jamnongwong2010"
 
 \end_inset
 
- and for carbon dioxide 
+ and 
+\begin_inset Formula $1.7\times10^{-9}m^{2}s^{-1}$
+\end_inset
+
+ for carbon dioxide 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Tamimi1994"
@@ -414,7 +498,7 @@ key "Tamimi1994"
  The Euler method was used for time stepping, and the time step was calculated
  automatically using the Auto Time Step feature in CFD-ACE-GUI.
  The minimum time step was set to 
-\begin_inset Formula $100\mu s$
+\begin_inset Formula $100\,\mu s$
 \end_inset
 
 .
@@ -468,7 +552,69 @@ key "Nakagaki1950,Inglesby2001,Culbertson2002"
  A roughly linear relationship was observed between molar mass and diffusion
  coefficient.
  Based on this relationship, the diffusion coefficient of Brilliant Blue
- FCF was estimated to be approximately .
+ FCF was estimated to be approximately 
+\begin_inset Formula $2\times10^{-10}m^{2}s^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Design Methodology
+\end_layout
+
+\begin_layout Standard
+The chamber dimensions and internal structures were optimized by successive
+ computational fluid dynamics modeling of the system.
+ The iterative design process revolved around minimizing the width of the
+ residence time distribution.
+ A CFD simulation was performed for each new design iteration and the residence
+ time distribution was calculated to evaluate that iteration.
+ The alveolar chamber was designed to accommodate a circular cell culture
+ membrane, such as a Transwell insert (Corning Life Sciences), with a diameter
+ of 
+\begin_inset Formula $6.5\, mm$
+\end_inset
+
+.
+ Baffles in the shape of circular arcs were added to the chamber to support
+ the membrane and reduce the width of the residence time distribution.
+ The baffles divide the incoming liquid into several streams such that the
+ velocity of the liquid in each stream is roughly proportional to the length
+ of the path it takes through the chamber.
+ Specifically, the baffles were designed so that liquid following the longest
+ path around the perimeter of the chamber would have the same residence
+ time as liquid that traversed the shortest path through the center of the
+ chamber.
+ The arc length of each baffle was kept as short as possible, since the
+ no-slip boundary condition on the baffles contributed to axial dispersion
+ within each channel.
+ The outer baffle was designed to be long enough to prevent a stagnation
+ zone from forming near the outlet of the chamber.
+ The inner baffles were made progressively shorter.
+ A small gap was added near the end of each baffle to prevent stagnation
+ on the channel inside of the baffle.
+ 
+\end_layout
+
+\begin_layout Standard
+The design used for the bubble trap and conditioning chamber was chosen
+ to be a rectangle with tapering inlet and outlet sections.
+ To allow the device to operate in a stop-flow mode, these chambers were
+ designed to have the same volume as the alveolar chamber.
+ The angle of the taper and the chamber width were adjusted to minimize
+ the width of the residence time distribution while maintaining a volume
+ equal to that of the circular chamber.
+ A staggered array of posts was then created in each chamber to modify the
+ flow characteristics.
+ The vertical spacing between posts and the number of columns of posts were
+ adjusted in the CFD model until the flow through the chamber was as close
+ as possible to plug flow.
+ Because the chamber wall reduced the velocity of fluid flowing between
+ the top row of posts and the chamber wall, the spacing between the top
+ row of posts and the chamber wall had to be larger than the spacing between
+ posts to avoid introducing a stagnation zone.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -491,7 +637,7 @@ on profile was approximately linear, though this relationship would not
  the devices initially containing 1X PBS with no dye and visualizing the
  movement of the blue dye solution in the chambers.
  The dye was pumped at a rate of 
-\begin_inset Formula $35\mu l\, min^{-1}$
+\begin_inset Formula $35\,\mu l\, min^{-1}$
 \end_inset
 
  using a syringe pump.
@@ -515,29 +661,45 @@ Dimensional analysis was utilized to understand how the device would perform
  order of magnitude higher than that of the dye.
  The Péclet number is the dimensionless number that represents the ratio
  of convective transport to diffusive transport in a fluidic system.
- The Péclet number in a channel is given by , where L is the characteristic
- dimension of the channel, U is the average velocity in the channel, and
- D is the diffusion coefficient of the solute.
+ The Péclet number in a channel is given by 
+\begin_inset Formula $Pe=LU/D$
+\end_inset
+
+, where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the characteristic dimension of the channel, 
+\begin_inset Formula $U$
+\end_inset
+
+ is the average velocity in the channel, and 
+\begin_inset Formula $D$
+\end_inset
+
+ is the diffusion coefficient of the solute.
  For a rectangular channel, the hydraulic diameter is used as the characteristic
  dimension.
  Using the average velocity in the channels between the chambers calculated
  by the CFD simulation, the Péclet number for dissolved gas with a diffusion
  coefficient of was computed to be 770 for a volumetric flow rate of 
-\begin_inset Formula $35\mu l\, min^{-1}$
+\begin_inset Formula $35\,\mu l\, min^{-1}$
 \end_inset
 
 .
- To obtain a similar Péclet number with the dye (D= ), experiments were
- performed with a volumetric flow rate of 
-\begin_inset Formula $3.5\mu l\, min^{-1}$
+ Because the diffusion coefficient of the dye is one order of magnitude
+ lower than that of dissolved gas, experiments with dye were performed with
+ a volumetric flow rate of 
+\begin_inset Formula $3.5\,\mu l\, min^{-1}$
 \end_inset
 
-.
+ to obtain a Péclet number comparable to that of dissolved gas.
  Experiments were also performed with a flow rate of 
-\begin_inset Formula $350\mu l\, min^{-1}$
+\begin_inset Formula $350\,\mu l\, min^{-1}$
 \end_inset
 
- to establish a two order of magnitude range of performance with the system.
+ to characterize the performance of the system over a range of two orders
+ of magnitude.
  
 \end_layout
 
@@ -594,6 +756,196 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/RT_alveolus.tif
+	lyxscale 50
+	width 3in
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:RT alveolus"
+
+\end_inset
+
+Alveolar chamber
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/RT_conditioner.tif
+	lyxscale 50
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:RT Conditioner"
+
+\end_inset
+
+Conditioner
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/RT_3chambers.tif
+	lyxscale 50
+	width 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:RT 3 chambers"
+
+\end_inset
+
+Alveolus on full chip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Residence time dist CFD"
+
+\end_inset
+
+Residence time distributions predicted by CFD for carbon dioxide-saturated
+ water.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The design goal was to obtain the best possible approximation to plug flow
+ so that a bolus of liquid would flow from one chamber into the next with
+ minimal mixing between the chambers.
+ The residence time distributions predicted by the CFD simulation for the
+ initial and final designs of the round alveolar chamber and the polygonal
+ chamber are shown in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RT alveolus"
+
+\end_inset
+
+ and Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RT Conditioner"
+
+\end_inset
+
+, respectively.
+ Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:RT 3 chambers"
+
+\end_inset
+
+ shows the predicted combined residence time distribution for first two
+ chambers of the device (bubble trap and conditioning chamber) and for the
+ first three chambers of the device (bubble trap, conditioning chamber,
+ and alveolus).
+\end_layout
+
+\begin_layout Subsection
+Experimental Validation of CFD Simulations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename Figures/Microreactor.tif
 	lyxscale 30
@@ -614,8 +966,19 @@ name "fig:Microreactor"
 
 \end_inset
 
-Microreactor design (a), fabricated silicon chip (b), and chip in acrylic
- housing (c)
+Microreactor design
+\begin_inset space ~
+\end_inset
+
+(a), fabricated silicon chip
+\begin_inset space ~
+\end_inset
+
+(b), and chip in acrylic housing
+\begin_inset space ~
+\end_inset
+
+(c)
 \end_layout
 
 \end_inset
@@ -623,16 +986,13 @@ Microreactor design (a), fabricated silicon chip (b), and chip in acrylic
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
-The design goal was to obtain the best possible approximation to plug flow
- so that a bolus of liquid would flow from one chamber into the next with
- minimal mixing between the chambers.
- The overall layout of the device is shown in Figure 
+The overall layout of the device is shown in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Microreactor"
@@ -640,7 +1000,11 @@ reference "fig:Microreactor"
 \end_inset
 
 a.
- The microfluidic device fabricated in silicon is shown in Figure 
+ The microfluidic device fabricated in silicon is shown in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Microreactor"
@@ -648,7 +1012,11 @@ reference "fig:Microreactor"
 \end_inset
 
 b.
- The silicon device in the acrylic housing is shown in Figure 
+ The silicon device in the acrylic housing is shown in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Microreactor"
@@ -665,20 +1033,12 @@ key "Sung2009"
 
 , followed by a chamber that will eventually be used to condition the liquid
  to contain physiologically relevant concentrations of dissolved gas.
- The alveolar chamber was designed to be round so that a variety of membranes
- could be used for tissue culture in the future, including commercially
- available membrane supports such as Transwell inserts (Corning Life Sciences).
- Two sensor chambers were included downstream of the alveolar chamber to
- allow incorporation of dissolved gas sensors.
- Another bubble trap was incorporated between the alveolus and the sensor
- chambers to prevent bubbles from accumulating in the sensor chambers.
- To allow the device to operate in a stop-flow mode, all the chambers were
- designed to have the same volume.
- 
-\end_layout
-
-\begin_layout Subsection
-Iterative CFD-Based Device Optimization
+ Another bubble trap is located downstream (to the right) of the alveolar
+ chamber to prevent bubbles from accumulating in the sensor chambers, followed
+ by two chambers that will eventually house dissolved-gas sensors.
+ For additional chip designs were fabricated (not shown) to test each chamber
+ design in isolation: the alveolar chamber with and without baffles and
+ the conditioning chamber with and without posts.
 \end_layout
 
 \begin_layout Standard
@@ -785,40 +1145,12 @@ Visualization of the flow in the alveolus predicted by CFD (left columns)
 
 \end_inset
 
-After the general layout was established as indicated in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Microreactor"
-
+The flow pattern inside an isolated alveolar chamber with and without baffles
+ is shown in Figure
+\begin_inset space ~
 \end_inset
 
-, the chamber dimensions and internal structures were optimized by successive
- computational fluid dynamics modeling of the system.
- The iterative design process revolved around minimizing the width of the
- residence time distribution.
- A CFD simulation was performed for each new design iteration and the residence
- time distribution was calculated to evaluate that iteration.
- The alveolar chamber was designed to accommodate a circular cell culture
- membrane with a diameter of 6.5mm.
- Baffles in the shape of circular arcs were added to the chamber to support
- the membrane and reduce the width of the residence time distribution.
- The baffles divide the incoming liquid into several streams such that the
- velocity of the liquid in each stream is roughly proportional to the length
- of the path it takes through the chamber.
- Specifically, the baffles were designed so that liquid following the longest
- path around the perimeter of the chamber would have the same residence
- time as liquid that traversed the shortest path through the center of the
- chamber.
- The arc length of each baffle was kept as short as possible, since the
- no-slip boundary condition on the baffles contributed to axial dispersion
- within each channel.
- The outer baffle was designed to be long enough to prevent a stagnation
- zone from forming near the outlet of the chamber.
- The inner baffles were made progressively shorter.
- A small gap was added near the end of each baffle to prevent stagnation
- on the channel inside of the baffle.
- The flow pattern inside an isolated alveolar chamber with and without baffles
- is shown in Figure 
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Alveolus CFD vs Dye"
@@ -826,9 +1158,7 @@ reference "fig:Alveolus CFD vs Dye"
 \end_inset
 
 , including both CFD results and experimental visualization.
-\end_layout
-
-\begin_layout Standard
+ 
 \begin_inset Float figure
 wide false
 sideways false
@@ -932,21 +1262,11 @@ Visualization of the flow in the conditioning chamber predicted by CFD (left
 
 \end_inset
 
-The chamber design for the bubble trap and conditioning chamber were chosen
- to be rectangles with tapering inlet and outlet sections.
- The angle of the taper and the chamber width were adjusted to minimize
- the width of the residence time distribution while maintaining a volume
- equal to that of the circular chamber.
- A staggered array of posts was then created in each chamber to modify the
- flow characteristics.
- The vertical spacing between posts and the number of columns of posts were
- adjusted in the CFD model until the flow through the chamber was as close
- as possible to plug flow.
- Because the chamber wall reduced the velocity of fluid flowing between
- the top row of posts and the chamber wall, the spacing between the top
- row of posts and the chamber wall had to be larger than the spacing between
- posts to avoid introducing a stagnation zone.
- Figure 
+ Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Conditioner CFD Dye"
@@ -954,7 +1274,7 @@ reference "fig:Conditioner CFD Dye"
 \end_inset
 
  indicates the amount of dye present in different locations within the isolated
- conditioning chamber and bubble trap at various times.
+ conditioning chamber/bubble trap at various times.
  The flow patterns for the conditioning chambers with and without the post
  arrangement are shown along with the flow patterns expected from the CFD
  results.
@@ -962,7 +1282,11 @@ reference "fig:Conditioner CFD Dye"
  represented as white and the maximum dye concentration was black.
  Images from the visualization experiments of the alveolar chamber in the
  combined three chamber device are compared to the images from the isolated
- alveolar chamber and CFD results in Figure 
+ alveolar chamber and CFD results in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:3 Chambers CFD Dye"
@@ -1013,199 +1337,14 @@ Visualization of the flow in the alveolar chamber in the full chip predicted
 \end_inset
 
 
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Figures/RT_alveolus.tif
-	lyxscale 50
-	width 3in
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:RT alveolus"
-
-\end_inset
-
-Alveolar chamber
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Figures/RT_conditioner.tif
-	lyxscale 50
-	width 3in
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:RT Conditioner"
-
-\end_inset
-
-Conditioner
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Figures/RT_3chambers.tif
-	lyxscale 50
-	width 3in
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:RT 3 chambers"
-
-\end_inset
-
-Alveolus on full chip
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Residence time dist CFD"
-
-\end_inset
-
-Residence time distributions predicted by CFD for carbon dioxide-saturated
- water
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-The residence time distributions predicted by the CFD simulation for the
- final designs of the round alveolar chamber and the polygonal chamber are
- shown in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:RT alveolus"
-
+Figure
+\begin_inset space ~
 \end_inset
 
- and Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:RT Conditioner"
 
-\end_inset
-
-, respectively.
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:RT 3 chambers"
-
-\end_inset
-
- shows the predicted combined residence time distribution for first two
- chambers of the device (bubble trap and conditioning chamber) and for the
- first three chambers of the device (bubble trap, conditioning chamber,
- and alveolus).
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Residence time dist CFD"
-
-\end_inset
-
- also shows the performance of the chambers without any posts or baffles.
- Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Alveolus outlet"
@@ -1216,7 +1355,11 @@ reference "fig:Alveolus outlet"
  a function of time when a concentration step function was applied at the
  chamber inlet.
  The outlet concentrations for the conditioning chamber designs, as analyzed
- from the video captures, are shown in Figure 
+ from the video captures, are shown in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Conditioner outlet"
@@ -1225,7 +1368,11 @@ reference "fig:Conditioner outlet"
 
 , along with the concentrations expected from the CFD results for these
  chambers.
- Figure 
+ Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:3 chambers outlet"
@@ -1237,7 +1384,11 @@ reference "fig:3 chambers outlet"
  Dotted lines indicate plus or minus one standard deviation from the experimenta
 l average, while a dashed line indicates the concentration predicted by
  CFD.
- Figure 
+ Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Outlet 3 flow rates"
@@ -1250,7 +1401,7 @@ reference "fig:Outlet 3 flow rates"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1290,7 +1441,7 @@ Saturation at the outlet of the alveolus
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1326,7 +1477,7 @@ Saturation at the outlet of the conditioning chamber
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1362,7 +1513,7 @@ Saturation at the outlet of the alveolus on the full chip
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1482,25 +1633,46 @@ The experimental flow patterns confirmed the CFD results that introducing
  baffles into the alveolar chamber reduced stagnation zones to produce a
  more plug-flow like flow pattern.
  At early time points, the baffles prevented a stream of dyed liquid in
- the center from speeding toward the outlet, as shown in time points 3.5s
- and 6.5s.
+ the center from speeding toward the outlet, as shown in time points 
+\begin_inset Formula $3.5\, s$
+\end_inset
+
+ and 
+\begin_inset Formula $6.5\, s$
+\end_inset
+
+.
  Especially at the later time points, the baffles reduced liquid stagnation
  near the outer walls of the chamber.
  Stagnation zones in the alveolar chamber without baffles were clearly visible
- at 11.5s, and stagnant liquid remained at 16.5s immediately adjacent to the
- walls.
- In contrast, the liquid near the walls of the alveolar chamber with baffles
- was much more uniform in concentration at 11.5s, and the entire chamber
- had a nearly uniform concentration at 16.5s.
- 
-\end_layout
+ at 
+\begin_inset Formula $11.5\, s$
+\end_inset
 
-\begin_layout Standard
-The baffle design clearly improved the flow patterns in the round alveolar
+, and stagnant liquid remained at 
+\begin_inset Formula $16.5\, s$
+\end_inset
+
+ immediately adjacent to the walls.
+ In contrast, the liquid near the walls of the alveolar chamber with baffles
+ was much more uniform in concentration at 
+\begin_inset Formula $11.5\, s$
+\end_inset
+
+, and the entire chamber had a nearly uniform concentration at 
+\begin_inset Formula $16.5\, s$
+\end_inset
+
+.
+ The baffle design clearly improved the flow patterns in the round alveolar
  chamber, though further improvements may be possible.
  The streaks of higher and lower concentration liquid, which are prominent
- at 6.5s, indicated that the flow pattern on the exit side of the baffles
- was not completely uniform.
+ at 
+\begin_inset Formula $6.5\, s$
+\end_inset
+
+, indicated that the flow pattern on the exit side of the baffles was not
+ completely uniform.
  It should be noted that the chambers were optimized for the transport of
  gases that have diffusion coefficients an order of magnitude higher than
  the diffusion coefficient of the dye used to visualize the flow patterns.
@@ -1509,8 +1681,8 @@ The baffle design clearly improved the flow patterns in the round alveolar
 \end_layout
 
 \begin_layout Standard
-The dye visualization of the flow patterns in the conditioning chamber (Figure
- 
+The dye visualization of the flow patterns in the isolated conditioning
+ chamber (Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Conditioner CFD Dye"
@@ -1520,23 +1692,39 @@ reference "fig:Conditioner CFD Dye"
 ) confirmed that the post layout improves the uniformity of the flow pattern
  in the conditioner, like the baffles improved the flow pattern in the alveolar
  chamber.
- Specifically at 6.5s and 9.5s after the introduction of dye into the inlet,
- the condition chamber without posts exhibited large regions of stagnant
- liquid near the chamber walls, represented by lighter color.
+ Specifically, at 
+\begin_inset Formula $6.5\, s$
+\end_inset
+
+ and 
+\begin_inset Formula $9.5\, s$
+\end_inset
+
+ after the introduction of dye into the inlet the condition chamber without
+ posts exhibited large regions of stagnant liquid near the chamber walls,
+ represented by lighter color.
  In contrast, the chamber with posts did not experience these stagnant zones.
  The CFD simulation predicted that the chamber without posts should be nearly
- completely filled with dyed liquid by 6.5s, while experiments showed that
- fillitheng the chamber required somewhat more time.
- In Figure 
+ completely filled with dyed liquid by 
+\begin_inset Formula $6.5\, s$
+\end_inset
+
+, while experiments showed that filling the chamber required somewhat more
+ time.
+ 
+\end_layout
+
+\begin_layout Standard
+In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:3 Chambers CFD Dye"
 
 \end_inset
 
-, the flow pattern for the liquid in the alveolus of the three chamber device
- followed the CFD results as well as matched the trends of the isolated
- alveolar chamber with baffles.
+, the flow pattern for the liquid in the alveolus of the full device followed
+ the CFD results as well as matched the trends of the isolated alveolar
+ chamber with baffles.
  The dispersion of dye in the inlet of the alveolus due to the previous
  two chambers can be observed in Figure 
 \begin_inset CommandInset ref
@@ -1546,9 +1734,9 @@ reference "fig:3 Chambers CFD Dye"
 \end_inset
 
 .
- Because of the dispersion at the inlet, the alveolar chamber in the three-chamb
-er device requires more time to reach a uniform concentration compared to
- the single alveolar chamber.
+ Because of the non-uniform concentration of dye across the inlet, the alveolar
+ chamber in the full device requires more time to reach a uniform concentration
+ compared to the single alveolar chamber.
  This trend can also be seen in the images from the CFD simulation.
  
 \end_layout
@@ -1591,9 +1779,6 @@ reference "fig:Conditioner CFD Dye"
 
 , the posts or baffles greatly reduced this variation across the channel
  width, indicating more plug-like flow.
- The baffles and posts effectively reduced the variation in times the liquid
- took to reach the outlet.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1636,22 +1821,22 @@ reference "fig:Conditioner outlet"
  Toward the later times, the outlet concentration profile for the chamber
  without posts was delayed by approximately 3 seconds relative to the profile
  of the chamber with posts.
- 
 \end_layout
 
 \begin_layout Standard
-The concentration profile for the three chamber device (Figure 
+The concentration profile at the outlet of the alveolar chamber in the full
+ device (Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:3 chambers outlet"
 
 \end_inset
 
-) in this case was actually steeper than the CFD results, indicating a narrower
- residence time distribution within the entire chip than was predicted.
- The inlet concentration for the alveolus was probably influenced by the
- previous two chambers, so the inlet concentration for the alveolar chamber
- was not a step function for either the CFD or the experimental results.
+) was actually steeper than the CFD results, indicating a narrower residence
+ time distribution within the entire chip than was predicted.
+ The inlet concentration for the alveolus was influenced by the previous
+ two chambers, so the inlet concentration for the alveolar chamber was not
+ a step function for either the CFD or the experimental results.
  The influence of all three chambers on the flow pattern was incorporated
  into both the CFD and experimental results for the three-chamber design.
  The fact that the experimental concentration profile at the outlet of the
@@ -1662,9 +1847,9 @@ reference "fig:3 chambers outlet"
 \end_layout
 
 \begin_layout Standard
-The three chamber device was imaged and the outlet concentrations analyzed
- using three different orders of magnitude for the flow rate to produce
- flows of varying ratios of convective flow to diffusive transfer (i.e.
+The full device was imaged and the concentrations at the outlet of the alveolar
+ chamber were analyzed using flow rates covering three orders of magnitude
+ to vary the ratio of convective to diffusive mass transfer (i.e.
  different Péclet numbers) (Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1678,27 +1863,45 @@ reference "fig:Outlet 3 flow rates"
  limited the amount of diffusion that occurred during the normalized time
  period.
  The slowest flow rate (
-\begin_inset Formula $3.5\mu l\, min^{-1}$
+\begin_inset Formula $3.5\,\mu l\, min^{-1}$
 \end_inset
 
 ) simulates the outlet concentration profile that would be produced using
  dissolved 
-\begin_inset Formula $\textrm{CO_{2}}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{CO2}
+\end_layout
+
 \end_inset
 
  (with approximately one order of magnitude higher diffusion coefficient
  than dye) at a flow rate of 
-\begin_inset Formula $35\mu l\, min^{-1}$
+\begin_inset Formula $35\,\mu l\, min^{-1}$
 \end_inset
 
 , since the ratio of convective transfer to diffusive transfer is about
  the same for both conditions.
  This condition (
-\begin_inset Formula $\textrm{CO_{2}}$
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{CO2}
+\end_layout
+
 \end_inset
 
  dissolved in a liquid flowing at 
-\begin_inset Formula $35\mu l\, min^{-1}$
+\begin_inset Formula $35\,\mu l\, min^{-1}$
 \end_inset
 
 ) is appropriate for a lung-on-a-chip device of similar geometry.
