@@ -452,6 +452,9 @@ CFD Simulation Methodology
 \begin_layout Standard
 The CFD-ACE+ suite of simulation tools was used to predict the performance
  of the device.
+ The Reynolds and Knudsen numbers were computed to ensure that flow would
+ be entirely laminar and that the continuum approximations inherent in CFD
+ would be valid for the system.
  CFD-GEOM was used to define the geometry and create a regular mesh throughout
  the liquid volume.
  The velocity derivatives were approximated with upwind differencing and
@@ -564,6 +567,141 @@ Design Methodology
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/alv_v0.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/alv_v1.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/alv_v2.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/alv_v3.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/alv_v4.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/alv_v5.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Alveolar chamber designs"
+
+\end_inset
+
+Progressive refinement of the design of the alveolar chamber.
+ The earliest design is at the upper left, and the final design is at the
+ lower right.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 The chamber dimensions and internal structures were optimized by successive
  computational fluid dynamics modeling of the system.
  The iterative design process revolved around minimizing the width of the
@@ -577,7 +715,18 @@ The chamber dimensions and internal structures were optimized by successive
 \end_inset
 
 .
- Baffles in the shape of circular arcs were added to the chamber to support
+ The progression of designs is shown in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Alveolar chamber designs"
+
+\end_inset
+
+.Baffles in the shape of circular arcs were added to the chamber to support
  the membrane and reduce the width of the residence time distribution.
  The baffles divide the incoming liquid into several streams such that the
  velocity of the liquid in each stream is roughly proportional to the length
@@ -598,6 +747,141 @@ The chamber dimensions and internal structures were optimized by successive
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/cond_v1a.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/cond_v1b.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/cond_v1c.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/cond_v1d.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/cond_v1e.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/cond_v1f.png
+	lyxscale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conditioning chamber designs"
+
+\end_inset
+
+Progressive refinement of the design of the conditioning chamber.
+ The earliest design is at the upper left, and the final design is at the
+ lower right.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 The design used for the bubble trap and conditioning chamber was chosen
  to be a rectangle with tapering inlet and outlet sections.
  To allow the device to operate in a stop-flow mode, these chambers were
@@ -607,6 +891,18 @@ The design used for the bubble trap and conditioning chamber was chosen
  equal to that of the circular chamber.
  A staggered array of posts was then created in each chamber to modify the
  flow characteristics.
+ The design iterations of the conditioning chamber are shown in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conditioning chamber designs"
+
+\end_inset
+
+.
  The vertical spacing between posts and the number of columns of posts were
  adjusted in the CFD model until the flow through the chamber was as close
  as possible to plug flow.
@@ -1907,7 +2203,10 @@ ce{CO2}
 ) is appropriate for a lung-on-a-chip device of similar geometry.
  Thus, the different flow rate outlet profiles can be used to estimate the
  profiles that would be produced for other diffusion coefficients.
- 
+\end_layout
+
+\begin_layout Subsection
+Conclusions
 \end_layout
 
 \begin_layout Standard
