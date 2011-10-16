@@ -3,6 +3,28 @@
 \begin_document
 \begin_header
 \textclass UCFthesis
+\begin_preamble
+\providecommand*\standardstate{%
+  {%
+    \ensuremath{\protect\cst@standardstate}%
+  }%
+}
+\newcommand*\cst@standardstate{%
+  \mathpalette\cst@standardstate@aux\circ
+}
+\newcommand*\cst@standardstate@aux[2]{%
+  \ooalign{%
+    \hfil
+    $#1-$%
+    \hfil
+    \cr
+    \hfil
+    $#1#2$%
+    \hfil
+    \cr
+  }%
+}
+\end_preamble
 \options PhD
 \use_default_options false
 \language english
@@ -110,10 +132,14 @@ key "Dror2010"
  used to model protein adsorption.
  Colloidal models represent a protein molecule with a simplified geometric
  shape (typically a sphere or ellipsoid) and interactions are modeled by
- DLVO forces 
+ DLVO (electrostatic and van der Walls) forces
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
-key "evans1994colloidal"
+key "evans1994colloidal,Roth1993,Lenhoff1995"
 
 \end_inset
 
@@ -135,12 +161,17 @@ A fundamental limitation of nanoscale and mesoscale simulation methods is
  that they are impractical for modeling transport in practical applications
  such as medical implants, engineered tissue constructs, blood flow simulations,
  and microfluidic devices.
- CFD simulations are widely used to model transport in macroscale systems.
+ Computational fluid dynamics (CFD) simulations are widely used to model
+ transport in macroscale systems.
  Simplified continuum models of adsorption based upon chemical kinetics
- have been used as adsorbing boundary conditions in CFD simulations 
+ have been used as adsorbing boundary conditions in CFD simulations
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Jenkins2004"
+key "Jenkins2004,Glaser1993,Edwards1999"
 
 \end_inset
 
@@ -873,7 +904,7 @@ The choice of boundary condition for the bulk solution depends upon the
 \end_layout
 
 \begin_layout Subsection
-Computation of the Activity Coefficient
+Calcluation of the Activity Coefficient
 \end_layout
 
 \begin_layout Standard
@@ -1085,7 +1116,7 @@ The Brownian dynamics simulation was validated by simulating diffusion-limited
 \end_layout
 
 \begin_layout Subsubsection
-Calculation of the Activity Coefficient
+Monte Carlo Calculation of the Activity Coefficient
 \end_layout
 
 \begin_layout Standard
@@ -1094,7 +1125,7 @@ The activity coefficient was determined empirically from the results of
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Widom1963"
+key "Widom1963,Dullens2005"
 
 \end_inset
 
@@ -1219,6 +1250,141 @@ k_{2}=\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\pa
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Exact Calculation of the Available Volume Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Joined_Particles_and_Images_9May2010.tiff
+	lyxscale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Computational geometry"
+
+\end_inset
+
+Example showing how computational geometry can be used to obtain the available
+ volume function.
+ Unavailable space due to image particles is shown in red, and overlaps
+ between particles and images are shown in green.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+An alternative method was developed to compute the available volume function
+ and confirm the results of the implementation of Widom's method.
+ The Computational Geometry Algorithm Library (CGAL) is collection of open-sourc
+e tools for computational geometry
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CGAL"
+
+\end_inset
+
+.
+ At a given height above the surface 
+\begin_inset Formula $h_{i},$
+\end_inset
+
+ the generalized polygon class from CGAL was used to compute the union of
+ all the space which
+\emph on
+ 
+\emph default
+could not be occupied by the center of a particle at that particular height.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Image
+\begin_inset Quotes erd
+\end_inset
+
+ particles were created to accurately represent space occupied by particles
+ at the edge of the domain that 
+\begin_inset Quotes eld
+\end_inset
+
+wrapped
+\begin_inset Quotes erd
+\end_inset
+
+ to the other side of the domain due to the periodic boundary conditions
+ in the Brownian dynamics simulation.
+ An example of the union of unavailable space, with image particles, is
+ shown in Figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Computational geometry"
+
+\end_inset
+
+.
+ The fraction of space that available for adsorption at given 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ could be directly calculated by subtracting the unavailable area from the
+ total area and dividing the result by the total area.
+ For computational efficiency, the algorithm started with the first surface
+ arrangment 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+, calculated the available area, added the particles that adsorbed at 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ and calculated the available area, and so on.
+ This was repeated for each 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+, and parallel computing was used to run multiple values of 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ in parallel.
 \end_layout
 
 \begin_layout Subsection
@@ -1530,7 +1696,9 @@ key "Schaaf1989"
 \end_inset
 
 .
- 
+ The AVF calculated by the Monte Carlo implementation of Widom's method
+ matched the results from the computational geometry calculation.
+ The computational geometry method require more computational resources.
 \end_layout
 
 \begin_layout Subsection

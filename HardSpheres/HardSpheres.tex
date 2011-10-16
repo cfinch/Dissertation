@@ -24,17 +24,17 @@ has the ability to simulate several microseconds of protein behavior
 simplified models are widely used to model protein adsorption. Colloidal
 models represent a protein molecule with a simplified geometric shape
 (typically a sphere or ellipsoid) and interactions are modeled by
-DLVO forces \cite{evans1994colloidal}. Recently, Brownian dynamics
-simulations been used to implement colloidal-scale simulations of
-protein transport and adsorption \cite{Unni2005,Magan2006,Quinn2008}. 
+DLVO (electrostatic and van der Walls) forces~\cite{evans1994colloidal,Roth1993,Lenhoff1995}.
+Recently, Brownian dynamics simulations been used to implement colloidal-scale
+simulations of protein transport and adsorption \cite{Unni2005,Magan2006,Quinn2008}. 
 
 A fundamental limitation of nanoscale and mesoscale simulation methods
 is that they are impractical for modeling transport in practical applications
 such as medical implants, engineered tissue constructs, blood flow
-simulations, and microfluidic devices. CFD simulations are widely
-used to model transport in macroscale systems. Simplified continuum
-models of adsorption based upon chemical kinetics have been used as
-adsorbing boundary conditions in CFD simulations \cite{Jenkins2004}.
+simulations, and microfluidic devices. Computational fluid dynamics
+(CFD) simulations are widely used to model transport in macroscale
+systems. Simplified continuum models of adsorption based upon chemical
+kinetics have been used as adsorbing boundary conditions in CFD simulations~\cite{Jenkins2004,Glaser1993,Edwards1999}.
 At first, kinetic models of adsorption were formulated based upon
 the assumptions of the Langmuir adsorption model \cite{Andrade1986}.
 More recently random sequential adsorption (RSA) models have been
@@ -186,7 +186,7 @@ the generalized diffusion equation to a conventional CFD simulation
 to predict transport-influenced adsorption in arbitrary geometries. 
 
 
-\subsection{Computation of the Activity Coefficient}
+\subsection{Calcluation of the Activity Coefficient}
 
 The coefficients of the generalized diffusion equation are functions
 of the activity coefficient $\gamma$, which is a function of space
@@ -268,15 +268,16 @@ three time steps ($10^{-5}$, $10^{-6}$ and $10^{-7}sec$) to determine
 the largest time step that would produce accurate results.
 
 
-\subsubsection{Calculation of the Activity Coefficient}
+\subsubsection{Monte Carlo Calculation of the Activity Coefficient}
 
 The activity coefficient was determined empirically from the results
 of the Brownian dynamics simulations using the Widom particle insertion
-method \cite{Widom1963}. In this method, a {}``test'' particle
-is introduced into a fixed configuration of particles and the energy
-of interaction $\psi$ between the test particle and the surrounding
-particles is calculated. The activity $a$ can be computed by taking
-the canonical average of many such insertions, using the formula\begin{equation}
+method \cite{Widom1963,Dullens2005}. In this method, a {}``test''
+particle is introduced into a fixed configuration of particles and
+the energy of interaction $\psi$ between the test particle and the
+surrounding particles is calculated. The activity $a$ can be computed
+by taking the canonical average of many such insertions, using the
+formula\begin{equation}
 \frac{n}{a}=\left\langle \exp\left(\frac{-\psi}{k_{B}T}\right)\right\rangle \label{eq:Widom equation}\end{equation}
 For hard spheres, the energy of interaction is either infinite if
 the test particle overlaps an existing particle or zero if it does
@@ -311,6 +312,43 @@ k_{1}=\frac{\partial}{\partial h}\log\gamma=\frac{-1}{AVF}\,\frac{\partial AVF}{
 \[
 k_{2}=\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)=\frac{1}{AVF^{2}}\left(\frac{\partial AVF}{\partial h}\right)^{2}-\frac{1}{AVF}\left(\frac{\partial^{2}AVF}{\partial h^{2}}\right)\]
 
+
+
+\subsubsection{Exact Calculation of the Available Volume Function}
+
+%
+\begin{figure}
+\includegraphics{HardSpheres/Figures/Joined_Particles_and_Images_9May2010}
+
+\caption{\label{fig:Computational geometry}Example showing how computational
+geometry can be used to obtain the available volume function. Unavailable
+space due to image particles is shown in red, and overlaps between
+particles and images are shown in green.}
+
+
+%
+\end{figure}
+An alternative method was developed to compute the available volume
+function and confirm the results of the implementation of Widom's
+method. The Computational Geometry Algorithm Library (CGAL) is collection
+of open-source tools for computational geometry~\cite{CGAL}. At
+a given height above the surface $h_{i},$ the generalized polygon
+class from CGAL was used to compute the union of all the space which\emph{
+}could not be occupied by the center of a particle at that particular
+height. {}``Image'' particles were created to accurately represent
+space occupied by particles at the edge of the domain that {}``wrapped''
+to the other side of the domain due to the periodic boundary conditions
+in the Brownian dynamics simulation. An example of the union of unavailable
+space, with image particles, is shown in Figure~\ref{fig:Computational geometry}.
+The fraction of space that available for adsorption at given $h_{i}$
+and $\theta_{i}$ could be directly calculated by subtracting the
+unavailable area from the total area and dividing the result by the
+total area. For computational efficiency, the algorithm started with
+the first surface arrangment $\theta_{0}$, calculated the available
+area, added the particles that adsorbed at $\theta_{1}$ and calculated
+the available area, and so on. This was repeated for each $h_{i}$,
+and parallel computing was used to run multiple values of $h_{i}$
+in parallel.
 
 
 \subsection{Implementation of the Continuum Model}
@@ -403,7 +441,10 @@ function. Available surface function for RSA shown as red dashed line.}
 %
 \end{figure}
  The available surface function (ASF) for the RSA model is also shown
-in Figure \ref{fig:Available Volume Function} \cite{Schaaf1989}. 
+in Figure \ref{fig:Available Volume Function} \cite{Schaaf1989}.
+The AVF calculated by the Monte Carlo implementation of Widom's method
+matched the results from the computational geometry calculation. The
+computational geometry method require more computational resources.
 
 
 \subsection{Continuum Model Results}

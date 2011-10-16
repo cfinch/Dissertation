@@ -142,40 +142,52 @@ results have recently been reported for the kinetics of adsorption
 \cite{Muguruma2006}.
 
 
-\subsection{Kinetic Models of Protein Adsorption}
+\subsection{Fitting Kinetic Models to Protein Adsorption Data}
 
-Kinetic models have been widely used to model protein adsorption.
+As mentioned in the previous chapter, kinetic models have been formulated
+as boundary conditions for use in computational fluid dynamics (CFD)
+simulations of the transport and adsorption of proteins~\cite{Glaser1993,Edwards1999}.
+Kinetic models have also been fitted to experimental measurements
+of adsorption kinetics. An RSA-type model with a simple approximation
+of transport limitations was fitted to kinetic data from an OWLS adsorption
+sensor~\cite{Kurrat1994}. More recently, a model of adsorption with
+a post-adsorption transition \cite{Lundstroem1984} was fitted to
+a comprehensive set of kinetic data from surface plasmon resonance
+sensor~\cite{Michael2003}. The concentration near the surface was
+assumed to be constant. These two approaches were combined in a study
+in which a Langmuir-type kinetic model coupled to a CFD simulation
+was fitted to experimental measurements of adsorption kinetics in
+microcapillaries~\cite{Jenkins2004}. This study was unique in that
+the entire CFD model, including transport and adsorption, was included
+in the fitting procedure.
 
 
-\subsection{Summary}
+\subsection{Overview}
 
-The glass WGM resonator was modified with alkylsilane monolayers presenting
-well-defined surface chemistries: DETA, 13F, and SiPEG. The WGM biosensor
-was then used to quantitatively study the kinetics of adsorption of
-GO and FN at varying concentrations onto SiPEG, DETA and 13F SAMs.
-The adsorption of GO was also measured on bare glass. The WGM biosensor
-incorporated a flow cell, which minimized the effect of transport
-limitations on protein adsorption, and this, along with the inherent
-sensitivity of the method, allowed the kinetics of adsorption of FN
-to be measured at concentrations lower than those that have previously
-been reported \cite{Michael2003}. Quantitative results fort the kinetics
-of GO adsorption have not been previously reported. The kinetic data
-provided additional information about the mechanism of adsorption
-that is not available from the more common equilibrium experiments.
-Kinetic models of protein adsorption were fitted to the measured kinetic
-curves, and the resulting parameters were used to assist in interpreting
-the results. To maximize the accuracy of the fitted kinetic parameters,
-computational fluid dynamics (CFD) simulations were used to quantify
-the limitations in the transport of protein to the sensor surface.
-For determining the biological activity of the adsorbed FN, neuronal
-and skeletal muscle cells were cultured on the SiPEG, DETA, and 13F
-surfaces in a serum-free culture system \cite{Brewer1995,Das2007}.
-The enzymatic activity of the GO was determined with a standard assay
-kit. WGM biosensing provides a unique capability to quantify protein
-adsorption on silane-modified surfaces for the purpose of understanding
-the interactions between tissues and tailored interfaces. Fitting
-kinetic models to the data from the WGM biosensor enabled new conclusions
-to be made about the mechanisms of adsorption on alkylsilane surfaces.
+A novel WGM biosensor was constructed and used to quantitatively study
+the kinetics of adsorption of GO and FN at varying concentrations
+onto alkylsilane monolayers presenting well-defined surface chemistries:
+DETA, 13F, and SiPEG. The WGM biosensor incorporated a flow cell which
+minimized the effect of transport limitations on protein adsorption.
+This, along with the inherent sensitivity of the method, allowed the
+kinetics of adsorption of FN to be measured at concentrations lower
+than those that have previously been reported \cite{Michael2003}.
+Multiple kinetic models of protein adsorption were fitted to the measured
+kinetic curves, and the resulting parameters were used to draw conclusions
+about the mechanisms of adsorption. To maximize the accuracy of the
+fitted kinetic parameters, computational fluid dynamics simulations
+were used to quantify the limitations in the transport of protein
+to the sensor surface. For determining the biological activity of
+the adsorbed FN, neuronal and skeletal muscle cells were cultured
+on the SiPEG, DETA, and 13F surfaces in a serum-free culture system
+\cite{Brewer1995,Das2007}. The kinetics of adsorption of glucose
+oxidase on the silane monolayers were also measured with the WGM biosensor,
+and its enzymatic activity on each surface was determined with a standard
+assay kit. The results demonstrate that the combination of WGM biosensing,
+CFD, and kinetic models of adsorption provides a unique capability
+to quantify protein adsorption on silane-modified surfaces for the
+purpose of understanding the interactions between tissues and tailored
+interfaces.
 
 
 \section{Methods and Materials}
@@ -344,18 +356,19 @@ to translate the absorbance measurments into activity units.
 
 The rate of adsorption on a surface may be limited by the rate at
 which the chemistry of adsorption takes place, the rate of transport
-to the surface, or both. Computational fluid dynamics (CFD) was used
-to model the transport of protein in the flow cell of the WGM biosensor.
-CFD simulations were run with a CFD-ACE+ multiphysics solver (ESI
-Software, Huntsville, AL) to determine the influence of transport
-on the adsorption of protein on the resonator surface. Before beginning,
-a Reynolds number calculation was performed to confirm that flow in
-the device would be entirely laminar. For all CFD simulations, the
-size of the mesh and the time step were refined until the simulation
-results did not change significantly. Upwind differencing was used
-to approximate velocity derivatives, a 2nd order limiter was used
-to approximate concentration derivatives, and the Euler method was
-used for time stepping in transient simulations. 
+to the surface, or both. Computational fluid dynamics was used to
+model the transport of protein in the flow cell of the WGM biosensor.
+Before beginning, the Reynolds and Knudsen numbers were calculated
+confirm that flow in the device would be entirely laminar and that
+conventional CFD simulation methods were appropriate. CFD simulations
+were run with a CFD-ACE+ multiphysics solver (ESI Software, Huntsville,
+AL) to determine the influence of transport on the adsorption of protein
+on the resonator surface. For all CFD simulations, the size of the
+mesh and the time step were refined until the simulation results did
+not change significantly. Upwind differencing was used to approximate
+velocity derivatives, a 2nd order limiter was used to approximate
+concentration derivatives, and the Euler method was used for time
+stepping in transient simulations. 
 
 A multi-scale approach was used to obtain high-resolution results
 while keeping the simulation run time reasonable. A model of the entire
@@ -798,10 +811,10 @@ RSA with transition & $1.99\times10^{-6}$ & $8.00\times10^{-3}$ & $9.95\times10^
 \end{table}
 %
 \begin{figure}
-\includegraphics{Protein_Adsorption/Plots/FN_13F_RSA_CFD}
+\includegraphics{Protein_Adsorption/Plots/FN_13F_VanTassel_CFD}
 
-\caption{\label{fig:FN 13F fitted}RSA model fitted to experimental data for
-FN on 13F.}
+\caption{\label{fig:FN 13F fitted}Adsorption model with post-adsorption transition
+fitted to experimental data for FN on 13F.}
 %
 \end{figure}
  The kinetics predicted by models fitted to FN adsorption on SiPEG
@@ -1075,6 +1088,24 @@ are very different for the two models. This difference has significant
 implications for modeling experimental data if a protein in state~$\alpha$
 functions differently than a protein in state~$\beta$.
 
+Langmuir-type and RSA-type models imply different types of adsorption
+behavior. RSA models assume that proteins can be approximated by spheres
+that adsorb act hard spheres. Because the spheres adsorb randomly
+on the surface, the surface packing is inefficient and the fractional
+surface coverage reaches its maximum value around 0.547. Although
+it is well known that proteins such as fibronectin are nothing like
+hard spheres, the RSA model is surprising useful for fitting adsorption
+data. The Langmuir model makes no assumptions about the shape of the
+adsorbing particles and assumes that the surface available for adsorption
+is a linear function of the surface coverage. The Langmuir model also
+assumes that the surface reaches 100\% coverage. Reality is probably
+somewhere in between the two extremes, with proteins adsorbing in
+a random sequential fashion but packing somewhat more effectively
+than spheres due their flexibility. Fitting the RSA and Langmuir models
+to the same data set and seeing which model fits better can indicate
+whether a particular protein is hard or flexible (on a particular
+surface under specific solvent conditions).
+
 
 \subsection{Transport Analysis}
 
@@ -1112,7 +1143,10 @@ used in these experiments were higher than the concentrations of FN.
 GO reached 99\% of full concentration at the resonator surface within
 20 seconds, so the near-surface depletion had minimal impact on the
 kinetics. Constant concentration was assumed when fitting the kinetic
-adsorption models to the GO data.
+adsorption models to the GO data. The association rate constants from
+fitted models demonstrate that GO has a much lower affinity for the
+surfaces than FN, which explains why its maximum rate of adsorption
+is lower and transport limitation is much less significant.
 
 Our modeling method was approximate in that the evolution of the near-surface
 concentration over time was computed once, based on the estimated
@@ -1500,43 +1534,69 @@ answer this question. Both the RSA and Langmuir single-layer models
 fitted this data set well.
 
 
-\subsubsection{Summary}
+\subsection{Fitting Kinetic Models to Experimental Data}
 
-Utilization of the WGM sensor enables, for the first time, quantitative
-analysis of protein adsorption on silane monolayers, which are more
-commonly used as substrates for cell culture than thiol monolayers.
-The sensitivity of this bench-top setup also can be readily enhanced
-by a number of methods, such as fabricating smaller microspheres and
-using a laser with a shorter wavelength \cite{Vollmer2008a} or coating
-the glass microsphere with a high-index wave-guiding layer \cite{Teraoka2006}. 
+Fitting models to the experimental data enabled us to test hypotheses
+about the mechanisms of adsorption on various surfaces. Formulating
+a hypothesis as a model, fitting it to the experimental data and evaluating
+the quality of fit provided a quantitative methodology to compare
+hypotheses. When several models fitted the data equally well, the
+quantitative enzyme activity data for adsorbed glucose oxidase provided
+a valuable test to support or reject a particular model. 
 
-Fitting models to the experimental data provided additional insight
-about the process of adsorption. It was assumed that the kinetic constants
-did not vary across the limited concentration range in this study.
-Therefore, a single set of parameters was fitted to multiple concentrations
-for a single surface. Fitting more concentrations, while holding the
-number of parameters constant, increased the possibility of finding
-a unique combination of parameters that minimized the SSE. A model
-with too many parameters can have multiple parameter sets with equivalent
-optimal fits, much like an under-determined system of linear equations.
-Although a lower SSE could have been achieved by fitting each concentration
-individually, the likelihood of finding non-unique parameters would
-have increased. 
+It was assumed that the kinetic constants did not vary across the
+limited concentration range in this study. Therefore, a single set
+of parameters was fitted to multiple concentrations for a single surface.
+Fitting more concentrations, while holding the number of fitted parameters
+constant, increased the possibility of finding a unique combination
+of parameters that minimized the mean-squared error. A model with
+too many parameters can have multiple parameter sets with equivalent
+optimal fits, much like an under-determined system of linear equations
+with multiple solutions. Although a lower SSE could have been achieved
+by fitting data at each concentration individually, the likelihood
+of finding non-unique parameters would have increased.
 
-\textbackslash{}u2022 Fitting models to data allows us to test hypotheses
-about mechanisms of adsorption 
+Finding a unique combination of parameters that provides a {}``best
+fit'' to the data is equivalent to finding a global minimum in an
+optimization problem. While this is not too difficult for the basic
+Langmuir and RSA models (which have only three parameters each), it
+becomes more challenging for the multi-stage and multi-layer models
+(with five parameters each). It is easy to formulate even more complex
+adsorption models, but the addition of each parameter increases the
+difficulty of finding a global minimum in the error function. The
+danger of a very complex model with many variable parameters is that
+it can be fitted to almost any data set but few useful conclusions
+can be drawn from the results! If models with more parameters must
+be used, it will be necessary to find additional experimental methods
+that can provide additional data or decrease the size of the search
+space. It may also be necessary to use novel types of nonlinear optimization
+methods, such as genetic algorithms, to optimize the fit of the model
+to the data.
 
-\textbackslash{}u2022 Sum of squared error is a only a rough guide
-to gauging the usefulness of a model 
 
-\textbackslash{}u2022 Activity assay provides valuable data to support
-or reject a particular model 
+\subsection{Conclusions}
 
-\textbackslash{}u2022 Langmuir-type and RSA-type models predict very
-different mechanisms 
-
-\textbackslash{}u2022 RSA-type models assume proteins occupy a spherical
-footprint on surface, but the assumption works well 
-
-\textbackslash{}u2022 Opportunity and difficulty of creating two-layer
-models with post-adsorption transition
+Utilization of the WGM sensor enabled, for the first time, quantitative
+analysis of protein adsorption on silane monolayers, which are commonly
+used as substrates for cell culture. The sensitivity of this technology
+can be readily enhanced by a number of methods, such as fabricating
+smaller microspheres and using a laser with a shorter wavelength \cite{Vollmer2008a}
+or coating the glass microsphere with a high-index wave-guiding layer
+\cite{Teraoka2006}. WGM biosensors have the potential to help answer
+difficult and important practical questions in biomaterials research.
+For example, PEG/OEG monolayers are resistant to protein adsorption
+but have not been shown to be useful as long-term biocompatible coatings
+for implants and medical devices. Many people would benefit from the
+development of a surface coating that reduces or eliminates the immune
+response to a foreign body, such as an implanted medical device. Computational
+fluid dynamics simulations were used in the design and characterization
+of the flow cell for the WGM biosensor. Many previous experimental
+studies used simple approximate models of transport limitations or
+neglected them altogether. The results of the CFD simulations were
+incorporated into the process of fitting kinetic models to fibronectin
+adsorption data, although this step was unnecessary for glucose oxidase.
+In this work four existing adsorption models were formulated in terms
+of the same variables, quantitatively compared and fitted to experimental
+data. This process enabled definitive conclusions to be drawn about
+the mechanisms of adsorption and created new questions to be answered
+in future research.
