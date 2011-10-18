@@ -46,7 +46,23 @@
 \begin_body
 
 \begin_layout Chapter
-CFD SIMULATION OF TRANSPORT IN A MICROFLUIDIC BIOREACTOR
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texorpdfstring{CFD SIMULATION OF TRANSPORT IN A MICROFLUIDIC BIOREACTOR}{CHAPTER
+ 
+\backslash
+arabic{chapter}.
+ CFD SIMULATION OF TRANSPORT IN A MICROFLUIDIC BIOREACTOR}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

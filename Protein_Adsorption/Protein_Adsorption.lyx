@@ -49,7 +49,22 @@
 \begin_body
 
 \begin_layout Chapter
-MODELING THE KINETICS OF PROTEIN ADSORPTION
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texorpdfstring{MODELING THE KINETICS OF PROTEIN ADSORPTION}{CHAPTER 
+\backslash
+arabic{chapter}.
+ MODELING THE KINETICS OF PROTEIN ADSORPTION}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

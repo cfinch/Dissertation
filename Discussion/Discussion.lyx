@@ -45,7 +45,22 @@
 \begin_body
 
 \begin_layout Chapter
-GENERAL DISCUSSION
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texorpdfstring{GENERAL DISCUSSION}{CHAPTER 
+\backslash
+arabic{chapter}.
+ GENERAL DISCUSSION}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

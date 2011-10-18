@@ -67,7 +67,23 @@
 \begin_body
 
 \begin_layout Chapter
-A CONTINUUM MODEL OF THE ADSORPTION OF HARD SPHERES
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texorpdfstring{A CONTINUUM MODEL OF THE ADSORPTION OF HARD SPHERES}{CHAPTER
+ 
+\backslash
+arabic{chapter}.
+ A CONTINUUM MODEL OF THE ADSORPTION OF HARD SPHERES}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

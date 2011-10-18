@@ -123,10 +123,15 @@ This would not have been possible without support from my advisers, Dr. James J.
 I thank the Institute for Simulation and Training (IST), the I\textsuperscript{2} Lab, and the NanoScience Technology Center at the University of Central Florida, as well the National Institutes for Health (grant \#RO1EB005459) and the United States Army (grant \#W81XWH-10-1-0542) for financial support.  IST also donated computing resources on the Stokes cluster.
 \end{acknowledgments}
 
-\clearpage \label{toc_label} \pdfbookmark[0]{TABLE OF CONTENTS}{toc_label} \tableofcontents
-\newpage \phantomsection \label{listoffig} \addcontentsline{toc}{chapter}{LIST OF FIGURES} \listoffigures
+\clearpage \bookmark[level=0, dest=toc_label]{TABLE OF CONTENTS}
+\hypertarget{toc_label} \tableofcontents
+\newpage \phantomsection \label{listoffig} \addcontentsline{toc}{chapter}{LIST OF FIGURES} 
+%\singlespacing
+\listoffigures
 \newpage \phantomsection \label{listoftab} \addcontentsline{toc}{chapter}{LIST OF TABLES} \listoftables
-\newpage \pagenumbering{arabic}\include{Introduction/Introduction}
+%\setstretch{\doublestretch}
+\newpage 
+\pagenumbering{arabic}\include{Introduction/Introduction}
 
 \include{HardSpheres/HardSpheres}
 
