@@ -114,7 +114,7 @@ The WGM sensor allowed for the first time the detailed kinetic analysis
  data that has been reported for the adsorption of fibronectin at low solution
  concentrations, and the first quantitative measurement of the kinetics
  of glucose oxidase adsorption on silane surfaces.
- CFD was used in the design of the flow cell, resulting in asensor system
+ CFD was used in the design of the flow cell, resulting in a sensor system
  which predominantly measures the kinetics of adsorption rather than the
  kinetics of transport the sensor.
  In the case of fibronectin adsorption, CFD analysis of transport limitations
@@ -139,8 +139,8 @@ The results of the WGM biosensor measurements, model fitting and the cell
  strongly depends on the surface chemistry of the adsorbing surface.
  One of the most important goals in biomaterials research is to discover
  surfaces that resist protein adsorption.
- Surface similar to SiPEG (OEG-thiols) have been shown to be the most protein-re
-sistant class of surfaces
+ Surfaces similar to SiPEG (OEG-thiols) have been shown to be the most protein-r
+esistant class of surfaces
 \begin_inset space ~
 \end_inset
 
@@ -181,7 +181,7 @@ plug-like,
 \begin_inset Quotes erd
 \end_inset
 
- with substational stagnation zones in each chamber.
+ with substantial stagnation zones in each chamber.
  Microfluidic structures were added to each chamber to minimize the stagnation
  zones and enable a plug of fluid to move from one chamber to the next with
  minimal dispersion.
@@ -198,7 +198,7 @@ on, the optimized post and baffle designs can effectively be used to improve
  The validation protocol required only food dye and an optical microscope
  with a camera\SpecialChar \nobreakdash-
 tools which are available in almost every laboratory.
- This project demostrates that simulation tools that can quantitatively
+ This project demonstrates that simulation tools that can quantitatively
  predict transport and protein adsorption will enable the rational design
  of microfluidic devices for biomedical applications.
 \end_layout
@@ -239,6 +239,8 @@ key "Martin2004"
  leaky waveguide and resonator into one monolithic device that can be mass-produ
 ced, eliminating the time-consuming and tedious task of flame-drawing a
  waveguide and securing it into the flow cell with silicone adhesive.
+ The combination of quantitative measurements and modeling has the potential
+ to enable new advances in biomedical science.
 \end_layout
 
 \end_body

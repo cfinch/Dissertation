@@ -13,7 +13,7 @@ dashes = [(None,None), (8,4), (2,2)]
 # RSA
 ka = 2.18e-8
 kd = 2.55e-4
-area = 482
+area = 482.0
 
 expFileName = '/home/cfinch/cfinch/Microfluidics/Whispering Gallery Mode Sensor/Experimental Data Analysis/GO/Data/GO_PEG.h5'
 

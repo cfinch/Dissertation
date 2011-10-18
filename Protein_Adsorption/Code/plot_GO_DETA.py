@@ -23,7 +23,7 @@ ka1 = 1.44e-7
 ka2 = 1.26e-8
 kd1 = 1.19e-3
 kd2 = 3.42e-9
-area = 363 # nm^2
+area = 363.0 # nm^2
 
 expFileName = '/home/cfinch/cfinch/Microfluidics/Whispering Gallery Mode Sensor/Experimental Data Analysis/GO/Data/GO_DETA.h5'
 

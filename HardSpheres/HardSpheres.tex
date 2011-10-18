@@ -11,22 +11,20 @@ dynamics (MD) have the potential to predict protein adsorption from
 first principles, the small (femtosecond) time step required by atomistic
 techniques presents a significant obstacle. The adsorption of proteins
 and their subsequent rearrangement occurs on a time scale of seconds
-to hours \cite{Latour2005}. , while it was recently reported that
+to hours~\cite{Latour2005}. MD has been used to simulate the adsorption
+of a fragment of fibrinogen with explicit solvent molecules for $5\, ns$
+of simulated time~\cite{Agashe2005}. A similar study was carried
+out to model the interaction between lysozyme and a graphite surface
+for $500\, ps$~\cite{Raffaini2010}. It was recently reported that
 an advanced MD simulation on a specially designed supercomputer has
-the ability to simulate several microseconds of protein behavior \cite{Dror2010}.
-MD has been used to simulate the adsorption of a fragment of fibrinogen
-with explicit solvent molecules for 5ns of simulated time \cite{Agashe2005}.
-A similar study was carried out to model the interaction between lysozyme
-and a graphite surface for 500ps \cite{Raffaini2010}. It was recently
-reported that an advanced MD simulation on a specially designed supercomputer
-has the ability to simulate several microseconds of protein behavior
-\cite{Dror2010}. Because of the limitations of atomistic models,
-simplified models are widely used to model protein adsorption. Colloidal
-models represent a protein molecule with a simplified geometric shape
-(typically a sphere or ellipsoid) and interactions are modeled by
-DLVO (electrostatic and van der Walls) forces~\cite{evans1994colloidal,Roth1993,Lenhoff1995}.
-Recently, Brownian dynamics simulations been used to implement colloidal-scale
-simulations of protein transport and adsorption \cite{Unni2005,Magan2006,Quinn2008}. 
+the ability to simulate several microseconds of protein behavior~\cite{Dror2010}.
+Because of the limitations of atomistic models, simplified models
+are widely used to model protein adsorption. Colloidal models represent
+a protein molecule with a simplified geometric shape (typically a
+sphere or ellipsoid) and interactions are modeled by DLVO (electrostatic
+and van der Waals) forces~\cite{evans1994colloidal,Roth1993,Lenhoff1995}.
+Recently, Brownian dynamics simulations have been used to implement
+colloidal-scale simulations of protein transport and adsorption~\cite{Unni2005,Magan2006,Quinn2008}. 
 
 A fundamental limitation of nanoscale and mesoscale simulation methods
 is that they are impractical for modeling transport in practical applications
@@ -36,52 +34,52 @@ simulations, and microfluidic devices. Computational fluid dynamics
 systems. Simplified continuum models of adsorption based upon chemical
 kinetics have been used as adsorbing boundary conditions in CFD simulations~\cite{Jenkins2004,Glaser1993,Edwards1999}.
 At first, kinetic models of adsorption were formulated based upon
-the assumptions of the Langmuir adsorption model \cite{Andrade1986}.
+the assumptions of the Langmuir adsorption model~\cite{Andrade1986}.
 More recently random sequential adsorption (RSA) models have been
 applied to characterize the blocking of the surface more rigorously
-for various particle shapes \cite{Talbot2000287}. The available surface
-for adsorption is usually quantified through the available surface
-function $ASF\left(\theta\right)$, where $\theta$ is the fraction
-of surface that is covered by adsorbed particles. Many types of kinetic
-models are currently used to model protein adsorption\cite{Rabe2010}. 
+for various particle shapes~\cite{Talbot2000287}. The available
+surface for adsorption is usually quantified through the available
+surface function $ASF\left(\theta\right)$, where $\theta$ is the
+fraction of surface that is covered by adsorbed particles. Many types
+of kinetic models are currently used to model protein adsorption~\cite{Rabe2010}. 
 
 Continuum models can be linked to discrete-particle simulations using
 the principles of chemical thermodynamics. The available surface function
 has been generalized to depend on the height above the adsorbing surface
-as well as the fractional surface coverage \cite{Adamczyk1999}. Adsorbed
-particles create an energy barrier which becomes higher as the number
-of adsorbed particles increases, reducing the flux of particles to
-the surface. This barrier incorporates steric exclusion due to the
-blocking effect of hard particles and the longer-ranged repulsive
-effect of electrostatic interactions \cite{Adamczyk2000}. This model
+as well as the fractional surface coverage~\cite{Adamczyk1999}.
+Adsorbed particles create an energy barrier which becomes higher as
+the number of adsorbed particles increases, reducing the flux of particles
+to the surface. This barrier incorporates steric exclusion due to
+the blocking effect of hard particles and the longer-ranged repulsive
+effect of electrostatic interactions~\cite{Adamczyk2000}. This model
 has been implemented by making simplifying assumptions about transport
 to the surface. For example, the surface boundary layer approximation
 (SFBLA) assumes that the interface is one-dimensional and the flux
 through the boundary layer is independent of the position above the
-surface \cite{Adamczyk1999a}. Transport to the interface has been
+surface~\cite{Adamczyk1999a}. Transport to the interface has been
 accounted for by coupling the adsorption model to a diffusive transport
 model, but the kinetic coefficients of the adsorption model were approximated
-with results from an RSA model \cite{Adamczyk2000}. 
+with results from an RSA model~\cite{Adamczyk2000}. 
 
 To fully account for the blocking effect of hard spheres, it cannot
-be assumed that the flux at the surface $J_{s}$ is equal to the flux
-at the interface with the continuum $J_{c}$ . A particle may diffuse
-into the boundary region, collide with adsorbed particles, and diffuse
-back out of the boundary region at a later time. At any instant, the
-flux at the surface will be less than or equal to the flux at the
-bulk interface. Brownian dynamics simulations of hard sphere adsorption
-were utilized to obtain configurations of adsorbed spheres, which
-were then analyzed to obtain the generalized blocking function $AVF\left(h,\theta\right)$.
-The principles of non-equilibrium thermodynamics were used to derive
-a continuum model of hard-sphere adsorption in which the flux of particles
-was allowed to vary with the distance from the surface. The generalized
-blocking function from the Brownian dynamics simulations was used
-to determine the coefficients of the continuum model, which was solved
-numerically in the region near the surface. This model was used as
-a boundary condition for a conventional CFD simulation to predict
-coupled transport and adsorption. Good agreement was found between
-the kinetics obtained from the Brownian dynamics simulations and the
-kinetics predicted by the continuum model.
+be assumed that the flux at the surface ($J_{s}$) is equal to the
+flux at the interface with the continuum ($J_{c}$) . A particle may
+diffuse into the boundary region, collide with adsorbed particles,
+and diffuse back out of the boundary region at a later time. At any
+instant, the flux at the surface will be less than or equal to the
+flux at the bulk interface. Brownian dynamics simulations of hard
+sphere adsorption were utilized to obtain configurations of adsorbed
+spheres, which were then analyzed to obtain the generalized blocking
+function $AVF\left(h,\theta\right)$. The principles of non-equilibrium
+thermodynamics were used to derive a continuum model of hard-sphere
+adsorption in which the flux of particles was allowed to vary with
+the distance from the surface. The generalized blocking function from
+the Brownian dynamics simulations was used to determine the coefficients
+of the continuum model, which was solved numerically in the region
+near the surface. This model was used as a boundary condition for
+a conventional CFD simulation to predict coupled transport and adsorption.
+Good agreement was found between the kinetics obtained from the Brownian
+dynamics simulations and the kinetics predicted by the continuum model.
 
 
 \section{Methods and Materials}
@@ -90,7 +88,7 @@ kinetics predicted by the continuum model.
 \subsection{Derivation of the Continuum Model }
 
 The first steps of the derivation of the continuum model follow the
-method described in \cite{Adamczyk1999a,Adamczyk2000,Adamczyk1999},
+method described in \cite{Adamczyk1999,Adamczyk2000,Adamczyk1999a},
 starting with the continuity equation\begin{equation}
 \frac{\partial n}{\partial t}=-\nabla\cdot\mathbf{J}\label{eq:Continuity}\end{equation}
 $n$ is the number density of particles in solution and $\mathbf{J}$
@@ -150,7 +148,7 @@ as shown in Figure \ref{fig:Geometry}. %
 \includegraphics{HardSpheres/Figures/AdsorbingBoundary}
 
 \caption{\label{fig:Geometry}Geometry used to define the hard-sphere adsorbing
-boundary condition}
+boundary condition.}
 
 
 %
@@ -164,8 +162,8 @@ be assumed that $n$ has been normalized. The equation can be re-arranged
 to have the form of a generalized diffusion equation\begin{align}
 \frac{\partial n}{\partial t} & =D\,\frac{\partial}{\partial h}\left[\left(\frac{1}{n}\frac{\partial n}{\partial h}+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\, n\right]\nonumber \\
  & =D\,\left[\frac{\partial^{2}}{\partial h^{2}}n+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\frac{\partial n}{\partial h}+n\,\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\right]\label{eq:Generalized Diffusion Eqn}\end{align}
-The result is a parabolic partial differential equation with variable
-coefficients. Let\begin{align}
+Equation \ref{eq:Generalized Diffusion Eqn} is a parabolic partial
+differential equation with variable coefficients. Let\begin{align}
 k_{1} & =\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\nonumber \\
 k_{2} & =\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)=\frac{\partial k_{1}}{\partial h}\label{eq:Variable coefficients}\end{align}
 Then\begin{align}
@@ -186,7 +184,7 @@ the generalized diffusion equation to a conventional CFD simulation
 to predict transport-influenced adsorption in arbitrary geometries. 
 
 
-\subsection{Calcluation of the Activity Coefficient}
+\subsection{Calculation of the Activity Coefficient}
 
 The coefficients of the generalized diffusion equation are functions
 of the activity coefficient $\gamma$, which is a function of space
@@ -199,8 +197,8 @@ of the activity coefficient is critical to obtain a useful model.
 A Brownian dynamics simulation of irreversible hard-sphere adsorption
 was used to obtain configurations of adsorbed particles. The Langevin
 position equation \cite{Elimelech1998} was used to update the position
-of each particle at each time step: \[
-\mathbf{r}_{i}(t+\Delta t)=\mathbf{r}_{i}(t)+\mathbf{g}_{q}\sqrt{2\, D\,\Delta t}\]
+of each particle at each time step: \begin{equation}
+\mathbf{r}_{i}(t+\Delta t)=\mathbf{r}_{i}(t)+\mathbf{g}_{q}\sqrt{2\, D\,\Delta t}\label{eq:Langevin equation}\end{equation}
 $\mathbf{r}_{i}$ is the position of particle $i$, $\Delta t$ is
 the simulation time step, $D$ is the diffusion coefficient, and $g_{q}\in\mathbb{R}^{3}$
 is a vector of random numbers drawn from a Gaussian distribution with
@@ -244,15 +242,17 @@ data, such as the coordinates of the particles, were stored in NumPy
 arrays \cite{Oliphant2006}. Routines from the SciPy library were
 used for standard operations like interpolation and numerical integration
 \cite{Oliphant2007}. Collision detection was implemented in C for
-speed, using the \emph{weave} function from SciPy. Each time a particle
-adsorbed on the surface the configuration of adsorbed particles was
-recorded, along with the profile of concentration vs. distance from
-the adsorbing surface and the fraction of the surface covered by particles
-($\theta$). The PyTables package was used to save the simulation
-results to binary files in HDF5 format \cite{Alted2002-,HDFGroup2000-}. 
+speed, using the \emph{weave} function from SciPy. The Message Passing
+Interface (MPI) was used to run multiple simulations in parallel on
+a Linux cluster~\cite{MPI}. Each time a particle adsorbed on the
+surface the configuration of adsorbed particles was recorded, along
+with the profile of concentration vs. distance from the adsorbing
+surface and the fraction of the surface covered by particles ($\theta$).
+The PyTables package was used to save the simulation results to binary
+files in HDF5 format \cite{Alted2002-,HDFGroup2000-}. 
 
 
-\subsubsection{Controls and Validation for the Brownian dynamics simulation}
+\subsubsection{Controls and Validation for the Brownian Dynamics Simulation}
 
 The Brownian dynamics simulation was validated by simulating diffusion-limited
 adsorption and comparing the results to the analytical solution of
@@ -297,7 +297,7 @@ test particles was constructed in the simulation domain at a given
 height $h_{i}$ above the adsorbing surface. Particles in solution
 with $h\geq2$ cannot interact with adsorbed particles, as shown in
 Figure \ref{fig:Geometry}. The position of each test particle was
-offset by a small random vector in $x-y$ plane and each test particle
+offset by a small random vector in $xy$ plane and each test particle
 was checked for overlaps with every simulation particle. The fraction
 of test particles without overlaps was recorded as the value of $AVF\left(h_{i},\theta_{i}\right)$.
 Multiple replicates with different random displacements from the grid
@@ -340,11 +340,11 @@ space occupied by particles at the edge of the domain that {}``wrapped''
 to the other side of the domain due to the periodic boundary conditions
 in the Brownian dynamics simulation. An example of the union of unavailable
 space, with image particles, is shown in Figure~\ref{fig:Computational geometry}.
-The fraction of space that available for adsorption at given $h_{i}$
+The fraction of space available for adsorption at a given $h_{i}$
 and $\theta_{i}$ could be directly calculated by subtracting the
 unavailable area from the total area and dividing the result by the
 total area. For computational efficiency, the algorithm started with
-the first surface arrangment $\theta_{0}$, calculated the available
+the first surface arrangement $\theta_{0}$, calculated the available
 area, added the particles that adsorbed at $\theta_{1}$ and calculated
 the available area, and so on. This was repeated for each $h_{i}$,
 and parallel computing was used to run multiple values of $h_{i}$
@@ -354,15 +354,16 @@ in parallel.
 \subsection{Implementation of the Continuum Model}
 
 The control volume formulation \cite{Patankar1980} was used to obtain
-a finite difference form of Equation 15 in the region $0\leq h<2$.
-Central differencing was used to approximate first derivatives in
-space, and a fully implicit scheme was used to approximate time derivatives.
-To ensure stability, the source term was linearized so that it was
-independent of the value of n. Any particle that touches the surfaces
-adsorbs, so the number density of particles at the surface is zero.
-The Dirichlet (type 1) boundary condition $n=0$ was used at $h=0$.
-For simulations with constant near-surface concentration the type
-1 boundary condition $n=n_{b}$ was applied at $h=2$. 
+a finite difference form of Equation \ref{eq:Generalized Diffusion Eqn}
+in the region $0\leq h<2$. Central differencing was used to approximate
+first derivatives in space, and a fully implicit scheme was used to
+approximate time derivatives. To ensure stability, the source term
+was linearized so that it was independent of the value of $n$. Any
+particle that touched the surfaces adsorbed, so the number density
+of particles at the surface was always zero. The Dirichlet (type 1)
+boundary condition $n=0$ was used at $h=0$. For simulations with
+constant near-surface concentration the type 1 boundary condition
+$n=n_{b}$ was applied at $h=2$. 
 
 
 \subsubsection{Coupling the Continuum Model of Hard-Sphere Adsorption to a Conventional
@@ -460,7 +461,7 @@ of the coefficient values are shown in Figure \ref{fig:Coefficient Plots}.%
 }
 
 \caption{\label{fig:Coefficient Plots}Coefficients of the generalized diffusion
-equation, derived from Brownian dynamics results}
+equation, derived from Brownian dynamics results.}
 %
 \end{figure}
  The calculation of coefficient was challenging due to the presence
@@ -490,15 +491,17 @@ are equivalent to results from hard-sphere Brownian dynamics simulations,
 with much less computational effort. Since the pair correlation function
 shows that Brownian dynamics and RSA simulations produce identical
 configurations of adsorbed particles, it is not surprising that the
-AVF for Brownian dynamics at $h=0$ is identical to the ASF for RSA. 
+AVF for Brownian dynamics at $h=0$ is identical to the ASF for random
+sequential adsorption of circular disks.
 
 The AVF shown in Figure \ref{fig:Available Volume Function} differs
-significantly from the blocking function reported in \cite{Magan2004},
+significantly from the blocking function reported in~\cite{Magan2004},
 which was estimated by taking the ratio of flux at the surface to
 the flux expected for a perfect adsorbing boundary. In this work the
 AVF was computed directly by attempting to adsorb an additional particle
-onto a surface with adsorbed particles. The method used here is more
-likely to obtain an accurate result.
+onto a surface with adsorbed particles and verified with a direct
+calculation using computational geometry. The method used here is
+more likely to obtain an accurate result.
 
 The kinetics of adsorption predicted by the continuum model matched
 the kinetics predicted by Brownian dynamics simulations when the Brownian
@@ -508,11 +511,11 @@ ran for up to several days on a high-performance cluster to obtain
 equivalent results. The continuum model can be scaled to larger domain
 sizes much more effectively than Brownian dynamic simulations, which
 require detecting collisions between particles. Collision detection
-scales as using a brute-force approach, although algorithms have been
-developed that produce linear scaling with $N$ \cite{Taylor2010}.
+scales as $N^{2}$ using a brute-force approach, although algorithms
+have been developed that produce linear scaling with $N$~\cite{Taylor2010}.
 
 
-\subsection{Future applications}
+\subsection{Future Applications}
 
 This work focused on the adsorption of hard spheres so that the results
 of the continuum adsorption model could be rigorously validated by

@@ -14,8 +14,8 @@ dashes = [(None,None), (8,4), (2,2)]
 ka = 1.35e-8
 ks = 1.476e-3
 kd = 1.745e-3
-area1 = 122
-area2 = 414
+area1 = 122.0
+area2 = 414.0
 ratio = area2 / area1
 
 expFileName = '/home/cfinch/cfinch/Microfluidics/Whispering Gallery Mode Sensor/Experimental Data Analysis/GO/Data/GO_glass_150mlhr.h5'

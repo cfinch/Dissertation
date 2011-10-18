@@ -31,7 +31,7 @@
     urlcolor=blue           % color of external links
 }
 
-\title{Modeling Transport and Adsorption in Microfluidic Systems}
+\title{Modeling Transport and Protein Adsorption in Microfluidic Systems}
 \author{Craig Finch}
 \priordegrees{B. S. University of Illinois, 1997 \\ M. S. University of Central Florida, 2001}
 \degree{Doctor of Philosophy}
@@ -190,10 +190,8 @@ sional.
  of hard-sphere particles in a liquid and the adsorption of the particles
  onto a uniform surface.
  The configuration of the adsorbed particles was analyzed to quantify the
- chemical potential near the surface, which was found to be a function of
- the distance from the surface and the fractional surface coverage.
- The near-surface chemical potential was used to derive a continuum model
- of adsorption that incorporates the results from the Brownian dynamics
+ chemical potential near the surface, which was used to derive a continuum
+ model of adsorption that incorporates the results from the Brownian dynamics
  simulations.
  The equations of the continuum model were discretized and coupled to a
  conventional computational fluid dynamics (CFD) simulation of diffusive
@@ -222,10 +220,12 @@ Kinetic models were used to interpret experimental measurements of the kinetics
  Multiple kinetic models were fitted to the experimental data.
   The fitted parameter values and the quality of fit of the various models
  were analyzed to test hypotheses about the mechanisms of adsorption.
- A colorimetric assay was used to determine the enzymatic activity of the
- adsorbed glucose oxidase and the results were compared to the activity
- predicted by the models.
- The WGM biosensor, transport simulation and fitted kinetic models enabled
+ Cells were cultured on silane surfaces coated with FN to assess its biological
+ activity, and a colorimetric assay was used to determine the enzymatic
+ activity of the adsorbed glucose oxidase.
+ The results of the GO activity assay were compared to the activity predicted
+ by the models.
+ The WGM biosensor, transport simulation and kinetic model fitting enabled
  new insights into the adsorption of proteins on functionalized surfaces
  at solution concentrations that were previously unattainable.
 \end_layout
@@ -238,8 +238,8 @@ Kinetic models were used to interpret experimental measurements of the kinetics
 
 The process of CFD simulation and experimental validation was used to design
  a microfluidic bioreactor that mimics the function of an alveolus.
- The design goal was to move a "plug" of liquid from the alveolus to a sensor
- chamber.
+ The design goal was to move a ``plug'' of liquid from the alveolus to a
+ sensor chamber.
  Microreactors experience significant deviations from plug flow due to the
  high ratio of surface area to volume and the no-slip boundary condition
  at the walls of the chamber.
@@ -275,7 +275,7 @@ begin{acknowledgments}
 
 \begin_layout Plain Layout
 
-This would not have been possible without support from my advisors, Dr.
+This would not have been possible without support from my advisers, Dr.
  James J.
  Hickman and Dr.
  Thomas Clarke, and the head of the Modeling and Simulation graduate program,
@@ -284,8 +284,8 @@ This would not have been possible without support from my advisors, Dr.
  I thank Kerry Wilson, Philip Anderson, Christopher Long and Wesley Anderson
  for providing experimental data and co-authoring several papers.
  Frank Vollmer introduced our group to whispering gallery mode biosensing.
- Vaibhav Thakore offered many helpful suggestions during our discussions
- about models and simulation.
+ Vaibhav Thakore offered many helpful suggestions during many technical
+ discussions.
   
 \end_layout
 

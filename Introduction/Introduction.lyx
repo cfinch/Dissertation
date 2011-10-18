@@ -61,8 +61,8 @@ key "Whitesides2006"
 
 \end_inset
 
-, while the MEMS Handbook defines a microfluidic channel as having characeristic
- dimensions between 
+, while the MEMS Handbook defines a microfluidic channel as having characteristi
+c dimensions between 
 \begin_inset Formula $1\,\mu m$
 \end_inset
 
@@ -94,7 +94,18 @@ key "Sharp2002"
  mix only by diffusion, which is a considerably slower process than the
  turbulent mixing that can be found in macroscale systems.
  Therefore, the creation of mixers is one of the defining challenges of
- microfluidics.
+ microfluidics
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nguyen2005"
+
+\end_inset
+
+.
  Because a microfluidic device has so much surface area relative to its
  volume, a large fraction of the fluid has the potential to interact with
  the surface.
@@ -163,8 +174,6 @@ key "Borland2008"
 \end_inset
 
 .
- Microfluidic chambers can also be used to create defined chemical gradients
- to study chemotaxis, the movement of cells in response to chemical cues.
  Flow cytometry has become a practical tool for clinical diagnosis, and
  microfluidic flow cytometers enable measurements to be performed with fewer
  cells
@@ -208,8 +217,8 @@ Transport in Microfluidic Systems
 \end_layout
 
 \begin_layout Standard
-Various dimensionless numbers have been derived to help characterize fluid
- systems through dimensional analysis.
+Various dimensionless numbers have been derived to characterize fluid systems
+ through dimensional analysis.
  One of the best-known is the Reynolds number, which describes the ratio
  of inertial forces to viscous (damping) forces
 \begin_inset space ~
@@ -226,7 +235,7 @@ key "fox2006"
  A large Reynolds number indicates that inertial forces dominate and the
  flow may be turbulent.
  A small Reynolds number indicates that viscous damping is strong enough
- to prevent turbulence from occuring, resulting in laminar flow.
+ to prevent turbulence from occurring, resulting in laminar flow.
  The Reynolds number is defined as
 \begin_inset Formula \[
 Re=\frac{\bar{v}L}{\nu}\]
@@ -267,7 +276,7 @@ Kn=\frac{\lambda}{L}\]
 \end_inset
 
  is the mean free path of a molecule in the gas.
- Molecules in a liquid do not have a mean free path becaue their motion
+ Molecules in a liquid do not have a mean free path because their motion
  is highly constrained by their neighbors, so the lattice spacing 
 \begin_inset Formula $\delta$
 \end_inset
@@ -455,7 +464,7 @@ key "Andrade1986"
 \end_inset
 
 .
- In the 1990s optical waveguide light spectrocopy (OWLS)
+ In the 1990s optical waveguide light spectroscopy (OWLS)
 \begin_inset space ~
 \end_inset
 

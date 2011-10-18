@@ -14,8 +14,8 @@ dashes = [(None,None), (8,4), (2,2)]
 ka = 5.957e-8
 ks = 1.143e-2
 kd = 6.744e-5
-area1 = 209
-area2 = 291
+area1 = 209.0
+area2 = 291.0
 ratio = area2 / area1
 theta_max = 1.0
 
@@ -27,7 +27,6 @@ f = NA / molar_mass * 1e-9    # g/molecule
 
 exp_C, exp_t, exp_mean, exp_std, labels = load_average_data(expFileName)
 plt.figure(figsize=(width, width/1.618), facecolor='w')
-
 max_time = 0
 for i in range(len(exp_C)):
     if exp_t[i].max() > max_time:

@@ -82,7 +82,11 @@ Computational methods have been applied to model and predict protein adsorption,
  (femtosecond) time step required by atomistic techniques presents a significant
  obstacle.
  The adsorption of proteins and their subsequent rearrangement occurs on
- a time scale of seconds to hours 
+ a time scale of seconds to hours
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Latour2005"
@@ -90,18 +94,16 @@ key "Latour2005"
 \end_inset
 
 .
- , while it was recently reported that an advanced MD simulation on a specially
- designed supercomputer has the ability to simulate several microseconds
- of protein behavior 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Dror2010"
-
+ MD has been used to simulate the adsorption of a fragment of fibrinogen
+ with explicit solvent molecules for 
+\begin_inset Formula $5\, ns$
 \end_inset
 
-.
- MD has been used to simulate the adsorption of a fragment of fibrinogen
- with explicit solvent molecules for 5ns of simulated time 
+ of simulated time
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Agashe2005"
@@ -110,7 +112,15 @@ key "Agashe2005"
 
 .
  A similar study was carried out to model the interaction between lysozyme
- and a graphite surface for 500ps 
+ and a graphite surface for 
+\begin_inset Formula $500\, ps$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Raffaini2010"
@@ -120,7 +130,11 @@ key "Raffaini2010"
 .
  It was recently reported that an advanced MD simulation on a specially
  designed supercomputer has the ability to simulate several microseconds
- of protein behavior 
+ of protein behavior
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Dror2010"
@@ -132,7 +146,7 @@ key "Dror2010"
  used to model protein adsorption.
  Colloidal models represent a protein molecule with a simplified geometric
  shape (typically a sphere or ellipsoid) and interactions are modeled by
- DLVO (electrostatic and van der Walls) forces
+ DLVO (electrostatic and van der Waals) forces
 \begin_inset space ~
 \end_inset
 
@@ -144,8 +158,12 @@ key "evans1994colloidal,Roth1993,Lenhoff1995"
 \end_inset
 
 .
- Recently, Brownian dynamics simulations been used to implement colloidal-scale
- simulations of protein transport and adsorption 
+ Recently, Brownian dynamics simulations have been used to implement colloidal-s
+cale simulations of protein transport and adsorption
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Unni2005,Magan2006,Quinn2008"
@@ -177,7 +195,11 @@ key "Jenkins2004,Glaser1993,Edwards1999"
 
 .
  At first, kinetic models of adsorption were formulated based upon the assumptio
-ns of the Langmuir adsorption model 
+ns of the Langmuir adsorption model
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Andrade1986"
@@ -187,7 +209,11 @@ key "Andrade1986"
 .
  More recently random sequential adsorption (RSA) models have been applied
  to characterize the blocking of the surface more rigorously for various
- particle shapes 
+ particle shapes
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Talbot2000287"
@@ -206,6 +232,10 @@ key "Talbot2000287"
 
  is the fraction of surface that is covered by adsorbed particles.
  Many types of kinetic models are currently used to model protein adsorption
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Rabe2010"
@@ -221,7 +251,10 @@ Continuum models can be linked to discrete-particle simulations using the
  principles of chemical thermodynamics.
  The available surface function has been generalized to depend on the height
  above the adsorbing surface as well as the fractional surface coverage
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Adamczyk1999"
@@ -234,7 +267,11 @@ key "Adamczyk1999"
  to the surface.
  This barrier incorporates steric exclusion due to the blocking effect of
  hard particles and the longer-ranged repulsive effect of electrostatic
- interactions 
+ interactions
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Adamczyk2000"
@@ -246,7 +283,11 @@ key "Adamczyk2000"
  transport to the surface.
  For example, the surface boundary layer approximation (SFBLA) assumes that
  the interface is one-dimensional and the flux through the boundary layer
- is independent of the position above the surface 
+ is independent of the position above the surface
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Adamczyk1999a"
@@ -256,7 +297,11 @@ key "Adamczyk1999a"
 .
  Transport to the interface has been accounted for by coupling the adsorption
  model to a diffusive transport model, but the kinetic coefficients of the
- adsorption model were approximated with results from an RSA model 
+ adsorption model were approximated with results from an RSA model
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Adamczyk2000"
@@ -269,15 +314,15 @@ key "Adamczyk2000"
 
 \begin_layout Standard
 To fully account for the blocking effect of hard spheres, it cannot be assumed
- that the flux at the surface 
+ that the flux at the surface (
 \begin_inset Formula $J_{s}$
 \end_inset
 
- is equal to the flux at the interface with the continuum 
+) is equal to the flux at the interface with the continuum (
 \begin_inset Formula $J_{c}$
 \end_inset
 
- .
+) .
  A particle may diffuse into the boundary region, collide with adsorbed
  particles, and diffuse back out of the boundary region at a later time.
  At any instant, the flux at the surface will be less than or equal to the
@@ -314,7 +359,7 @@ The first steps of the derivation of the continuum model follow the method
  described in 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Adamczyk1999a,Adamczyk2000,Adamczyk1999"
+key "Adamczyk1999,Adamczyk2000,Adamczyk1999a"
 
 \end_inset
 
@@ -795,7 +840,7 @@ name "fig:Geometry"
 
 \end_inset
 
-Geometry used to define the hard-sphere adsorbing boundary condition
+Geometry used to define the hard-sphere adsorbing boundary condition.
 \end_layout
 
 \end_inset
@@ -848,8 +893,14 @@ standardstate
 
 \end_inset
 
-The result is a parabolic partial differential equation with variable coefficien
-ts.
+Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Generalized Diffusion Eqn"
+
+\end_inset
+
+ is a parabolic partial differential equation with variable coefficients.
  Let
 \begin_inset Formula \begin{align}
 k_{1} & =\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\nonumber \\
@@ -904,7 +955,7 @@ The choice of boundary condition for the bulk solution depends upon the
 \end_layout
 
 \begin_layout Subsection
-Calcluation of the Activity Coefficient
+Calculation of the Activity Coefficient
 \end_layout
 
 \begin_layout Standard
@@ -935,8 +986,8 @@ key "Elimelech1998"
 \end_inset
 
  was used to update the position of each particle at each time step: 
-\begin_inset Formula \[
-\mathbf{r}_{i}(t+\Delta t)=\mathbf{r}_{i}(t)+\mathbf{g}_{q}\sqrt{2\, D\,\Delta t}\]
+\begin_inset Formula \begin{equation}
+\mathbf{r}_{i}(t+\Delta t)=\mathbf{r}_{i}(t)+\mathbf{g}_{q}\sqrt{2\, D\,\Delta t}\label{eq:Langevin equation}\end{equation}
 
 \end_inset
 
@@ -1056,6 +1107,19 @@ key "Oliphant2007"
 weave
 \emph default
  function from SciPy.
+ The Message Passing Interface (MPI) was used to run multiple simulations
+ in parallel on a Linux cluster
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MPI"
+
+\end_inset
+
+.
  Each time a particle adsorbed on the surface the configuration of adsorbed
  particles was recorded, along with the profile of concentration vs.
  distance from the adsorbing surface and the fraction of the surface covered
@@ -1077,7 +1141,7 @@ key "Alted2002-,HDFGroup2000-"
 \end_layout
 
 \begin_layout Subsubsection
-Controls and Validation for the Brownian dynamics simulation
+Controls and Validation for the Brownian Dynamics Simulation
 \end_layout
 
 \begin_layout Standard
@@ -1211,7 +1275,7 @@ reference "fig:Geometry"
 .
  The position of each test particle was offset by a small random vector
  in 
-\begin_inset Formula $x-y$
+\begin_inset Formula $xy$
 \end_inset
 
  plane and each test particle was checked for overlaps with every simulation
@@ -1356,7 +1420,7 @@ reference "fig:Computational geometry"
 \end_inset
 
 .
- The fraction of space that available for adsorption at given 
+ The fraction of space available for adsorption at a given 
 \begin_inset Formula $h_{i}$
 \end_inset
 
@@ -1367,7 +1431,7 @@ reference "fig:Computational geometry"
  could be directly calculated by subtracting the unavailable area from the
  total area and dividing the result by the total area.
  For computational efficiency, the algorithm started with the first surface
- arrangment 
+ arrangement 
 \begin_inset Formula $\theta_{0}$
 \end_inset
 
@@ -1399,8 +1463,14 @@ key "Patankar1980"
 
 \end_inset
 
- was used to obtain a finite difference form of Equation 15 in the region
- 
+ was used to obtain a finite difference form of Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Generalized Diffusion Eqn"
+
+\end_inset
+
+ in the region 
 \begin_inset Formula $0\leq h<2$
 \end_inset
 
@@ -1408,9 +1478,13 @@ key "Patankar1980"
  Central differencing was used to approximate first derivatives in space,
  and a fully implicit scheme was used to approximate time derivatives.
  To ensure stability, the source term was linearized so that it was independent
- of the value of n.
- Any particle that touches the surfaces adsorbs, so the number density of
- particles at the surface is zero.
+ of the value of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Any particle that touched the surfaces adsorbed, so the number density
+ of particles at the surface was always zero.
  The Dirichlet (type 1) boundary condition 
 \begin_inset Formula $n=0$
 \end_inset
@@ -1814,7 +1888,7 @@ name "fig:Coefficient Plots"
 \end_inset
 
 Coefficients of the generalized diffusion equation, derived from Brownian
- dynamics results
+ dynamics results.
 \end_layout
 
 \end_inset
@@ -1911,8 +1985,7 @@ The RDFs for particle configurations generated by Brownian dynamics simulations
 \begin_inset Formula $h=0$
 \end_inset
 
- is identical to the ASF for RSA.
- 
+ is identical to the ASF for random sequential adsorption of circular disks.
 \end_layout
 
 \begin_layout Standard
@@ -1923,7 +1996,11 @@ reference "fig:Available Volume Function"
 
 \end_inset
 
- differs significantly from the blocking function reported in 
+ differs significantly from the blocking function reported in
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Magan2004"
@@ -1933,7 +2010,8 @@ key "Magan2004"
 , which was estimated by taking the ratio of flux at the surface to the
  flux expected for a perfect adsorbing boundary.
  In this work the AVF was computed directly by attempting to adsorb an additiona
-l particle onto a surface with adsorbed particles.
+l particle onto a surface with adsorbed particles and verified with a direct
+ calculation using computational geometry.
  The method used here is more likely to obtain an accurate result.
 \end_layout
 
@@ -1947,12 +2025,20 @@ ce cluster to obtain equivalent results.
  The continuum model can be scaled to larger domain sizes much more effectively
  than Brownian dynamic simulations, which require detecting collisions between
  particles.
- Collision detection scales as using a brute-force approach, although algorithms
- have been developed that produce linear scaling with 
+ Collision detection scales as 
+\begin_inset Formula $N^{2}$
+\end_inset
+
+ using a brute-force approach, although algorithms have been developed that
+ produce linear scaling with 
 \begin_inset Formula $N$
 \end_inset
 
- 
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Taylor2010"
@@ -1963,7 +2049,7 @@ key "Taylor2010"
 \end_layout
 
 \begin_layout Subsection
-Future applications
+Future Applications
 \end_layout
 
 \begin_layout Standard
