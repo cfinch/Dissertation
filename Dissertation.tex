@@ -9,6 +9,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage[numbers]{natbib}
 
 \makeatletter
 
@@ -84,16 +85,7 @@
     \cr
   }%
 }
-
-\let\oldthebibliography=\thebibliography
-\let\endoldthebibliography=\endthebibliography
-\renewenvironment{thebibliography}[1]{%
-\begin{oldthebibliography}{#1}%
-\setlength{\itemsep}{-2mm}%
-}%
-{%
-\end{oldthebibliography}%
-}
+\setlength{\bibsep}{0pt}
 
 \@ifundefined{showcaptionsetup}{}{%
  \PassOptionsToPackage{caption=false}{subfig}}
@@ -123,13 +115,13 @@ This would not have been possible without support from my advisers, Dr. James J.
 I thank the Institute for Simulation and Training (IST), the I\textsuperscript{2} Lab, and the NanoScience Technology Center at the University of Central Florida, as well the National Institutes for Health (grant \#RO1EB005459) and the United States Army (grant \#W81XWH-10-1-0542) for financial support.  IST also donated computing resources on the Stokes cluster.
 \end{acknowledgments}
 
+\singlespacing
 \clearpage \bookmark[level=0, dest=toc_label]{TABLE OF CONTENTS}
 \hypertarget{toc_label} \tableofcontents
 \newpage \phantomsection \label{listoffig} \addcontentsline{toc}{chapter}{LIST OF FIGURES} 
-%\singlespacing
 \listoffigures
 \newpage \phantomsection \label{listoftab} \addcontentsline{toc}{chapter}{LIST OF TABLES} \listoftables
-%\setstretch{\doublestretch}
+\setstretch{\doublestretch}
 \newpage 
 \pagenumbering{arabic}\include{Introduction/Introduction}
 

@@ -60,16 +60,7 @@
     \cr
   }%
 }
-
-\let\oldthebibliography=\thebibliography
-\let\endoldthebibliography=\endthebibliography
-\renewenvironment{thebibliography}[1]{%
-\begin{oldthebibliography}{#1}%
-\setlength{\itemsep}{-2mm}%
-}%
-{%
-\end{oldthebibliography}%
-}
+\setlength{\bibsep}{0pt}
 \end_preamble
 \options letterpaper, english
 \use_default_options true
@@ -101,7 +92,7 @@
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
-\cite_engine basic
+\cite_engine natbib_numerical
 \use_bibtopic false
 \paperorientation portrait
 \paperwidth 0cm
@@ -321,6 +312,13 @@ end{acknowledgments}
 
 
 \backslash
+singlespacing
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 clearpage 
 \backslash
 bookmark[level=0, dest=toc_label]{TABLE OF CONTENTS}
@@ -350,13 +348,6 @@ addcontentsline{toc}{chapter}{LIST OF FIGURES}
 
 \begin_layout Plain Layout
 
-%
-\backslash
-singlespacing
-\end_layout
-
-\begin_layout Plain Layout
-
 
 \backslash
 listoffigures
@@ -379,7 +370,7 @@ listoftables
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 setstretch{
 \backslash
