@@ -839,7 +839,6 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Figures/AdsorbingBoundary.pdf
-	lyxscale 30
 
 \end_inset
 
@@ -857,6 +856,15 @@ name "fig:Geometry"
 \end_inset
 
 Geometry used to define the hard-sphere adsorbing boundary condition.
+ 
+\begin_inset Formula $h$
+\end_inset
+
+ is non-dimensionalized with the particle radius 
+\begin_inset Formula $a$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -905,7 +913,7 @@ standardstate
  equation
 \begin_inset Formula \begin{align}
 \frac{\partial n}{\partial t} & =D\,\frac{\partial}{\partial h}\left[\left(\frac{1}{n}\frac{\partial n}{\partial h}+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\, n\right]\nonumber \\
- & =D\,\left[\frac{\partial^{2}}{\partial h^{2}}n+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\frac{\partial n}{\partial h}+n\,\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\right]\label{eq:Generalized Diffusion Eqn}\end{align}
+ & =D\,\left[\frac{\partial^{2}n}{\partial h^{2}}+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\frac{\partial n}{\partial h}+n\,\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\right]\label{eq:Generalized Diffusion Eqn}\end{align}
 
 \end_inset
 
@@ -926,7 +934,7 @@ k_{2} & =\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{
 
 Then
 \begin_inset Formula \begin{align}
-\frac{\partial n}{\partial t} & =D\,\left[\frac{\partial^{2n}}{\partial h^{2}}+k_{1\,}\frac{\partial n}{\partial h}+k_{2}\, n\right]\label{eq:Generalized Diffusion Eqn 1D}\end{align}
+\frac{\partial n}{\partial t} & =D\,\left[\frac{\partial^{2}n}{\partial h^{2}}+k_{1\,}\frac{\partial n}{\partial h}+k_{2}\, n\right]\label{eq:Generalized Diffusion Eqn 1D}\end{align}
 
 \end_inset
 
@@ -992,6 +1000,46 @@ Brownian Dynamics Simulation
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Brownian_Dynamics_Illustration.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Brownian Dynamics"
+
+\end_inset
+
+An illustration of a Brownian dynamics simulation.
+ Adsorbed particles are black, particles in solution are blue, and the motion
+ of each particle is indicated by a vector.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 A Brownian dynamics simulation of irreversible hard-sphere adsorption was
  used to obtain configurations of adsorbed particles.
  The Langevin position equation 
@@ -1091,15 +1139,7 @@ Implementation of Brownian Dynamics Simulation
 \end_layout
 
 \begin_layout Standard
-The simulation was implemented using the Python programming language using
- the dimensionless variables defined in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Magan2004"
-
-\end_inset
-
-.
+The simulation was implemented using the Python programming language .
  Numerical data, such as the coordinates of the particles, were stored in
  NumPy arrays 
 \begin_inset CommandInset citation
@@ -1154,6 +1194,45 @@ key "Alted2002-,HDFGroup2000-"
 
 .
  
+\end_layout
+
+\begin_layout Standard
+The Brownian dynamics simulations were run with the parameters from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Magan2004"
+
+\end_inset
+
+ so that the simulation results could be compared to published data: radius
+ of the particle 
+\begin_inset Formula $a=5.8\times10^{-8}\, m$
+\end_inset
+
+ and the diffusion coefficient 
+\begin_inset Formula $D=3.77\times10^{-12}\, m^{2}/s$
+\end_inset
+
+.
+ Although these parameters are more representative of colloidal particles
+ than proteins, the absolute values are not important because both the Brownian
+ dynamics and continuum models were implemented in terms of dimensionless
+ variables.
+ The simulation was implemented with the dimensionless variables that were
+ defined in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Magan2004"
+
+\end_inset
+
+:
+\begin_inset Formula \begin{equation}
+\bar{r}=\frac{r}{a},\,\bar{t}=\frac{D}{a^{2}}t\label{eq:Dimensionless variables}\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1491,6 +1570,8 @@ reference "eq:Generalized Diffusion Eqn"
 \end_inset
 
 .
+ The continuum adsorption model was defined in terms of the same dimensionless
+ space and time variables as the Brownian dynamics simulation.
  Central differencing was used to approximate first derivatives in space,
  and a fully implicit scheme was used to approximate time derivatives.
  To ensure stability, the source term was linearized so that it was independent
@@ -1810,7 +1891,7 @@ reference "fig:Coefficient Plots"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -1820,7 +1901,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/cfinch/Brownian_Dynamics/Documentation/Hard_Sphere_Paper/Plots/coeff_a_publication_plot.pdf
+	filename Plots/coeff_a_publication_plot.pdf
 
 \end_inset
 
@@ -1859,7 +1940,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/cfinch/Brownian_Dynamics/Documentation/Hard_Sphere_Paper/Plots/coeff_b_publication_plot.pdf
+	filename Plots/coeff_b_publication_plot.pdf
 
 \end_inset
 

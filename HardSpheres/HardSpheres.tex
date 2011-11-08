@@ -148,7 +148,8 @@ as shown in Figure \ref{fig:Geometry}. %
 \includegraphics{HardSpheres/Figures/AdsorbingBoundary}
 
 \caption{\label{fig:Geometry}Geometry used to define the hard-sphere adsorbing
-boundary condition.}
+boundary condition. $h$ is non-dimensionalized with the particle
+radius $a$.}
 
 
 %
@@ -161,13 +162,13 @@ The notation \(n  / n^\standardstate\) will be dropped, and it will
 be assumed that $n$ has been normalized. The equation can be re-arranged
 to have the form of a generalized diffusion equation\begin{align}
 \frac{\partial n}{\partial t} & =D\,\frac{\partial}{\partial h}\left[\left(\frac{1}{n}\frac{\partial n}{\partial h}+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\, n\right]\nonumber \\
- & =D\,\left[\frac{\partial^{2}}{\partial h^{2}}n+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\frac{\partial n}{\partial h}+n\,\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\right]\label{eq:Generalized Diffusion Eqn}\end{align}
+ & =D\,\left[\frac{\partial^{2}n}{\partial h^{2}}+\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\frac{\partial n}{\partial h}+n\,\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)\right]\label{eq:Generalized Diffusion Eqn}\end{align}
 Equation \ref{eq:Generalized Diffusion Eqn} is a parabolic partial
 differential equation with variable coefficients. Let\begin{align}
 k_{1} & =\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\nonumber \\
 k_{2} & =\frac{\partial}{\partial h}\left(\frac{1}{\gamma}\frac{\partial\gamma}{\partial h}\right)=\frac{\partial k_{1}}{\partial h}\label{eq:Variable coefficients}\end{align}
 Then\begin{align}
-\frac{\partial n}{\partial t} & =D\,\left[\frac{\partial^{2n}}{\partial h^{2}}+k_{1\,}\frac{\partial n}{\partial h}+k_{2}\, n\right]\label{eq:Generalized Diffusion Eqn 1D}\end{align}
+\frac{\partial n}{\partial t} & =D\,\left[\frac{\partial^{2}n}{\partial h^{2}}+k_{1\,}\frac{\partial n}{\partial h}+k_{2}\, n\right]\label{eq:Generalized Diffusion Eqn 1D}\end{align}
  This equation predicts the evolution of number density over time
 at every point in a domain for which the activity coefficient is known.
 To utilize this equation to predict the surface density of adsorbed
@@ -194,6 +195,17 @@ of the activity coefficient is critical to obtain a useful model.
 
 \subsubsection{Brownian Dynamics Simulation}
 
+%
+\begin{figure}
+\includegraphics{HardSpheres/Figures/Brownian_Dynamics_Illustration}
+
+\caption{\label{fig:Brownian Dynamics}An illustration of a Brownian dynamics
+simulation. Adsorbed particles are black, particles in solution are
+blue, and the motion of each particle is indicated by a vector.}
+
+
+%
+\end{figure}
 A Brownian dynamics simulation of irreversible hard-sphere adsorption
 was used to obtain configurations of adsorbed particles. The Langevin
 position equation \cite{Elimelech1998} was used to update the position
@@ -237,19 +249,30 @@ described in \cite{Magan2004}.
 \subsubsection{Implementation of Brownian Dynamics Simulation}
 
 The simulation was implemented using the Python programming language
-using the dimensionless variables defined in \cite{Magan2004}. Numerical
-data, such as the coordinates of the particles, were stored in NumPy
-arrays \cite{Oliphant2006}. Routines from the SciPy library were
-used for standard operations like interpolation and numerical integration
-\cite{Oliphant2007}. Collision detection was implemented in C for
-speed, using the \emph{weave} function from SciPy. The Message Passing
-Interface (MPI) was used to run multiple simulations in parallel on
-a Linux cluster~\cite{MPI}. Each time a particle adsorbed on the
-surface the configuration of adsorbed particles was recorded, along
-with the profile of concentration vs. distance from the adsorbing
+. Numerical data, such as the coordinates of the particles, were stored
+in NumPy arrays \cite{Oliphant2006}. Routines from the SciPy library
+were used for standard operations like interpolation and numerical
+integration \cite{Oliphant2007}. Collision detection was implemented
+in C for speed, using the \emph{weave} function from SciPy. The Message
+Passing Interface (MPI) was used to run multiple simulations in parallel
+on a Linux cluster~\cite{MPI}. Each time a particle adsorbed on
+the surface the configuration of adsorbed particles was recorded,
+along with the profile of concentration vs. distance from the adsorbing
 surface and the fraction of the surface covered by particles ($\theta$).
 The PyTables package was used to save the simulation results to binary
 files in HDF5 format \cite{Alted2002-,HDFGroup2000-}. 
+
+The Brownian dynamics simulations were run with the parameters from
+\cite{Magan2004} so that the simulation results could be compared
+to published data: radius of the particle $a=5.8\times10^{-8}\, m$
+and the diffusion coefficient $D=3.77\times10^{-12}\, m^{2}/s$. Although
+these parameters are more representative of colloidal particles than
+proteins, the absolute values are not important because both the Brownian
+dynamics and continuum models were implemented in terms of dimensionless
+variables. The simulation was implemented with the dimensionless variables
+that were defined in \cite{Magan2004}:\begin{equation}
+\bar{r}=\frac{r}{a},\,\bar{t}=\frac{D}{a^{2}}t\label{eq:Dimensionless variables}\end{equation}
+
 
 
 \subsubsection{Controls and Validation for the Brownian Dynamics Simulation}
@@ -355,7 +378,9 @@ in parallel.
 
 The control volume formulation \cite{Patankar1980} was used to obtain
 a finite difference form of Equation \ref{eq:Generalized Diffusion Eqn}
-in the region $0\leq h<2$. Central differencing was used to approximate
+in the region $0\leq h<2$. The continuum adsorption model was defined
+in terms of the same dimensionless space and time variables as the
+Brownian dynamics simulation. Central differencing was used to approximate
 first derivatives in space, and a fully implicit scheme was used to
 approximate time derivatives. To ensure stability, the source term
 was linearized so that it was independent of the value of $n$. Any
@@ -454,9 +479,9 @@ The coefficients of the generalized diffusion equation were computed
 from the AVF from Brownian dynamics simulations. Representative plots
 of the coefficient values are shown in Figure \ref{fig:Coefficient Plots}.%
 \begin{figure}[H]
-\subfloat[\label{fig:Coefficient a}Coefficient $k_{1}$]{\includegraphics{/home/cfinch/Brownian_Dynamics/Documentation/Hard_Sphere_Paper/Plots/coeff_a_publication_plot}
+\subfloat[\label{fig:Coefficient a}Coefficient $k_{1}$]{\includegraphics{HardSpheres/Plots/coeff_a_publication_plot}
 
-}\subfloat[\label{fig:Coefficient b}Coefficient $k_{2}$]{\includegraphics{/home/cfinch/Brownian_Dynamics/Documentation/Hard_Sphere_Paper/Plots/coeff_b_publication_plot}
+}\subfloat[\label{fig:Coefficient b}Coefficient $k_{2}$]{\includegraphics{HardSpheres/Plots/coeff_b_publication_plot}
 
 }
 

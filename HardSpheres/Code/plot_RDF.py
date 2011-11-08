@@ -5,7 +5,7 @@ from matplotlib import rc
 import tables
 
 rc('text', usetex=True)
-rc('font',**{'family':'serif'})
+rc('font',**{'family':'serif', 'serif':['Times']})
 rc('font', size=10)
 
 ### Setup ###
@@ -38,7 +38,7 @@ theoretical_dashes = (4,4)
 offset = 2.0
 
 ### Load and plot ###
-plt.figure(figsize=(4,5), facecolor='white')
+plt.figure(figsize=(90.0/25.4, 180.0/25.4), facecolor='white')
 ax = plt.axes([0.12, 0.1, 0.525, 0.85], axisbg='white')
 
 num_figures = 0
