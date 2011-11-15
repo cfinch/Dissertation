@@ -72,10 +72,29 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+The previous chapter advanced the theory of protein adsorption by developing
+ a continuum model that describes the adsorption of three-dimensional particles
+ at an interface.
+ In this chapter, existing continuum models of protein adsorption will be
+ used to interpret experimental measurements of the kinetics of protein
+ adsorption on surfaces with varying properties.
+ Kinetic adsorption models from multiple sources will be formulated in a
+ common mathematical framework and quantitatively compared.
+ Computational fluid dynamics simulations will be used to characterize transport
+ limitations in the flow cell of a whispering gallery mode (WGM) biosensor.
+ The kinetic models will be fitted to experimental data from the WGM biosensor,
+ taking transport limitations into account, and used to test hypotheses
+ about the experimental results.
+\end_layout
+
+\begin_layout Subsection
+Alkylsilane Surface Modification
+\end_layout
+
+\begin_layout Standard
 Many studies to date have focused on the adsorption of proteins to alkanethiol
- self-assembled monolayers (SAMs).
- Alkanethiol SAMs are used to functionalize noble metal surfaces (typically
- gold).
+ self-assembled monolayers (SAMs), which are used to functionalize noble
+ metal surfaces (typically gold).
  These SAMs are convenient in that they are relatively easy to prepare,
  present highly ordered monolayers with well-defined composition, and are
  compatible with integrated electrodes and other sensor systems utilizing
@@ -209,8 +228,8 @@ key "Gombotz1991"
 \end_layout
 
 \begin_layout Standard
-A biosensor system utilizing whispering gallery mode (WGM) technology, where
- the active sensor is typically a silica disk, ring, toroid, or sphere/spheroid,
+A biosensor system utilizing whispering gallery mode technology, where the
+ active sensor is typically a silica disk, ring, toroid, or sphere/spheroid,
  can provide new insights into the adsorption behavior of biomolecules onto
  alkylsilane-modified surfaces.
  Glass and silicon oxide surfaces are much more common than metal surfaces
@@ -735,6 +754,20 @@ Data analysis software was written using the Python programming language.
  One resonance, with a continuous trace and the lowest FWHM value, was chosen
  for further analysis.
  A linear baseline subtraction was applied to correct for baseline drift.
+ The refractive index of adsorbed protein (about 1.45) is similar to that
+ of glass
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Akimoto1999"
+
+\end_inset
+
+, so adsorbing proteins effectively increase the diameter of the spheroidal
+ resonator.
  A method based on first order perturbation theory 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -744,7 +777,7 @@ key "Vollmer2002,Arnold2003"
 
  was used to calculate the surface concentration of the adsorbed species
  
-\begin_inset Formula $\sigma_{s}$
+\begin_inset Formula $\Gamma\,\left(molecules\, cm^{-2}\right)$
 \end_inset
 
  based on the measured change in resonant wavelength 
@@ -753,7 +786,7 @@ key "Vollmer2002,Arnold2003"
 
 :
 \begin_inset Formula \begin{equation}
-\frac{\Delta\lambda}{\lambda}=\frac{\alpha_{ex}\sigma_{s}}{\epsilon_{0}\left(n_{s}^{2}-n_{m}^{2}\right)R}\label{eq:WGM data analysis}\end{equation}
+\frac{\Delta\lambda}{\lambda}=\frac{\alpha_{ex}\Gamma}{\epsilon_{0}\left(n_{s}^{2}-n_{m}^{2}\right)R}\label{eq:WGM data analysis}\end{equation}
 
 \end_inset
 
@@ -761,7 +794,11 @@ key "Vollmer2002,Arnold2003"
 \begin_inset Formula $\lambda$
 \end_inset
 
- is the nominal wavelength of the resonance, 
+ is the nominal wavelength of the resonance (
+\begin_inset Formula $1310\, nm$
+\end_inset
+
+), 
 \begin_inset Formula $\Delta\lambda$
 \end_inset
 
@@ -769,19 +806,37 @@ key "Vollmer2002,Arnold2003"
 \begin_inset Formula $n_{s}$
 \end_inset
 
- is the refractive index of the spheroid (1.46), 
+ is the refractive index of the spheroid (1.46)
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SMF28e"
+
+\end_inset
+
+, 
 \begin_inset Formula $n_{m}$
 \end_inset
 
- is the refractive index of the medium surrounding the sphere (1.3357), 
+ is the refractive index of the medium surrounding the sphere (1.3357)
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Akimoto1999"
+
+\end_inset
+
+, 
 \begin_inset Formula $\alpha_{ex}$
 \end_inset
 
- is the excess polarizability of the protein molecule (
-\begin_inset Formula $0.184\, cm^{3}g^{-1}$
-\end_inset
-
-), 
+ is the excess polarizability of the protein molecule, 
 \begin_inset Formula $\epsilon_{0}$
 \end_inset
 
@@ -790,6 +845,73 @@ key "Vollmer2002,Arnold2003"
 \end_inset
 
  is the radius of the spheroid.
+ The excess polarizability of the protein can be calculated from the refractive
+ index increment 
+\begin_inset Formula $dn/dc$
+\end_inset
+
+:
+\begin_inset Formula \begin{equation}
+\alpha_{ex}=4\pi\epsilon_{0}\frac{n_{s}}{2\pi}\frac{dn}{dc}m\label{eq:Excess polarizability}\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $m=N_{A}/M$
+\end_inset
+
+ is the mass (in grams) of a single protein molecule and 
+\begin_inset Formula $M$
+\end_inset
+
+ is the molar mass.
+ Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Excess polarizability"
+
+\end_inset
+
+ can be substituted into equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:WGM data analysis"
+
+\end_inset
+
+ and solved for surface concentration to obtain
+\begin_inset Formula \begin{equation}
+\Gamma=\frac{\Delta\lambda}{\lambda}\frac{\left(n_{s}^{2}-n_{b}^{2}\right)R}{2\, n_{b}\, dn/dc}\frac{N_{A}}{M}\label{eq:WGM data analysis 2}\end{equation}
+
+\end_inset
+
+The molar mass was not needed to calculate surface density 
+\begin_inset Formula $\rho\,\left(g\, cm^{-2}\right)$
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+\rho=\Gamma\frac{N_{A}}{M}=\frac{\Delta\lambda}{\lambda}\frac{\left(n_{s}^{2}-n_{b}^{2}\right)R}{2\, n_{b}\, dn/dc}\label{eq:WGM data analysis 3}\end{equation}
+
+\end_inset
+
+The generally accepted value for the refractive index increment of a dilute
+ protein solution (
+\begin_inset Formula $0.184\, cm^{3}g^{-1}$
+\end_inset
+
+) was used to compute the excess polarizability
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Vollmer2002,Voros2004"
+
+\end_inset
+
+.
  Spheroid radii were measured from images taken using brightfield microscopy.
  Two runs for each concentration were averaged for the DETA and 13F surfaces,
  and a single run was used for each concentration on the SiPEG surface.
@@ -1425,7 +1547,7 @@ key "Andrade1986"
 
 .
  The function 
-\begin_inset Formula $\Phi$
+\begin_inset Formula $\Phi\left(\theta\right)$
 \end_inset
 
  represents the blocking effect of adsorbed particles.
@@ -1455,6 +1577,9 @@ key "Schaaf1989"
 \end_inset
 
 .
+ Adsorption models of this form assume that proteins behave like hard particles,
+ with the RSA model making a further assumption that the particles pack
+ like spheres.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1462,12 +1587,137 @@ RSA-Type Model of Adsorption with Transition
 \end_layout
 
 \begin_layout Standard
-Single-layer adsorption models cannot adequately predict the kinetics of
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/two_stage_figure.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Two stage adsorption"
+
+\end_inset
+
+Two-stage adsorption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/two_layer_figure.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Two layer adsorption"
+
+\end_inset
+
+Two-layer adsorption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Adsorption Schematics"
+
+\end_inset
+
+Schematic representations of adsorption with post-adsorption transition
+ (a) and two-layer adsorption (b).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Single-step adsorption models cannot adequately predict the kinetics of
  adsorption for many combinations of proteins and surfaces.
  More complex models have been developed to account for these experimental
  results.
  Because many surfaces cause proteins to denature upon adsorption, it is
  common to model adsorption with a post-adsorption transition.
+ A schematic representation of this process is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Two stage adsorption"
+
+\end_inset
+
+.
+ An adsorbing protein is treated as a hard sphere (state 
+\begin_inset Formula $\alpha$
+\end_inset
+
+).
+ After adsorption, the sphere may transition to a second state 
+\begin_inset Formula $\beta$
+\end_inset
+
+ with a different radius if there is available space on the surface.
  This process can be described by the kinetic equations
 \begin_inset Formula \begin{align}
 \frac{d\rho_{\alpha}}{dt} & =k_{a}c\,\Phi_{\alpha}-k_{s}\rho_{\alpha}\Psi_{\alpha\beta}-k_{d}\rho_{\alpha}\label{eq:Adsorption Transition Kinetics}\\
@@ -1475,7 +1725,26 @@ Single-layer adsorption models cannot adequately predict the kinetics of
 
 \end_inset
 
-The form of the blocking functions depends upon the assumptions of the model.
+The blocking function 
+\begin_inset Formula $\Phi_{\alpha}$
+\end_inset
+
+ represents the probability that a protein adsorbing from solution is able
+ to find space to adsorb, while 
+\begin_inset Formula $\Psi_{\alpha\beta}$
+\end_inset
+
+ represents the probability that an adsorbed protein in state 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ has space to transition to state 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ The form of the blocking functions depends upon the assumptions of the
+ model.
  When the particles are spherical with initial radius 
 \begin_inset Formula $R_{\alpha}$
 \end_inset
@@ -1499,7 +1768,7 @@ key "Brusatori1999"
 
 \end_inset
 
-The following non-dimensional variables are defined: 
+The following non-dimensional variables were defined: 
 \begin_inset Formula $\overline{\rho_{\alpha}}=\rho_{\alpha}\pi R_{\alpha}^{2}$
 \end_inset
 
@@ -1749,7 +2018,18 @@ Langmuir-Type Model of Two-Layer Adsorption
 \begin_layout Standard
 A two-layer adsorption model was formulated, based on the assumptions of
  the Langmuir adsorption model.
- The two-layer adsorption model can be represented by the chemical equations
+ A schematic representation of this model is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Two layer adsorption"
+
+\end_inset
+
+.
+\begin_inset space ~
+\end_inset
+
+The two-layer adsorption model can be represented by the chemical equations
  
 \begin_inset ERT
 status open
@@ -6736,6 +7016,135 @@ Discussion
 \end_layout
 
 \begin_layout Standard
+Although the whispering gallery mode biosensor we constructed is more sophistica
+ted than any WGM biosensor that has been previously reported, it is still
+ a prototype system with significant room for improvement.
+ The sensitivity of the instrument could be improved by reducing the effect
+ of temperature on the resonant wavelengths of the spheroid.
+ This could be accomplished by actively stabilizing the temperature of the
+ instrument or measuring the temperature constantly and compensating for
+ the temperature drift in software.
+ Temperature stabilization should eliminate the need to perform a linear
+ baseline subtraction on the data.
+ The instrument could be made significantly easier to use if the resonator
+ and waveguide did not have to be fabricated separately and assembled by
+ hand.
+\end_layout
+
+\begin_layout Standard
+The methods used to convert the raw data (resonance wavelength over time)
+ to final data (adsorbed surface density over time) could also be improved.
+ Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:WGM data analysis 3"
+
+\end_inset
+
+ depends upon several constants taken from literature, such as the refractive
+ index of adsorbed protein and the refractive index increment of protein
+ in solution.
+ The refractive index of adsorbed protein is often taken to be constant
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Akimoto1999"
+
+\end_inset
+
+.
+ More recent measurements have shown that the refractive index actually
+ depends upon the density of the adsorbed layer, which is influenced by
+ the size of the protein, the solvent conditions and the relaxation of the
+ protein on the surface
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Voros2004"
+
+\end_inset
+
+.
+ Refractive index increments for many proteins have been tabulated, and
+ generally fall into the range of 
+\begin_inset Formula $0.18-0.20\, cm^{3}g^{-1}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fasman1989"
+
+\end_inset
+
+.
+ However, the refractive index increment depends on the wavelength and solvent
+ conditions, and the infrared laser used in the WGM biosensor has a significantl
+y longer wavelength (
+\begin_inset Formula $1310\, nm$
+\end_inset
+
+) than the wavelengths at which the refractive index increment is usually
+ measured (
+\begin_inset Formula $\sim600nm$
+\end_inset
+
+)
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rocco1983"
+
+\end_inset
+
+.
+ The absolute surface densities reported by the instrument could be made
+ more accurate by measuring these values for the particular proteins and
+ solution conditions used in the protein adsorption experiments.
+\end_layout
+
+\begin_layout Subsection
+Comparison of Adsorption Models
+\end_layout
+
+\begin_layout Standard
+Langmuir-type and RSA-type models are based upon different assumptions about
+ adsorption behavior.
+ RSA models assume that proteins act like hard spheres.
+ Because the spheres adsorb randomly on the surface, the surface packing
+ is inefficient and the fractional surface coverage reaches its maximum
+ value around 0.547.
+ Although it is well known that proteins such as fibronectin are nothing
+ like hard spheres, the RSA model is surprising useful for fitting adsorption
+ data for a wide variety of proteins.
+ The Langmuir model makes no assumptions about the shape of the adsorbing
+ particles and assumes that the surface available for adsorption is a linear
+ function of the surface coverage.
+ Adsorption stops when a limiting surface coverage has been reached, which
+ may be less than 100% surface coverage if there is a limited surface concentrat
+ion of adsorption sites.
+ Reality is probably somewhere in between the two extremes, with proteins
+ adsorbing in a random sequential fashion but packing somewhat more effectively
+ than spheres due their flexibility.
+ Fitting the RSA and Langmuir models to the same data set and seeing which
+ model fits better can indicate whether a particular protein is hard or
+ flexible (on a particular surface under specific solvent conditions).
+\end_layout
+
+\begin_layout Standard
 Two different kinetic models have been proposed in the literature to model
  the adsorption of protein with a post-adsorption transition.
  The model by Brusatori and Van Tassel 
@@ -6780,7 +7189,11 @@ reference "eq:RSA Blocking Function"
 
 \end_inset
 
-) when the radius of particles in state 
+) when the radius of particles in state
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -6924,28 +7337,6 @@ reference "fig:SPT vs Langmuir kinetics"
 .
 \end_layout
 
-\begin_layout Standard
-Langmuir-type and RSA-type models imply different types of adsorption behavior.
- RSA models assume that proteins can be approximated by spheres that act
- like hard spheres.
- Because the spheres adsorb randomly on the surface, the surface packing
- is inefficient and the fractional surface coverage reaches its maximum
- value around 0.547.
- Although it is well known that proteins such as fibronectin are nothing
- like hard spheres, the RSA model is surprising useful for fitting adsorption
- data.
- The Langmuir model makes no assumptions about the shape of the adsorbing
- particles and assumes that the surface available for adsorption is a linear
- function of the surface coverage.
- The Langmuir model also assumes that the surface reaches 100% coverage.
- Reality is probably somewhere in between the two extremes, with proteins
- adsorbing in a random sequential fashion but packing somewhat more effectively
- than spheres due their flexibility.
- Fitting the RSA and Langmuir models to the same data set and seeing which
- model fits better can indicate whether a particular protein is hard or
- flexible (on a particular surface under specific solvent conditions).
-\end_layout
-
 \begin_layout Subsection
 Transport Analysis
 \end_layout
@@ -6964,10 +7355,10 @@ Although the flow cell was designed to minimize transport limitations, CFD
  concentration, the rate of adsorption onto the resonator was high enough
  to deplete the fibronectin in a boundary layer near the resonator.
  Because of the no-slip boundary condition at the surface and the absence
- of turbulent mixing, diffusion was the only way that fibronectin can be
- transported to the surface to adsorb.
+ of turbulent mixing, diffusion was the only way that fibronectin could
+ be transported to the surface to adsorb.
  Fibronectin is a relatively large protein with a correspondingly low diffusion
- coefficient, so its rate of diffusive transport is rather low.
+ coefficient, so its rate of diffusive transport was rather low.
  This type of limitation is virtually unavoidable in microfluidic systems
  when the rate of adsorption is high and the solution concentration is low.
  The near-surface concentration predicted by CFD was used when fitting the
@@ -6976,11 +7367,43 @@ Although the flow cell was designed to minimize transport limitations, CFD
 \end_layout
 
 \begin_layout Standard
+The shape of the kinetic curves predicted by CFD simulations for the adsorption
+ of FN did not match the shape of the experimentally measured curves during
+ the first minute or so of adsorption.
+ The experimental curves have a 
+\begin_inset Quotes eld
+\end_inset
+
+sigmoidal
+\begin_inset Quotes erd
+\end_inset
+
+ shape in which the rate of adsorption increases during the first 30 seconds,
+ while the maximum rate of adsorption occurs at 
+\begin_inset Formula $t=0$
+\end_inset
+
+ for the predicted curves.
+ Since the displacement of buffer from the system and the development of
+ the near-surface depletion layer have been modeled, another mechanism must
+ be hypothesized to account for this discrepancy.
+ It is likely that a significant amount of protein adsorbed to the silicone
+ tubing between the reservoir and the flow cell and to the channel walls
+ in the flow cell.
+ The rate of adsorption to these surfaces would be highest when protein
+ solution was first introduced into the system, leading to a depletion of
+ protein in the solution that reached the resonator.
+ These surfaces would quickly saturate, reducing the rate of adsorption
+ to the tubing and allowing the protein solution to reach the resonator
+ at the desired concentration.
+\end_layout
+
+\begin_layout Standard
 In the experiments reported here, transport limitation had much less influence
  on the adsorption of glucose oxidase.
  GO is a smaller protein than FN, its initial rate of adsorption is lower
- and the concentrations used in these experiments were higher than the concentra
-tions of FN.
+ and the molar concentrations of GO used in these experiments were higher
+ than the concentrations of FN.
  GO reached 99% of full concentration at the resonator surface within 20
  seconds, so the near-surface depletion had minimal impact on the kinetics.
  Constant concentration was assumed when fitting the kinetic adsorption
@@ -9112,11 +9535,35 @@ Fitting Kinetic Models to Experimental Data
 \end_layout
 
 \begin_layout Standard
-Fitting models to the experimental data enabled us to test hypotheses about
- the mechanisms of adsorption on various surfaces.
- Formulating a hypothesis as a model, fitting it to the experimental data
- and evaluating the quality of fit provided a quantitative methodology to
- compare hypotheses.
+Fitting different models to the experimental data enabled us to test hypotheses
+ about the mechanisms of adsorption on various surfaces.
+ Each model was based upon different assumptions about the actual behavior
+ of the protein at the surface.
+ Fitting each model to the experimental data and evaluating the quality
+ of fit provided a quantitative methodology to compare hypotheses and determine
+ which assumptions were most realistic for a particular combination of protein
+ and surface.
+ The fitted parameter values also provided critical information about the
+ validity of each model.
+ It is possible that a good fit can be achieved with an unrealistic parameter
+ value or combination of parameter values (such as a negative value for
+ a kinetic constant or radius).
+ Therefore, it is important to understand the physical process that is being
+ modeled and review the fitted parameter values to ensure their validity.
+ The least-squares fitting algorithm used in this work did not incorporate
+ constraints on parameter values.
+ Many algorithms are available for constrained optimization
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gill1981,Jones2001-"
+
+\end_inset
+
+.
  When several models fitted the data equally well, the quantitative enzyme
  activity data for adsorbed glucose oxidase provided a valuable test to
  support or reject a particular model.
@@ -9133,7 +9580,7 @@ It was assumed that the kinetic constants did not vary across the limited
  parameters that minimized the mean-squared error.
  A model with too many parameters can have multiple parameter sets with
  equivalent optimal fits, much like an under-determined system of linear
- equations with multiple solutions.
+ equations can have multiple solutions.
  Although a lower SSE could have been achieved by fitting data at each concentra
 tion individually, the likelihood of finding non-unique parameters would
  have increased.
@@ -9170,7 +9617,10 @@ Conclusions
 \end_layout
 
 \begin_layout Standard
-Utilization of the WGM sensor enabled, for the first time, quantitative
+The combination of simulations and experiments described in this chapter
+ allowed protein adsorption to be studied in a way that would not be possible
+ with either technique by itself.
+ Utilization of the WGM sensor enabled, for the first time, quantitative
  analysis of protein adsorption on silane monolayers, which are commonly
  used as substrates for cell culture.
  The sensitivity of this technology can be readily enhanced by a number
@@ -9195,21 +9645,27 @@ key "Teraoka2006"
  For example, PEG/OEG monolayers are resistant to protein adsorption but
  have not been shown to be useful as long-term biocompatible coatings for
  implants and medical devices.
- Many people would benefit from the development of a surface coating that
- reduces or eliminates the immune response to a foreign body, such as an
- implanted medical device.
- Computational fluid dynamics simulations were used in the design and characteri
-zation of the flow cell for the WGM biosensor.
- Many previous experimental studies used simple approximate models of transport
- limitations or neglected them altogether.
+ The field of bioengineering would benefit from the development of a surface
+ coating that reduces or eliminates the immune response to a foreign body,
+ such as an implanted medical device.
+\end_layout
+
+\begin_layout Standard
+The work described here combined well-known modeling techniques in a novel
+ way to achieve a detailed understanding of protein adsorption on silane
+ surfaces.
+ Computational fluid dynamics simulations were used to design and characterize
+ the flow cell of the WGM biosensor, while most experimental studies have
+ used simple approximate models of transport limitations or neglected them
+ altogether.
  The results of the CFD simulations were incorporated into the process of
- fitting kinetic models to fibronectin adsorption data, although this step
- was unnecessary for glucose oxidase.
- In this work four existing adsorption models were formulated in terms of
- the same variables, quantitatively compared and fitted to experimental
- data.
- This process enabled definitive conclusions to be drawn about the mechanisms
- of adsorption and inspired new directions for future research.
+ fitting kinetic models to fibronectin adsorption data (this step was unnecessar
+y for glucose oxidase.) Four existing adsorption models and one new model
+ were formulated in terms of the same variables and fitted to the experimental
+ data, and the quality of fit and fitted parameter values were compared.
+ It is common to fit a single model to experimental data.
+ Fitting five models and comparing the results resulted in a thorough and
+ comprehensive study of protein adsorption on surfaces used for cell culture.
 \end_layout
 
 \end_body
