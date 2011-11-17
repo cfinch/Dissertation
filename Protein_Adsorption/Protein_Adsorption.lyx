@@ -693,7 +693,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Figures/WGM_System_Overview.pdf
+	filename Figures/WGM_System_Overview.tif
 
 \end_inset
 
@@ -1263,8 +1263,10 @@ The rate of adsorption on a surface may be limited by the rate at which
  until the simulation results did not change significantly.
  Upwind differencing was used to approximate velocity derivatives, a 2nd
  order limiter was used to approximate concentration derivatives, and the
- Euler method was used for time stepping in transient simulations.
- 
+ fully implicit Euler method was used for time stepping in transient simulations.
+ A constant-velocity boundary condition was used at the inlet, a fixed-pressure
+ boundary was used at the outlet, and no-slip boundary conditions were applied
+ on all the surfaces.
 \end_layout
 
 \begin_layout Standard
@@ -1472,9 +1474,9 @@ Overall mesh for the two-dimensional CFD model and a close-up of the mesh
 \end_inset
 
  Because the axisymmetric geometry models a channel with a circular cross
- section while the actual channel has a square cross section, the flow velocity
- at the inlet was adjusted so the velocity near the resonator matched the
- results from the three-dimensional simulation.
+ section while the actual channel has a square cross section, the average
+ flow velocity of the inlet boundary condition was adjusted so the velocity
+ near the resonator matched the results from the three-dimensional simulation.
  Data from the simulation of the whole flow cell was used to set the concentrati
 on over time at the inlet of the axisymmetric model.
  A surface reaction was defined on the surface of the resonator using the
@@ -2187,8 +2189,11 @@ reference "eq:Two Layer AAB"
 \end_inset
 
  were used to create a two-layer adsorption simulation.
- The differential equations were solved numerically using the odeint routine
- from SciPy
+ The differential equations were solved numerically using the 
+\emph on
+odeint
+\emph default
+ routine from SciPy
 \begin_inset space ~
 \end_inset
 
@@ -7227,8 +7232,7 @@ reference "fig:Blocking function comparison"
 \end_layout
 
 \begin_layout Standard
-When the model used by Michael et.
- al.
+When the model used by Michael et al.
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -7239,8 +7243,7 @@ key "Michael2003"
  was written in terms of a different set of variables, it was revealed that
  the model uses a Langmuir-like blocking function.
  This result shows that the relationship between the kinetic models stated
- and Michael et.
- al.
+ and Michael et al.
  and Brusatori and Van Tassel is analogous to the relationship between the
  RSA model and the Langmuir model.
  This is illustrated in Figure

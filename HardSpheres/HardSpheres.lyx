@@ -1072,7 +1072,7 @@ key "Elimelech1998"
 \end_inset
 
  is the diffusion coefficient, and 
-\begin_inset Formula $g_{q}\in\mathbb{R}^{3}$
+\begin_inset Formula $\mathbf{g}_{q}\in\mathbb{R}^{3}$
 \end_inset
 
  is a vector of random numbers drawn from a Gaussian distribution with a
@@ -1123,7 +1123,11 @@ Two different boundary conditions were used for the top of the box.
  to allow the Brownian dynamics simulation to exchange particles with an
  infinite bulk solution.
  This boundary condition was implemented according to the multi-scale linking
- algorithm described in 
+ algorithm described in
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Magan2004"
@@ -1139,9 +1143,13 @@ Implementation of Brownian Dynamics Simulation
 \end_layout
 
 \begin_layout Standard
-The simulation was implemented using the Python programming language .
+The simulation was implemented using the Python programming language.
  Numerical data, such as the coordinates of the particles, were stored in
- NumPy arrays 
+ NumPy arrays
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Oliphant2006"
@@ -1150,7 +1158,11 @@ key "Oliphant2006"
 
 .
  Routines from the SciPy library were used for standard operations like
- interpolation and numerical integration 
+ interpolation and numerical integration
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Oliphant2007"
@@ -1185,7 +1197,11 @@ key "MPI"
 
 ).
  The PyTables package was used to save the simulation results to binary
- files in HDF5 format 
+ files in HDF5 format
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Alted2002-,HDFGroup2000-"
@@ -1197,7 +1213,11 @@ key "Alted2002-,HDFGroup2000-"
 \end_layout
 
 \begin_layout Standard
-The Brownian dynamics simulations were run with the parameters from 
+The Brownian dynamics simulations were run with the parameters from
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Magan2004"
@@ -1219,7 +1239,11 @@ key "Magan2004"
  dynamics and continuum models were implemented in terms of dimensionless
  variables.
  The simulation was implemented with the dimensionless variables that were
- defined in 
+ defined in
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Magan2004"
@@ -1281,7 +1305,10 @@ Monte Carlo Calculation of the Activity Coefficient
 \begin_layout Standard
 The activity coefficient was determined empirically from the results of
  the Brownian dynamics simulations using the Widom particle insertion method
- 
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Widom1963,Dullens2005"
@@ -1360,7 +1387,11 @@ After the completion of an ensemble of Brownian dynamics simulations, the
 \begin_inset Formula $h\geq2$
 \end_inset
 
- cannot interact with adsorbed particles, as shown in Figure 
+ cannot interact with adsorbed particles, as shown in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Geometry"
@@ -1551,14 +1582,22 @@ Implementation of the Continuum Model
 \end_layout
 
 \begin_layout Standard
-The control volume formulation 
+The control volume formulation
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Patankar1980"
 
 \end_inset
 
- was used to obtain a finite difference form of Equation 
+ was used to obtain a finite difference form of Equation
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Generalized Diffusion Eqn"
@@ -1706,14 +1745,18 @@ Brownian Dynamics Simulation Results
 The Brownian dynamics simulation was run with three different number densities
  of particles in solution.
  The number density had a significant impact on the kinetics of adsorption,
- as shown in Figure 
+ as shown in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:BrD Adsorption Kinetics"
 
 \end_inset
 
- .
+.
 \begin_inset Float figure
 wide false
 sideways false
@@ -1756,7 +1799,11 @@ Kinetics of adsorption predicted by the Brownian dynamics simulation for
 \end_inset
 
 , which is also known as the radial distribution function (RDF).
- The results are shown in Figure 
+ The results are shown in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Brownian Dynamics RDF"
@@ -1797,7 +1844,11 @@ Radial distribution function predicted by Brownian dynamics simulation for
 
 \end_inset
 
- Figure 
+ Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Brownian Dynamics RDF"
@@ -1807,7 +1858,11 @@ reference "fig:Brownian Dynamics RDF"
  also shows the pair correlation function for configurations generated by
  RSA simulations.
  A representative plot of the AVF for a volume fraction of 0.01 is shown
- in Figure 
+ in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Available Volume Function"
@@ -1852,14 +1907,22 @@ Plot of the available volume function.
 \end_inset
 
  The available surface function (ASF) for the RSA model is also shown in
- Figure 
+ Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Available Volume Function"
 
 \end_inset
 
- 
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Schaaf1989"
@@ -1879,7 +1942,11 @@ Continuum Model Results
 \begin_layout Standard
 The coefficients of the generalized diffusion equation were computed from
  the AVF from Brownian dynamics simulations.
- Representative plots of the coefficient values are shown in Figure 
+ Representative plots of the coefficient values are shown in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Coefficient Plots"
@@ -2003,7 +2070,11 @@ Coefficients of the generalized diffusion equation, derived from Brownian
 \begin_inset Formula $AVF^{-2}$
 \end_inset
 
- in Equation 
+ in Equation
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Variable coefficients"
@@ -2012,7 +2083,11 @@ reference "eq:Variable coefficients"
 
 , which result in large numbers when the value of the AVF approaches zero.
  The continuum model accurately reproduced the kinetics predicted by the
- Brownian dynamics simulations, as shown in Figure 
+ Brownian dynamics simulations, as shown in Figure
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Kinetics CFD BrD"

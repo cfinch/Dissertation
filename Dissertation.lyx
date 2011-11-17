@@ -154,8 +154,9 @@ begin{abstract}
 
 Mass transport limitations and surface interactions are important phenomena
  in microfluidic devices.
- The flow of water is laminar at small scales, and the absence of turbulent
- mixing can lead to transport limitations.
+ The flow of water is laminar at small scales and the absence of turbulent
+ mixing can lead to transport limitations, especially for reactions that
+ take place at surfaces.
  Microscale devices have a high ratio of surface area to volume, and proteins
  are known to adsorb preferentially at interfaces.
  Protein adsorption plays a significant role in biology by mediating critical
@@ -200,16 +201,16 @@ sional.
 
 \begin_layout Plain Layout
 
-Kinetic models were used to interpret experimental measurements of the kinetics
- of protein adsorption.
+Continuum models were used to interpret experimental measurements of the
+ kinetics of protein adsorption.
  A Whispering Gallery Mode (WGM) biosensor was constructed and used to measure
  the adsorption of fibronectin (FN) and glucose oxidase (GO) onto several
  types alkysilane self-assembled monolayers (SAMs).
  Computational fluid dynamics was used to model the transport of protein
- in the flow cell of the biosensor and the results were used to improve
- the accuracy of the kinetic models.
- Multiple kinetic models were fitted to the experimental data.
-  The fitted parameter values and the quality of fit of the various models
+ in the flow cell of the biosensor.
+  Various models were fitted to the experimental data, taking into account
+ the transport limitations predicted by the CFD simulations.
+ The fitted parameter values and the quality of fit of the various models
  were analyzed to test hypotheses about the mechanisms of adsorption.
  Cells were cultured on silane surfaces coated with FN to assess its biological
  activity, and a colorimetric assay was used to determine the enzymatic
@@ -227,12 +228,14 @@ Kinetic models were used to interpret experimental measurements of the kinetics
 
 \begin_layout Plain Layout
 
-The process of CFD simulation and experimental validation was used to design
- a microfluidic bioreactor that mimics the function of an alveolus.
- The design goal was to move a ``plug'' of liquid from the alveolus to a
- sensor chamber.
- Microreactors experience significant deviations from plug flow due to the
- high ratio of surface area to volume and the no-slip boundary condition
+The process of CFD simulation and experimental validation was applied to
+ the design of microfluidic bioreactors for an 
+\backslash
+textit{in vitro} tissue engineered model of an alveolus.
+ The objective was to optimize the design of the microreactors so they operate
+ more like plug flow reactors.
+  Microreactors experience significant deviations from plug flow due to
+ the high ratio of surface area to volume and the no-slip boundary condition
  at the walls of the chamber.
   Iterative CFD simulations were performed to optimize microfluidic structures
  to minimize the width of the residence time distributions of two types
@@ -240,10 +243,8 @@ The process of CFD simulation and experimental validation was used to design
  Qualitative and quantitative visualization experiments with a dye indicator
  demonstrated that the CFD simulations accurately predicted the residence
  time distributions of the chambers.
-  The results show that the combination of simulations and experiments can
- be used to optimize the performance of microreactors for 
-\backslash
-textit{in vitro} tissue engineered systems for drug and toxin studies.
+  The use of CFD simulations greatly reduced the time and cost required
+ to optimize the performance of the microreactors.
 \end_layout
 
 \begin_layout Plain Layout
@@ -272,12 +273,11 @@ This would not have been possible without support from my advisers, Dr.
  Thomas Clarke, and the head of the Modeling and Simulation graduate program,
  Dr.
  Peter Kincaid.
- I thank Kerry Wilson, Philip Anderson, Christopher Long and Wesley Anderson
+ I thank Kerry Wilson, Phillip Anderson, Christopher Long and Wesley Anderson
  for providing experimental data and co-authoring several papers.
  Frank Vollmer introduced our group to whispering gallery mode biosensing.
- Vaibhav Thakore offered many helpful suggestions during many technical
- discussions.
-  
+ Vaibhav Thakore offered many helpful suggestions during our technical discussio
+ns.
 \end_layout
 
 \begin_layout Plain Layout

@@ -212,7 +212,7 @@ position equation \cite{Elimelech1998} was used to update the position
 of each particle at each time step: \begin{equation}
 \mathbf{r}_{i}(t+\Delta t)=\mathbf{r}_{i}(t)+\mathbf{g}_{q}\sqrt{2\, D\,\Delta t}\label{eq:Langevin equation}\end{equation}
 $\mathbf{r}_{i}$ is the position of particle $i$, $\Delta t$ is
-the simulation time step, $D$ is the diffusion coefficient, and $g_{q}\in\mathbb{R}^{3}$
+the simulation time step, $D$ is the diffusion coefficient, and $\mathbf{g}_{q}\in\mathbb{R}^{3}$
 is a vector of random numbers drawn from a Gaussian distribution with
 a mean of zero and a variance of one. At each time step, all particles
 in the domain were moved simultaneously, and overlaps were detected.
@@ -243,16 +243,16 @@ was chosen at random for deletion. To simulate diffusion on a semi-infinite
 domain, an open box top was used to allow the Brownian dynamics simulation
 to exchange particles with an infinite bulk solution. This boundary
 condition was implemented according to the multi-scale linking algorithm
-described in \cite{Magan2004}. 
+described in~\cite{Magan2004}. 
 
 
 \subsubsection{Implementation of Brownian Dynamics Simulation}
 
-The simulation was implemented using the Python programming language
-. Numerical data, such as the coordinates of the particles, were stored
-in NumPy arrays \cite{Oliphant2006}. Routines from the SciPy library
+The simulation was implemented using the Python programming language.
+Numerical data, such as the coordinates of the particles, were stored
+in NumPy arrays~\cite{Oliphant2006}. Routines from the SciPy library
 were used for standard operations like interpolation and numerical
-integration \cite{Oliphant2007}. Collision detection was implemented
+integration~\cite{Oliphant2007}. Collision detection was implemented
 in C for speed, using the \emph{weave} function from SciPy. The Message
 Passing Interface (MPI) was used to run multiple simulations in parallel
 on a Linux cluster~\cite{MPI}. Each time a particle adsorbed on
@@ -260,17 +260,17 @@ the surface the configuration of adsorbed particles was recorded,
 along with the profile of concentration vs. distance from the adsorbing
 surface and the fraction of the surface covered by particles ($\theta$).
 The PyTables package was used to save the simulation results to binary
-files in HDF5 format \cite{Alted2002-,HDFGroup2000-}. 
+files in HDF5 format~\cite{Alted2002-,HDFGroup2000-}. 
 
-The Brownian dynamics simulations were run with the parameters from
-\cite{Magan2004} so that the simulation results could be compared
-to published data: radius of the particle $a=5.8\times10^{-8}\, m$
-and the diffusion coefficient $D=3.77\times10^{-12}\, m^{2}/s$. Although
-these parameters are more representative of colloidal particles than
-proteins, the absolute values are not important because both the Brownian
-dynamics and continuum models were implemented in terms of dimensionless
-variables. The simulation was implemented with the dimensionless variables
-that were defined in \cite{Magan2004}:\begin{equation}
+The Brownian dynamics simulations were run with the parameters from~\cite{Magan2004}
+so that the simulation results could be compared to published data:
+radius of the particle $a=5.8\times10^{-8}\, m$ and the diffusion
+coefficient $D=3.77\times10^{-12}\, m^{2}/s$. Although these parameters
+are more representative of colloidal particles than proteins, the
+absolute values are not important because both the Brownian dynamics
+and continuum models were implemented in terms of dimensionless variables.
+The simulation was implemented with the dimensionless variables that
+were defined in~\cite{Magan2004}:\begin{equation}
 \bar{r}=\frac{r}{a},\,\bar{t}=\frac{D}{a^{2}}t\label{eq:Dimensionless variables}\end{equation}
 
 
@@ -295,7 +295,7 @@ the largest time step that would produce accurate results.
 
 The activity coefficient was determined empirically from the results
 of the Brownian dynamics simulations using the Widom particle insertion
-method \cite{Widom1963,Dullens2005}. In this method, a {}``test''
+method~\cite{Widom1963,Dullens2005}. In this method, a {}``test''
 particle is introduced into a fixed configuration of particles and
 the energy of interaction $\psi$ between the test particle and the
 surrounding particles is calculated. The activity $a$ can be computed
@@ -319,7 +319,7 @@ $\theta$. For each $\theta_{i}$ a planar grid of non-overlapping
 test particles was constructed in the simulation domain at a given
 height $h_{i}$ above the adsorbing surface. Particles in solution
 with $h\geq2$ cannot interact with adsorbed particles, as shown in
-Figure \ref{fig:Geometry}. The position of each test particle was
+Figure~\ref{fig:Geometry}. The position of each test particle was
 offset by a small random vector in $xy$ plane and each test particle
 was checked for overlaps with every simulation particle. The fraction
 of test particles without overlaps was recorded as the value of $AVF\left(h_{i},\theta_{i}\right)$.
@@ -376,8 +376,8 @@ in parallel.
 
 \subsection{Implementation of the Continuum Model}
 
-The control volume formulation \cite{Patankar1980} was used to obtain
-a finite difference form of Equation \ref{eq:Generalized Diffusion Eqn}
+The control volume formulation~\cite{Patankar1980} was used to obtain
+a finite difference form of Equation~\ref{eq:Generalized Diffusion Eqn}
 in the region $0\leq h<2$. The continuum adsorption model was defined
 in terms of the same dimensionless space and time variables as the
 Brownian dynamics simulation. Central differencing was used to approximate
@@ -436,8 +436,7 @@ held constant ($AVF\left(h,\theta\right)\equiv1$).
 
 The Brownian dynamics simulation was run with three different number
 densities of particles in solution. The number density had a significant
-impact on the kinetics of adsorption, as shown in Figure \ref{fig:BrD Adsorption Kinetics}
-.%
+impact on the kinetics of adsorption, as shown in Figure~\ref{fig:BrD Adsorption Kinetics}.%
 \begin{figure}
 \includegraphics{HardSpheres/Plots/BrD_kinetics}\caption{\label{fig:BrD Adsorption Kinetics}Kinetics of adsorption predicted
 by the Brownian dynamics simulation for three different volume fractions.}
@@ -448,7 +447,7 @@ by the Brownian dynamics simulation for three different volume fractions.}
  The configurations of adsorbed particles predicted by the Brownian
 dynamics simulations were characterized using the pair correlation
 function $g\left(r\right)$, which is also known as the radial distribution
-function (RDF). The results are shown in Figure \ref{fig:Brownian Dynamics RDF}.
+function (RDF). The results are shown in Figure~\ref{fig:Brownian Dynamics RDF}.
 %
 \begin{figure}
 \includegraphics{HardSpheres/Plots/RDF_BrD_volume_fraction}\caption{\label{fig:Brownian Dynamics RDF}Radial distribution function predicted
@@ -456,9 +455,9 @@ by Brownian dynamics simulation for three volume fractions, and the
 RDF predicted by the RSA model.}
 %
 \end{figure}
- Figure \ref{fig:Brownian Dynamics RDF} also shows the pair correlation
+ Figure~\ref{fig:Brownian Dynamics RDF} also shows the pair correlation
 function for configurations generated by RSA simulations. A representative
-plot of the AVF for a volume fraction of 0.01 is shown in Figure \ref{fig:Available Volume Function}.%
+plot of the AVF for a volume fraction of 0.01 is shown in Figure~\ref{fig:Available Volume Function}.%
 \begin{figure}[H]
 \includegraphics{HardSpheres/Plots/AVF_publication_plot}
 
@@ -467,7 +466,7 @@ function. Available surface function for RSA shown as red dashed line.}
 %
 \end{figure}
  The available surface function (ASF) for the RSA model is also shown
-in Figure \ref{fig:Available Volume Function} \cite{Schaaf1989}.
+in Figure~\ref{fig:Available Volume Function}~\cite{Schaaf1989}.
 The AVF calculated by the Monte Carlo implementation of Widom's method
 matched the results from the computational geometry calculation. The
 computational geometry method require more computational resources.
@@ -477,7 +476,7 @@ computational geometry method require more computational resources.
 
 The coefficients of the generalized diffusion equation were computed
 from the AVF from Brownian dynamics simulations. Representative plots
-of the coefficient values are shown in Figure \ref{fig:Coefficient Plots}.%
+of the coefficient values are shown in Figure~\ref{fig:Coefficient Plots}.%
 \begin{figure}[H]
 \subfloat[\label{fig:Coefficient a}Coefficient $k_{1}$]{\includegraphics{HardSpheres/Plots/coeff_a_publication_plot}
 
@@ -490,10 +489,10 @@ equation, derived from Brownian dynamics results.}
 %
 \end{figure}
  The calculation of coefficient was challenging due to the presence
-of $AVF^{-1}$ and $AVF^{-2}$ in Equation \ref{eq:Variable coefficients},
+of $AVF^{-1}$ and $AVF^{-2}$ in Equation~\ref{eq:Variable coefficients},
 which result in large numbers when the value of the AVF approaches
 zero. The continuum model accurately reproduced the kinetics predicted
-by the Brownian dynamics simulations, as shown in Figure \ref{fig:Kinetics CFD BrD}.%
+by the Brownian dynamics simulations, as shown in Figure~\ref{fig:Kinetics CFD BrD}.%
 \begin{figure}
 \includegraphics{HardSpheres/Plots/BrD_Continuum_Kinetics_dt}
 

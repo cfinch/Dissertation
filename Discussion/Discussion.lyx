@@ -141,6 +141,8 @@ The WGM sensor allowed for the first time the detailed kinetic analysis
  Fitting multiple models to each data set and evaluating the quality of
  the fit allowed various hypotheses about the mechanisms of adsorption to
  be tested.
+ The use of modeling and simulation greatly enhanced the conclusions that
+ could be drawn from a set of experiments.
 \end_layout
 
 \begin_layout Standard
@@ -254,8 +256,8 @@ key "Martin2004"
  leaky waveguide and resonator into one monolithic device that can be mass-produ
 ced, eliminating the time-consuming and tedious task of flame-drawing a
  waveguide and securing it into the flow cell with silicone adhesive.
- The combination of quantitative measurements and modeling has the potential
- to enable new advances in biomedical science.
+ The combination of quantitative measurements and modeling and simulation
+ will enable new advances in biomedical science.
 \end_layout
 
 \end_body
